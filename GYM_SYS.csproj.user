@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmAddFunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCancelBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCancelClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCreateBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmCreateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmDeRegisterInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmeditInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmRegisterInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmScheduleClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmWithdrawMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

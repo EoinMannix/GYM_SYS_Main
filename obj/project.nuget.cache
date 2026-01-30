@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "82kNOfDGqiQ=",
+  "success": true,
+  "projectFilePath": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYM_SYS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eoinm\\.nuget\\packages\\oracle.manageddataaccess\\23.26.100\\oracle.manageddataaccess.23.26.100.nupkg.sha512",
+    "C:\\Users\\eoinm\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.2\\system.diagnostics.diagnosticsource.6.0.2.nupkg.sha512",
+    "C:\\Users\\eoinm\\.nuget\\packages\\system.formats.asn1\\8.0.1\\system.formats.asn1.8.0.1.nupkg.sha512",
+    "C:\\Users\\eoinm\\.nuget\\packages\\system.memory\\4.6.0\\system.memory.4.6.0.nupkg.sha512",
+    "C:\\Users\\eoinm\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512",
+    "C:\\Users\\eoinm\\.nuget\\packages\\system.threading.tasks.extensions\\4.6.0\\system.threading.tasks.extensions.4.6.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Oracle.ManagedDataAccess 23.26.100' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYM_SYS.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYM_SYS.csproj",
+      "libraryId": "Oracle.ManagedDataAccess",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}
