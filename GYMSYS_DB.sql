@@ -107,6 +107,18 @@ CREATE TABLE Bookings
         FOREIGN KEY (ClassID) REFERENCES Classes
 );
 
+-- Sample Class Types
+
+INSERT INTO ClassTypes VALUES('HX','Hyrox');
+INSERT INTO ClassTypes VALUES('YG','Yoga');
+INSERT INTO ClassTypes VALUES('PL','Pilates');
+INSERT INTO ClassTypes VALUES('SP','Spinning');
+
+
+--
+
+
+
 
     
     
