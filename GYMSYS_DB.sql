@@ -115,7 +115,10 @@ INSERT INTO ClassTypes VALUES('PL','Pilates');
 INSERT INTO ClassTypes VALUES('SP','Spinning');
 
 
---
+-- Sample data members
+
+INSERT INTO Members 
+    
 
 
 
