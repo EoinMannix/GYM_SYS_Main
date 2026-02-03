@@ -32,7 +32,7 @@ CREATE TABLE Members
     Forename VARCHAR2(20),
     Surename VARCHAR2(20),
     DOB DATE,
-    Phone NUMERIC(10),
+    Phone VARCHAR2(15),
     Email VARCHAR2(40),
     Gender VARCHAR2(6),
     
@@ -48,10 +48,10 @@ PROMPT
 CREATE TABLE Instructors
 (
     InstructorID NUMERIC(4),
-    Forename VARCHAR(20),
+    Forename VARCHAR2(20),
     Surename VARCHAR2(20),
     DOB DATE,
-    Phone NUMERIC(10),
+    Phone VARCHAR(15),
     Email VARCHAR2(40),
     Gender VARCHAR2(6),
     
@@ -74,7 +74,7 @@ CREATE TABLE Classes
     ClassTime VARCHAR2(5), -- I put varchar as there is then room for a semi colon eg 10:00
     Price NUMERIC(6,2),
     Room VARCHAR2(10),
-    Status VARCHAR(10),
+    Status VARCHAR2(10),
     
     CONSTRAINT pk_Classes PRIMARY KEY (ClassID),
     
@@ -94,7 +94,7 @@ CREATE TABLE Bookings
 (
     BookingID NUMERIC(4),
     MemberID NUMERIC(4),
-    ClassID CHAR(4),
+    ClassID NUMERIC(4),
     BookingDate DATE,
     Status VARCHAR2(10),
     
@@ -117,9 +117,18 @@ INSERT INTO ClassTypes VALUES('SP','Spinning');
 
 -- Sample data members
 
-INSERT INTO Members 
-    
-
+INSERT INTO Members VALUES(1001, 'Sean', 'O Brien', DATE '1995-04-12', '0712345678','sean.obrien@gmail.com','Male');
+INSERT INTO Members VALUES(1002, 'Aoife', 'Murphy', DATE '1996-08-18', '0847652390','aoife.murphy@gmail.com','Female');
+INSERT INTO Members VALUES(1003, 'Connor', 'Kelly', DATE '2002-05-02','0723748090','connor.kelly@gmail.com','Male');
+INSERT INTO Members VALUES(1004, 'Niamh', 'Doyle', DATE '2000-04-18','0864567890','niamh.doyle@gmail.com','Female');
+INSERT INTO Members VALUES(1005, 'Ciaran', 'Bryne' DATE '1996-09-12','0855678910','ciaran.bryne@gmail.com','Male');
+INSERT INTO Members VALUES(1006, 'Saoirse', 'Ryan' DATE '2001-01-30','0876789012','saoirse.ryan@gmail.com','Female');
+INSERT INTO Members VALUES(1007, 'Darragh', 'Walsh' DATE '2001-01-30','0837890123','darragh.walsh@gmail.com','Male');
+INSERT INTO Members VALUES(1008, 'Orla', 'O Connor' DATE '1997-03-14','0868901234','orla.oconnor@gmail.com','Female');
+INSERT INTO Members VALUES(1009, 'Padraig', 'fitzgerald', DATE '1989-12-08', '0859012345','padraig.fitzgerald@gmail.com','Male');
+INSERT INTO Members VALUES(1010, 'Clodagh', 'Higgins', DATE '1995-10-19','0870123456','clodagh.higgins@gmail.com','Female');
+INSERT INTO Members VALUES(1011, 'Ronan', 'Mccarthy', DATE '1991-05-27', '0831234567','ronan.mccarthy@gmail.com','Male');
+INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan' DATE '1999-08-03', '0862345678','eimear.flanagan@gmail.com','Female');
 
 
 

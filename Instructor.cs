@@ -76,7 +76,7 @@ namespace GYM_SYS
             return new Instructor(id, forename, surname, dob, phone, email, "", "", "");
         }
 
-        public void AddProduct()
+        public void AddInstructor()
         {
             Debug.WriteLine(this);
 
@@ -107,7 +107,8 @@ namespace GYM_SYS
 
         public static DataSet FindInstructors(string InstructorForename)
         {
-            string sqlQuery = "SELECT InstructorID, InstructorForename, InstructorSurname, InstructorDOB, InstructorPhone, InstructorEmail " +
+            string sqlQuery = "SELECT InstructorID, InstructorForename, InstructorSurname," +
+                              " InstructorDOB, InstructorPhone, InstructorEmail " +
                               "FROM Instructors " +
                               "WHERE InstructorForename LIKE '%" + InstructorForename + "%' " +
                               "ORDER BY InstructorID";

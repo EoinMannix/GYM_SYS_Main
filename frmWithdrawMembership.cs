@@ -172,6 +172,11 @@ namespace GYMSYS
         {
 
         }
+
+        private void txtMemberName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

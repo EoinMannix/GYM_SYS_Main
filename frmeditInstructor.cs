@@ -26,55 +26,55 @@ namespace GYMSYS
             dgvEditInstructors.Rows[0].Cells[1].Value = "John Doe";
             dgvEditInstructors.Rows[0].Cells[2].Value = "0851234567";
             dgvEditInstructors.Rows[0].Cells[3].Value = "johndoe123@gmail.com";
-           
+
 
             dgvEditInstructors.Rows[1].Cells[0].Value = "002";
             dgvEditInstructors.Rows[1].Cells[1].Value = "Joe Bloggs";
             dgvEditInstructors.Rows[1].Cells[2].Value = "0869876543";
             dgvEditInstructors.Rows[1].Cells[3].Value = "JoeBloggs172@gmail.com";
-     
+
 
             dgvEditInstructors.Rows[2].Cells[0].Value = "003";
             dgvEditInstructors.Rows[2].Cells[1].Value = "Lucas Carter";
             dgvEditInstructors.Rows[2].Cells[2].Value = "0876543210";
             dgvEditInstructors.Rows[2].Cells[3].Value = "LCarter890@gmail.com";
-          
+
 
             dgvEditInstructors.Rows[3].Cells[0].Value = "004";
             dgvEditInstructors.Rows[3].Cells[1].Value = "Zoe Mitchell";
             dgvEditInstructors.Rows[3].Cells[2].Value = "0891234567";
-            dgvEditInstructors.Rows[3].Cells[3].Value = "zoeMitchell102@gmail.com"; 
-            
+            dgvEditInstructors.Rows[3].Cells[3].Value = "zoeMitchell102@gmail.com";
+
 
             dgvEditInstructors.Rows[4].Cells[0].Value = "005";
             dgvEditInstructors.Rows[4].Cells[1].Value = "Padraig Walsh";
             dgvEditInstructors.Rows[4].Cells[2].Value = "0857654321";
             dgvEditInstructors.Rows[4].Cells[3].Value = "PWalsh123@gmail.com";
-            
+
 
             dgvEditInstructors.Rows[5].Cells[0].Value = "006";
             dgvEditInstructors.Rows[5].Cells[1].Value = "Maeve O Connor";
             dgvEditInstructors.Rows[5].Cells[2].Value = "0863456789";
             dgvEditInstructors.Rows[5].Cells[3].Value = "MaeveC685@gmail.com";
-           
+
 
             dgvEditInstructors.Rows[6].Cells[0].Value = "007";
             dgvEditInstructors.Rows[6].Cells[1].Value = "Niamh O Sullivan";
             dgvEditInstructors.Rows[6].Cells[2].Value = "0879876543";
             dgvEditInstructors.Rows[6].Cells[3].Value = "NiamhOS123@gmail.com";
-          
+
 
             dgvEditInstructors.Rows[7].Cells[0].Value = "008";
             dgvEditInstructors.Rows[7].Cells[1].Value = "Eoghan Kelleher";
             dgvEditInstructors.Rows[7].Cells[2].Value = "0894561230";
             dgvEditInstructors.Rows[7].Cells[3].Value = "EoghanKelleher67@gmail.com";
-         
+
 
             dgvEditInstructors.Rows[8].Cells[0].Value = "009";
             dgvEditInstructors.Rows[8].Cells[1].Value = "Cian Gallagher";
             dgvEditInstructors.Rows[8].Cells[2].Value = "0856789123";
             dgvEditInstructors.Rows[8].Cells[3].Value = "CGallagher123@gmail.com";
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -84,7 +84,7 @@ namespace GYMSYS
 
         private void dgvInstructors_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
 
         }
 
@@ -121,18 +121,18 @@ namespace GYMSYS
 
         private void frmeditInstructor_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvEditInstructors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (e.RowIndex >= 0) // makes sure the user clicked a real row not the header
             {
                 DataGridViewRow row = dgvEditInstructors.Rows[e.RowIndex]; // gets the clicked row
-                
+
                 String fulllName = row.Cells[1].Value.ToString(); // gets the name
-                
+
                 String[] nameParts = fulllName.Split(' '); // gets the name and splits into forename and surename
 
                 if (nameParts.Length >= 2)   //puts forename and surname into their respective text boxes
@@ -165,7 +165,7 @@ namespace GYMSYS
 
 
         //As c# is quite similar to java I used my knowledge of java in my OOP module to create a search function for the instructor edit form
-        private void txtEnterName_KeyDown(object sender, KeyEventArgs e) 
+        private void txtEnterName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -202,6 +202,9 @@ namespace GYMSYS
 
         }
 
+        private void txtEnterName_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

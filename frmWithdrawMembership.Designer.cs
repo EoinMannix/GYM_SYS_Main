@@ -28,273 +28,279 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblEnterMembersName = new System.Windows.Forms.Label();
-            this.dgvWithdrawMembership = new System.Windows.Forms.DataGridView();
-            this.clmMemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMemberName = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lstGender = new System.Windows.Forms.ListBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.txtForename = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblForename = new System.Windows.Forms.Label();
-            this.btnConfirmWithdraw = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWithdrawMembership)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            backToolStripMenuItem = new ToolStripMenuItem();
+            lblEnterMembersName = new Label();
+            dgvWithdrawMembership = new DataGridView();
+            clmMemberID = new DataGridViewTextBoxColumn();
+            clmName = new DataGridViewTextBoxColumn();
+            clmEmail = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            txtMemberName = new TextBox();
+            groupBox1 = new GroupBox();
+            lstGender = new ListBox();
+            txtPhone = new TextBox();
+            txtEmail = new TextBox();
+            dateTimePicker1 = new DateTimePicker();
+            txtSurname = new TextBox();
+            txtForename = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            lblForename = new Label();
+            btnConfirmWithdraw = new Button();
+            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvWithdrawMembership).BeginInit();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1083, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1083, 28);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // backToolStripMenuItem
             // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.backToolStripMenuItem.Text = "Back";
+            backToolStripMenuItem.Name = "backToolStripMenuItem";
+            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Text = "Back";
             // 
             // lblEnterMembersName
             // 
-            this.lblEnterMembersName.AutoSize = true;
-            this.lblEnterMembersName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnterMembersName.Location = new System.Drawing.Point(196, 77);
-            this.lblEnterMembersName.Name = "lblEnterMembersName";
-            this.lblEnterMembersName.Size = new System.Drawing.Size(249, 29);
-            this.lblEnterMembersName.TabIndex = 1;
-            this.lblEnterMembersName.Text = "Enter Members Name";
+            lblEnterMembersName.AutoSize = true;
+            lblEnterMembersName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEnterMembersName.Location = new Point(196, 96);
+            lblEnterMembersName.Name = "lblEnterMembersName";
+            lblEnterMembersName.Size = new Size(249, 29);
+            lblEnterMembersName.TabIndex = 1;
+            lblEnterMembersName.Text = "Enter Members Name";
             // 
             // dgvWithdrawMembership
             // 
-            this.dgvWithdrawMembership.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWithdrawMembership.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmMemberID,
-            this.clmName,
-            this.clmEmail,
-            this.Column4});
-            this.dgvWithdrawMembership.Location = new System.Drawing.Point(201, 144);
-            this.dgvWithdrawMembership.Name = "dgvWithdrawMembership";
-            this.dgvWithdrawMembership.RowHeadersWidth = 51;
-            this.dgvWithdrawMembership.RowTemplate.Height = 24;
-            this.dgvWithdrawMembership.Size = new System.Drawing.Size(554, 175);
-            this.dgvWithdrawMembership.TabIndex = 2;
-            this.dgvWithdrawMembership.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWithdrawMembership_CellClick);
+            dgvWithdrawMembership.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvWithdrawMembership.Columns.AddRange(new DataGridViewColumn[] { clmMemberID, clmName, clmEmail, Column4 });
+            dgvWithdrawMembership.Location = new Point(201, 180);
+            dgvWithdrawMembership.Margin = new Padding(3, 4, 3, 4);
+            dgvWithdrawMembership.Name = "dgvWithdrawMembership";
+            dgvWithdrawMembership.RowHeadersWidth = 51;
+            dgvWithdrawMembership.RowTemplate.Height = 24;
+            dgvWithdrawMembership.Size = new Size(554, 219);
+            dgvWithdrawMembership.TabIndex = 2;
+            dgvWithdrawMembership.CellContentClick += dgvWithdrawMembership_CellClick;
             // 
             // clmMemberID
             // 
-            this.clmMemberID.HeaderText = "MemberID";
-            this.clmMemberID.MinimumWidth = 6;
-            this.clmMemberID.Name = "clmMemberID";
-            this.clmMemberID.Width = 125;
+            clmMemberID.HeaderText = "MemberID";
+            clmMemberID.MinimumWidth = 6;
+            clmMemberID.Name = "clmMemberID";
+            clmMemberID.Width = 125;
             // 
             // clmName
             // 
-            this.clmName.HeaderText = "Name";
-            this.clmName.MinimumWidth = 6;
-            this.clmName.Name = "clmName";
-            this.clmName.Width = 125;
+            clmName.HeaderText = "Name";
+            clmName.MinimumWidth = 6;
+            clmName.Name = "clmName";
+            clmName.Width = 125;
             // 
             // clmEmail
             // 
-            this.clmEmail.HeaderText = "Email";
-            this.clmEmail.MinimumWidth = 6;
-            this.clmEmail.Name = "clmEmail";
-            this.clmEmail.Width = 125;
+            clmEmail.HeaderText = "Email";
+            clmEmail.MinimumWidth = 6;
+            clmEmail.Name = "clmEmail";
+            clmEmail.Width = 125;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
+            Column4.HeaderText = "Column4";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
             // 
             // txtMemberName
             // 
-            this.txtMemberName.Location = new System.Drawing.Point(481, 84);
-            this.txtMemberName.Name = "txtMemberName";
-            this.txtMemberName.Size = new System.Drawing.Size(257, 22);
-            this.txtMemberName.TabIndex = 3;
+            txtMemberName.Location = new Point(481, 105);
+            txtMemberName.Margin = new Padding(3, 4, 3, 4);
+            txtMemberName.Name = "txtMemberName";
+            txtMemberName.Size = new Size(257, 27);
+            txtMemberName.TabIndex = 3;
+            txtMemberName.TextChanged += txtMemberName_TextChanged;
+            txtMemberName.KeyDown += txtEnterName_KeyDown;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lstGender);
-            this.groupBox1.Controls.Add(this.txtPhone);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.txtSurname);
-            this.groupBox1.Controls.Add(this.txtForename);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lblForename);
-            this.groupBox1.Location = new System.Drawing.Point(88, 325);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(840, 216);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Member Details";
+            groupBox1.Controls.Add(lstGender);
+            groupBox1.Controls.Add(txtPhone);
+            groupBox1.Controls.Add(txtEmail);
+            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(txtSurname);
+            groupBox1.Controls.Add(txtForename);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(lblForename);
+            groupBox1.Location = new Point(88, 406);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(840, 270);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Member Details";
             // 
             // lstGender
             // 
-            this.lstGender.FormattingEnabled = true;
-            this.lstGender.ItemHeight = 16;
-            this.lstGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.lstGender.Location = new System.Drawing.Point(643, 169);
-            this.lstGender.Name = "lstGender";
-            this.lstGender.Size = new System.Drawing.Size(158, 20);
-            this.lstGender.TabIndex = 11;
+            lstGender.FormattingEnabled = true;
+            lstGender.Items.AddRange(new object[] { "Male", "Female" });
+            lstGender.Location = new Point(643, 211);
+            lstGender.Margin = new Padding(3, 4, 3, 4);
+            lstGender.Name = "lstGender";
+            lstGender.Size = new Size(158, 24);
+            lstGender.TabIndex = 11;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(643, 100);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(158, 22);
-            this.txtPhone.TabIndex = 10;
+            txtPhone.Location = new Point(643, 125);
+            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(158, 27);
+            txtPhone.TabIndex = 10;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(643, 46);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(158, 22);
-            this.txtEmail.TabIndex = 9;
+            txtEmail.Location = new Point(643, 58);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(158, 27);
+            txtEmail.TabIndex = 9;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(230, 167);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(158, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            dateTimePicker1.Location = new Point(230, 209);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(158, 27);
+            dateTimePicker1.TabIndex = 8;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(230, 107);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(158, 22);
-            this.txtSurname.TabIndex = 7;
+            txtSurname.Location = new Point(230, 134);
+            txtSurname.Margin = new Padding(3, 4, 3, 4);
+            txtSurname.Name = "txtSurname";
+            txtSurname.Size = new Size(158, 27);
+            txtSurname.TabIndex = 7;
             // 
             // txtForename
             // 
-            this.txtForename.Location = new System.Drawing.Point(230, 46);
-            this.txtForename.Name = "txtForename";
-            this.txtForename.Size = new System.Drawing.Size(158, 22);
-            this.txtForename.TabIndex = 6;
+            txtForename.Location = new Point(230, 58);
+            txtForename.Margin = new Padding(3, 4, 3, 4);
+            txtForename.Name = "txtForename";
+            txtForename.Size = new Size(158, 27);
+            txtForename.TabIndex = 6;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(427, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 29);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Gender";
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(427, 200);
+            label5.Name = "label5";
+            label5.Size = new Size(94, 29);
+            label5.TabIndex = 5;
+            label5.Text = "Gender";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(427, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 29);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Phone Number";
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(427, 125);
+            label4.Name = "label4";
+            label4.Size = new Size(176, 29);
+            label4.TabIndex = 4;
+            label4.Text = "Phone Number";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(427, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 29);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Email";
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(427, 49);
+            label3.Name = "label3";
+            label3.Size = new Size(74, 29);
+            label3.TabIndex = 3;
+            label3.Text = "Email";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 160);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 29);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Date of Birth";
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(56, 200);
+            label2.Name = "label2";
+            label2.Size = new Size(144, 29);
+            label2.TabIndex = 2;
+            label2.Text = "Date of Birth";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Surename";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(56, 125);
+            label1.Name = "label1";
+            label1.Size = new Size(124, 29);
+            label1.TabIndex = 1;
+            label1.Text = "Surename";
             // 
             // lblForename
             // 
-            this.lblForename.AutoSize = true;
-            this.lblForename.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForename.Location = new System.Drawing.Point(56, 39);
-            this.lblForename.Name = "lblForename";
-            this.lblForename.Size = new System.Drawing.Size(124, 29);
-            this.lblForename.TabIndex = 0;
-            this.lblForename.Text = "Forename";
+            lblForename.AutoSize = true;
+            lblForename.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblForename.Location = new Point(56, 49);
+            lblForename.Name = "lblForename";
+            lblForename.Size = new Size(124, 29);
+            lblForename.TabIndex = 0;
+            lblForename.Text = "Forename";
             // 
             // btnConfirmWithdraw
             // 
-            this.btnConfirmWithdraw.Location = new System.Drawing.Point(435, 557);
-            this.btnConfirmWithdraw.Name = "btnConfirmWithdraw";
-            this.btnConfirmWithdraw.Size = new System.Drawing.Size(174, 45);
-            this.btnConfirmWithdraw.TabIndex = 5;
-            this.btnConfirmWithdraw.Text = "Confirm";
-            this.btnConfirmWithdraw.UseVisualStyleBackColor = true;
-            this.btnConfirmWithdraw.Click += new System.EventHandler(this.btnConfirmWithdraw_Click);
+            btnConfirmWithdraw.Location = new Point(435, 696);
+            btnConfirmWithdraw.Margin = new Padding(3, 4, 3, 4);
+            btnConfirmWithdraw.Name = "btnConfirmWithdraw";
+            btnConfirmWithdraw.Size = new Size(174, 56);
+            btnConfirmWithdraw.TabIndex = 5;
+            btnConfirmWithdraw.Text = "Confirm";
+            btnConfirmWithdraw.UseVisualStyleBackColor = true;
+            btnConfirmWithdraw.Click += btnConfirmWithdraw_Click;
             // 
             // frmWithdrawMembership
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 628);
-            this.Controls.Add(this.btnConfirmWithdraw);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtMemberName);
-            this.Controls.Add(this.dgvWithdrawMembership);
-            this.Controls.Add(this.lblEnterMembersName);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmWithdrawMembership";
-            this.Text = "frmWithdrawMembership";
-            this.Load += new System.EventHandler(this.frmWithdrawMembership_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWithdrawMembership)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1083, 785);
+            Controls.Add(btnConfirmWithdraw);
+            Controls.Add(groupBox1);
+            Controls.Add(txtMemberName);
+            Controls.Add(dgvWithdrawMembership);
+            Controls.Add(lblEnterMembersName);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmWithdrawMembership";
+            Text = "frmWithdrawMembership";
+            Load += frmWithdrawMembership_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvWithdrawMembership).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
