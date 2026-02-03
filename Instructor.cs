@@ -49,6 +49,13 @@ namespace GYM_SYS
                    ", Email: " + InstructorEmail;
         }
 
+        public static DataSet GetAllInstructors()
+        {
+            string sqlQuery = "SELECT * FROM Instructors ORDER BY InstructorID";
+            DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
+            return ds;
+        }
+
         public static Instructor GetInstructor (int id)
         {
 
@@ -82,6 +89,31 @@ namespace GYM_SYS
                               InstructorEmail + "')";
 
             Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public void UpdateInstructor()
+        {
+            string sqlQuery = "UPDATE Instructors SET " +
+                              "InstructorForename = '" + InstructorForename + "', " +
+                              "InstructorSurname = '" + InstructorSurname + "', " +
+                              "InstructorDOB = TO_DATE('" + InstructorDOB.ToString("dd-MM-yyyy") +
+                              "', 'DD-MM-YYYY'), " +
+                              "InstructorPhone = " + InstructorPhone + ", " +
+                              "InstructorEmail = '" + InstructorEmail + "' " +
+                              "WHERE InstructorID = " + InstructorID;
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public static DataSet FindInstructors(string InstructorForename)
+        {
+            string sqlQuery = "SELECT InstructorID, InstructorForename, InstructorSurname, InstructorDOB, InstructorPhone, InstructorEmail " +
+                              "FROM Instructors " +
+                              "WHERE InstructorForename LIKE '%" + InstructorForename + "%' " +
+                              "ORDER BY InstructorID";
+
+            DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
+            return ds;
         }
 
     }
