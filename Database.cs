@@ -16,7 +16,6 @@ namespace GYMSYS
             OracleConnection conn = new OracleConnection(Database.connectionString);
 
             conn.Open();
-
             return conn;
         }
 
@@ -77,4 +76,8 @@ namespace GYMSYS
 
         }
     }
+
+    //REGISTER INSTRUCTOR
+
+
 }
