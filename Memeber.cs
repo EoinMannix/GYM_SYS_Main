@@ -16,13 +16,13 @@ namespace GYM_SYS
         public string MemberForename { get; set; }
         public string MemberSurename { get; set; }
         public DateTime MemberDOB { get; set; }
-        public int MemberPhone { get; set; }
+        public string MemberPhone { get; set; }
         public String MemberEmail { get; set; }
         public string MemberGender { get; set; }
 
 
         public Member (int memberID, string memberForename, string memberSurename,
-            DateTime memberDOB, int memberPhone, string memberEmail, string memberGender )
+            DateTime memberDOB, string memberPhone, string memberEmail, string memberGender )
         {
             MemberID = memberID;
             MemberForename = memberForename;
@@ -51,10 +51,10 @@ namespace GYM_SYS
             return ds;
         }
 
-        public static Member GetMember(int id)
+        public static Member GetMembers(int id)
         {
 
-            string sqlQuery = "SELECT * FROM Member WHERE MemberID = " + id;
+            string sqlQuery = "SELECT * FROM Members WHERE MemberID = " + id;
 
             OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
 
@@ -63,7 +63,7 @@ namespace GYM_SYS
             string forename = dr.GetString(1);
             string surename = dr.GetString(2);
             DateTime dob = dr.GetDateTime(3);
-            int phone = dr.GetInt32(4);
+            string phone = dr.GetString(4);
             string email = dr.GetString(5);
 
             dr.Close();

@@ -1,9 +1,9 @@
 --GYMSYS Database
-DROP TABLE Bookings;
-DROP TABLE Classes;
-DROP TABLE Members;
-DROP TABLE Instructors;
-DROP TABLE ClassTypes;
+DROP TABLE Bookings CASCADE CONSTRAINTS;
+DROP TABLE Classes CASCADE CONSTRAINTS;
+DROP TABLE Members CASCADE CONSTRAINTS;
+DROP TABLE Instructors CASCADE CONSTRAINTS;
+DROP TABLE ClassTypes CASCADE CONSTRAINTS;
 
 
 -- Class Types Table
@@ -121,14 +121,14 @@ INSERT INTO Members VALUES(1001, 'Sean', 'O Brien', DATE '1995-04-12', '07123456
 INSERT INTO Members VALUES(1002, 'Aoife', 'Murphy', DATE '1996-08-18', '0847652390','aoife.murphy@gmail.com','Female');
 INSERT INTO Members VALUES(1003, 'Connor', 'Kelly', DATE '2002-05-02','0723748090','connor.kelly@gmail.com','Male');
 INSERT INTO Members VALUES(1004, 'Niamh', 'Doyle', DATE '2000-04-18','0864567890','niamh.doyle@gmail.com','Female');
-INSERT INTO Members VALUES(1005, 'Ciaran', 'Bryne' DATE '1996-09-12','0855678910','ciaran.bryne@gmail.com','Male');
-INSERT INTO Members VALUES(1006, 'Saoirse', 'Ryan' DATE '2001-01-30','0876789012','saoirse.ryan@gmail.com','Female');
-INSERT INTO Members VALUES(1007, 'Darragh', 'Walsh' DATE '2001-01-30','0837890123','darragh.walsh@gmail.com','Male');
-INSERT INTO Members VALUES(1008, 'Orla', 'O Connor' DATE '1997-03-14','0868901234','orla.oconnor@gmail.com','Female');
+INSERT INTO Members VALUES(1005, 'Ciaran', 'Bryne', DATE '1996-09-12','0855678910','ciaran.bryne@gmail.com','Male');
+INSERT INTO Members VALUES(1006, 'Saoirse', 'Ryan', DATE '2001-01-30','0876789012','saoirse.ryan@gmail.com','Female');
+INSERT INTO Members VALUES(1007, 'Darragh', 'Walsh', DATE '2001-01-30','0837890123','darragh.walsh@gmail.com','Male');
+INSERT INTO Members VALUES(1008, 'Orla', 'O Connor', DATE '1997-03-14','0868901234','orla.oconnor@gmail.com','Female');
 INSERT INTO Members VALUES(1009, 'Padraig', 'fitzgerald', DATE '1989-12-08', '0859012345','padraig.fitzgerald@gmail.com','Male');
 INSERT INTO Members VALUES(1010, 'Clodagh', 'Higgins', DATE '1995-10-19','0870123456','clodagh.higgins@gmail.com','Female');
 INSERT INTO Members VALUES(1011, 'Ronan', 'Mccarthy', DATE '1991-05-27', '0831234567','ronan.mccarthy@gmail.com','Male');
-INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan' DATE '1999-08-03', '0862345678','eimear.flanagan@gmail.com','Female');
+INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan', DATE '1999-08-03', '0862345678','eimear.flanagan@gmail.com','Female');
 
 
 

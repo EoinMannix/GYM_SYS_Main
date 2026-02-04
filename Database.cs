@@ -6,7 +6,9 @@ namespace GYM_SYS
 {
     class Database
     {
-        public const string connectionString = "Data Source = localhost/orcl; User Id = C##USER; Password = Oracle;";
+        //public const string connectionString = "Data Source = localhost/orcl; User Id = C##USER; Password = Oracle;";
+        public const string connectionString = "User Id = C##USER; Password = Oracle; Data Source = localhost:1521/orcl;";
+
 
         //public const string connectionString = "Data Source = studentoracle:1521/orcl; User Id = ... ; Password = **********;";
 

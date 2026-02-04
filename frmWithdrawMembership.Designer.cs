@@ -89,9 +89,11 @@
             dgvWithdrawMembership.Columns.AddRange(new DataGridViewColumn[] { clmMemberID, clmName, clmEmail, Column4 });
             dgvWithdrawMembership.Location = new Point(201, 180);
             dgvWithdrawMembership.Margin = new Padding(3, 4, 3, 4);
+            dgvWithdrawMembership.MultiSelect = false;
             dgvWithdrawMembership.Name = "dgvWithdrawMembership";
             dgvWithdrawMembership.RowHeadersWidth = 51;
             dgvWithdrawMembership.RowTemplate.Height = 24;
+            dgvWithdrawMembership.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvWithdrawMembership.Size = new Size(554, 219);
             dgvWithdrawMembership.TabIndex = 2;
             dgvWithdrawMembership.CellContentClick += dgvWithdrawMembership_CellClick;
