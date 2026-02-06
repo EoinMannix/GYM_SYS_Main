@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM_SYS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +31,7 @@ namespace GYMSYS
 
             if (e.RowIndex >= 0) // makes sure the user clicked a real row not the header
             {
-                DataGridViewRow row = dgvWithdrawMembership.Rows[0]; ; // gets the clicked row
+                DataGridViewRow row = dgvWithdrawMembership.Rows[e.RowIndex]; ; // gets the clicked row
 
                     txtForename.Text = row.Cells["FORENAME"].Value.ToString(); 
                                                                                
@@ -124,12 +125,32 @@ namespace GYMSYS
 
         }
 
-        private void LoadMembers()
+
+        /*private void LoadMembers()
         {
 
             dgvWithdrawMembership.Visible = false;
 
             DataSet ds = GYM_SYS.Member.GetAllMembers();
+
+
+            MessageBox.Show(
+                "user : " + GetCurrentUser(),
+                "Debug Test");
+
+            MessageBox.Show(
+                "Schema: " + GetCurrentSchema(),
+                "Debug"
+            );
+
+
+            if (ds == null || ds.Tables.Count == 0)
+            {
+                MessageBox.Show("No members found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            dgvWithdrawMembership.AutoGenerateColumns = true;
 
             dgvWithdrawMembership.DataSource = ds.Tables[0];
 
@@ -137,11 +158,36 @@ namespace GYMSYS
 
 
 
+        } */
+        private void LoadMembers()
+        {
+            DataSet ds = GYM_SYS.Member.GetAllMembers(); // runs the method to get all members from the database
+
+            if (ds == null || ds.Tables.Count == 0) // checks if the dataset is null or contains no tables
+            {
+                MessageBox.Show("No members found."); // shows a message box if no members are found
+                return; // exits the method if no members are found
+            }
+
+            // Reset grid completely
+            dgvWithdrawMembership.DataSource = null;
+            dgvWithdrawMembership.Columns.Clear();
+            dgvWithdrawMembership.AutoGenerateColumns = true;
+
+            // Bind data
+            dgvWithdrawMembership.DataSource = ds.Tables[0]; // sets the data source of the DataGridView to the first table in the dataset
+
+            dgvWithdrawMembership.Refresh(); // refreshes the DataGridView to display the new data
+
+            MessageBox.Show("Rows loaded: " + ds.Tables[0].Rows.Count); // shows a message box with the number of rows loaded for debugging purposes
         }
+
+
+
 
     }
 
-   
+
 }
 
  

@@ -6,8 +6,16 @@ namespace GYM_SYS
 {
     class Database
     {
-        //public const string connectionString = "Data Source = localhost/orcl; User Id = C##USER; Password = Oracle;";
-        public const string connectionString = "User Id = C##USER; Password = Oracle; Data Source = localhost:1521/orcl;";
+        
+        private const string connectionString =
+                 "User Id=C##USER;Password=Oracle;" +
+                    "Data Source=(DESCRIPTION=" +
+                     "(ADDRESS=(PROTOCOL=TCP)(HOST=EMXlaptop1)(PORT=1521))" +
+                        "(CONNECT_DATA=(SERVICE_NAME=orcl)))";
+        //https://docs.oracle.com/en/database/oracle/oracle-database/26/odpnt/OracleConnectionClass.html#GUID-A8BFA792-97D6-423B-9548-80CA0652174E
+        // As i was for the majority using my home laptop , i did some debugging and found ou that i must switch my connection string as i made a 'C##USER' user in my local database which needed a data source query as a service name isntead of the regular orcl
+        //I also found that instead of using local host i can use the Name of my laptop which is EMXlaptop1 and it worked fine.
+
 
 
         //public const string connectionString = "Data Source = studentoracle:1521/orcl; User Id = ... ; Password = **********;";
@@ -23,25 +31,21 @@ namespace GYM_SYS
 
         public static DataSet ExecuteMultiRowQuery(string query)
         {
-            //Open a connection to an Oracle database
             OracleConnection conn = OpenConnection();
+             //Formulate the DB request
 
-            //Formulate the DB request
             OracleCommand cmd = new OracleCommand(query, conn);
-
             //Use an OracleDataAdapter as a bridge between the DB and an in-memory
+
             //data structure (a DataSet in this case)
             OracleDataAdapter da = new OracleDataAdapter(cmd);
-
             //Create the DataSet to hold results of the query
-            DataSet ds = new DataSet();
 
+            DataSet ds = new DataSet();
             //Populate the DataSet with the results of the query
 
-            //Note that Fill() will use the OracleCommand object to execute query
             da.Fill(ds);
 
-            //Close DB connection
             conn.Close();
             return ds;
         }
@@ -78,8 +82,6 @@ namespace GYM_SYS
 
         }
     }
-
-    //REGISTER INSTRUCTOR
 
 
 }

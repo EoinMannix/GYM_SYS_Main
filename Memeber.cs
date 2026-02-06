@@ -21,16 +21,16 @@ namespace GYM_SYS
         public string MemberGender { get; set; }
 
 
-        public Member (int memberID, string memberForename, string memberSurename,
-            DateTime memberDOB, string memberPhone, string memberEmail, string memberGender )
+        public Member (int id, string forename, string surename,
+            DateTime dob, string phone, string email, string gender )
         {
-            MemberID = memberID;
-            MemberForename = memberForename;
-            MemberSurename = memberSurename;
-            MemberDOB = memberDOB;
-            MemberPhone = memberPhone;
-            MemberEmail = memberEmail;
-            MemberGender = memberGender;
+            MemberID = id;
+            MemberForename = forename;
+            MemberSurename = surename;
+            MemberDOB = dob;
+            MemberPhone = phone;
+            MemberEmail = email;
+            MemberGender = gender;
 
         }
 
@@ -46,7 +46,8 @@ namespace GYM_SYS
 
         public static DataSet GetAllMembers()
         {
-            string sqlQuery = "SELECT * FROM Members ORDER BY MemberID";
+            string sqlQuery = "SELECT MEMBERID, FORENAME, SURENAME, DOB, PHONE, EMAIL, GENDER " +
+                "FROM MEMBERS ORDER BY MEMBERID";
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
             return ds;
         }
@@ -54,7 +55,8 @@ namespace GYM_SYS
         public static Member GetMembers(int id)
         {
 
-            string sqlQuery = "SELECT * FROM Members WHERE MemberID = " + id;
+            string sqlQuery = "SELECT * FROM MEMBERS WHERE MEMBERID = " + id;
+
 
             OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
 
@@ -76,12 +78,12 @@ namespace GYM_SYS
         {
            Debug.WriteLine(this);
 
-            string sqlQuery = "INSERT INTO Members Values (" +
+            string sqlQuery = "INSERT INTO MEMBERS Values (" +
                 MemberID + ", '" +
                 MemberForename + "', '" +
                 MemberSurename + "', TO_DATE('" +
-                MemberDOB.ToString("dd/MM/yyyy") + "', 'DD/MM/YYYY'), " +
-                MemberPhone + ", '" +
+                MemberDOB.ToString("dd/MM/yyyy") + "', 'DD/MM/YYYY'), '" +
+                MemberPhone + "', '" +
                 MemberEmail + "', '" +
                 MemberGender + "')";
 
@@ -90,25 +92,25 @@ namespace GYM_SYS
 
         public void UpdateMember()
         {
-            string sqlQuery = "UPDATE Members SET " +
-                "MemberForename = '" + MemberForename + "', " +
-                "MemberSurename = '" + MemberSurename + "', " +
-                "MemberDOB = TO_DATE('" + MemberDOB.ToString("dd/MM/yyyy") + "', 'DD/MM/YYYY'), " +
-                "MemberPhone = " + MemberPhone + ", " +
-                "MemberEmail = '" + MemberEmail + "', " +
-                "MemberGender = '" + MemberGender + "' " +
-                "WHERE MemberID = " + MemberID;
+            string sqlQuery = "UPDATE MEMBERS SET " +
+                "FORENAME = '" + MemberForename + "', " +
+                "SURENAME = '" + MemberSurename + "', " +
+                "DOB = TO_DATE('" + MemberDOB.ToString("dd/MM/yyyy") + "', 'DD/MM/YYYY'), " +
+                "PHONE = '" + MemberPhone + "', " +
+                "EMAIL = '" + MemberEmail + "', " +
+                "GENDER = '" + MemberGender + "' " +
+                "WHERE MEMBERID = " + MemberID;
 
             Database.ExecuteNonQuery(sqlQuery);
         }
 
         public static DataSet FindMembers(string MemberForename)
         {
-            string sqlQuery = "SELECT MemberID, MemberForename, MemberSurename, MemberDOB," +
-                " MemberPhone, MemberEmail, MemberGender " +
-                "FROM Members " +
-                "WHERE MemberForename LIKE '%" + MemberForename + "%' " +
-                "ORDER BY MemberID";
+            string sqlQuery = "SELECT MEMBERID, FORENAME, SURENAME, DOB," +
+                " PHONE, EMAIL, GENDER " +
+                "FROM MEMBERS " +
+                "WHERE FORENAME LIKE '%" + MemberForename + "%' " +
+                "ORDER BY MEMBERID";
 
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
             return ds;

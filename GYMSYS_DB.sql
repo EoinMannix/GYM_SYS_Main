@@ -51,7 +51,7 @@ CREATE TABLE Instructors
     Forename VARCHAR2(20),
     Surename VARCHAR2(20),
     DOB DATE,
-    Phone VARCHAR(15),
+    Phone VARCHAR2(15),
     Email VARCHAR2(40),
     Gender VARCHAR2(6),
     
