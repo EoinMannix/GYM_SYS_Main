@@ -13,6 +13,9 @@ namespace GYMSYS
 {
     public partial class frmWithdrawMembership : Form
     {
+
+        private Member member;
+
         public frmWithdrawMembership()
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace GYMSYS
 
         }
 
-        private void dgvWithdrawMembership_CellClick(object sender, DataGridViewCellEventArgs e)
+        /*private void dgvWithdrawMembership_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             if (e.RowIndex >= 0) // makes sure the user clicked a real row not the header
@@ -60,6 +63,21 @@ namespace GYMSYS
 
             }
 
+        }*/
+        private void dgvWithdrawMembership_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int id = Convert.ToInt32(
+                dgvWithdrawMembership.Rows[
+                dgvWithdrawMembership.CurrentCell.RowIndex
+                ].Cells[0].Value);
+
+            member = Member.GetMembers(id);
+
+            txtForename.Text = member.MemberForename;
+            txtSurname.Text = member.MemberSurename;
+            txtPhone.Text = member.MemberPhone;
+            txtEmail.Text = member.MemberEmail;
         }
 
         private void txtEnterName_KeyDown(object sender, KeyEventArgs e)
@@ -99,20 +117,18 @@ namespace GYMSYS
 
         }
 
-        private void btnConfirmWithdraw_Click(object sender, EventArgs e)
+        private void btnUpdateWithdraw_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to withdraw this membership?", "Confirm Withdrawal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                MessageBox.Show("Membership withdrawn successfully.", "Withdrawal Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+            member.MemberForename = txtForename.Text;
+            member.MemberSurename = txtSurname.Text;
+            member.MemberPhone = txtPhone.Text;
+            member.MemberEmail = txtEmail.Text;
 
-            }
+            member.UpdateMember();
 
-            else
-            {
-                // Do nothing if No is selected
-            }
+            dgvWithdrawMembership.Visible = false;
+            txtMemberName.Clear();
+            txtMemberName.Focus();
         }
 
         private void frmWithdrawMembership_Load(object sender, EventArgs e)

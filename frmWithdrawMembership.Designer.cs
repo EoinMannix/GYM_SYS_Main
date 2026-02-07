@@ -50,7 +50,7 @@
             label2 = new Label();
             label1 = new Label();
             lblForename = new Label();
-            btnConfirmWithdraw = new Button();
+            btnUpdateWithdraw = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvWithdrawMembership).BeginInit();
             groupBox1.SuspendLayout();
@@ -269,23 +269,23 @@
             lblForename.TabIndex = 0;
             lblForename.Text = "Forename";
             // 
-            // btnConfirmWithdraw
+            // btnUpdateWithdraw
             // 
-            btnConfirmWithdraw.Location = new Point(435, 696);
-            btnConfirmWithdraw.Margin = new Padding(3, 4, 3, 4);
-            btnConfirmWithdraw.Name = "btnConfirmWithdraw";
-            btnConfirmWithdraw.Size = new Size(174, 56);
-            btnConfirmWithdraw.TabIndex = 5;
-            btnConfirmWithdraw.Text = "Confirm";
-            btnConfirmWithdraw.UseVisualStyleBackColor = true;
-            btnConfirmWithdraw.Click += btnConfirmWithdraw_Click;
+            btnUpdateWithdraw.Location = new Point(435, 696);
+            btnUpdateWithdraw.Margin = new Padding(3, 4, 3, 4);
+            btnUpdateWithdraw.Name = "btnUpdateWithdraw";
+            btnUpdateWithdraw.Size = new Size(174, 56);
+            btnUpdateWithdraw.TabIndex = 5;
+            btnUpdateWithdraw.Text = "Update";
+            btnUpdateWithdraw.UseVisualStyleBackColor = true;
+            btnUpdateWithdraw.Click += btnUpdateWithdraw_Click;
             // 
             // frmWithdrawMembership
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1083, 785);
-            Controls.Add(btnConfirmWithdraw);
+            Controls.Add(btnUpdateWithdraw);
             Controls.Add(groupBox1);
             Controls.Add(txtMemberName);
             Controls.Add(dgvWithdrawMembership);
@@ -320,7 +320,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnConfirmWithdraw;
+        private System.Windows.Forms.Button btnUpdateWithdraw;
         private System.Windows.Forms.TextBox txtForename;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtSurname;
