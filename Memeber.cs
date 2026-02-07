@@ -60,19 +60,50 @@ namespace GYM_SYS
 
             OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
 
-            dr.Read();
 
-            string forename = dr.GetString(1);
-            string surename = dr.GetString(2);
-            DateTime dob = dr.GetDateTime(3);
-            string phone = dr.GetString(4);
-            string email = dr.GetString(5);
+            if (!dr.Read())
+            {
+                MessageBox.Show("Member not found.");
+                dr.Close();
+                return null;
+            }
 
-            dr.Close();
+            else
+            {
+                string forename = dr.GetString(1);
+                string surename = dr.GetString(2);
+                DateTime dob = dr.GetDateTime(3);
+                string phone = dr.GetString(4);
+                string email = dr.GetString(5);
 
-            return new Member(id, forename, surename, dob, phone, email, "");
 
+                dr.Close();
+
+                return new Member(id, forename, surename, dob, phone, email, "");
+            }
         }
+
+        /*DataReader Method for later use
+          public static void GetAllMembersDR()
+        {
+            string sql = "SELECT * FROM MEMBERS";
+
+           OracleDataReader dr = Database.ExecuteSingleRowQuery(sql);
+
+            while (dr.Read())
+            {
+                int id = dr.GetInt32(0);
+                string forename = dr.GetString(1);
+                string surename = dr.GetString(2);
+                DateTime dob = dr.GetDateTime(3);
+                string phone = dr.GetString(4);
+                string email = dr.GetString(5);
+                Console.WriteLine("ID: " + id + ", Forename: " + forename + ", Surename: " + surename +
+                    ", DOB: " + dob.ToShortDateString() + ", Phone: " + phone + ", Email: " + email);
+            }
+        }
+        */
+
 
         public void AddMember()
         {

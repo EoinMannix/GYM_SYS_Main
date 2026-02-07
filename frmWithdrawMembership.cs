@@ -126,39 +126,7 @@ namespace GYMSYS
         }
 
 
-        /*private void LoadMembers()
-        {
-
-            dgvWithdrawMembership.Visible = false;
-
-            DataSet ds = GYM_SYS.Member.GetAllMembers();
-
-
-            MessageBox.Show(
-                "user : " + GetCurrentUser(),
-                "Debug Test");
-
-            MessageBox.Show(
-                "Schema: " + GetCurrentSchema(),
-                "Debug"
-            );
-
-
-            if (ds == null || ds.Tables.Count == 0)
-            {
-                MessageBox.Show("No members found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            dgvWithdrawMembership.AutoGenerateColumns = true;
-
-            dgvWithdrawMembership.DataSource = ds.Tables[0];
-
-            dgvWithdrawMembership.Visible = true;
-
-
-
-        } */
+        
         private void LoadMembers()
         {
             DataSet ds = GYM_SYS.Member.GetAllMembers(); // runs the method to get all members from the database
@@ -177,12 +145,10 @@ namespace GYMSYS
             // Bind data
             dgvWithdrawMembership.DataSource = ds.Tables[0]; // sets the data source of the DataGridView to the first table in the dataset
 
+            Utility.FormatGrid(dgvWithdrawMembership); 
+
             dgvWithdrawMembership.Refresh(); // refreshes the DataGridView to display the new data
-
-            MessageBox.Show("Rows loaded: " + ds.Tables[0].Rows.Count); // shows a message box with the number of rows loaded for debugging purposes
         }
-
-
 
 
     }
