@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM_SYS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,10 @@ namespace GYMSYS
         {
             if (ValidateRegisterInputs())
             {
+
+                Member newMember = new Member(0, txtForename.Text, txtSurname.Text, dtpDOB.Value, txtPhone.Text, txtEmail.Text, txtGender.Text);
+
+
                 MessageBox.Show("Member " + txtForename.Text + " " + txtSurname.Text + "added successfully!");
 
                 this.Close();
@@ -58,11 +63,24 @@ namespace GYMSYS
                 return false;
             }
 
+            if (txtSurname.Text == "")
+            {
+                MessageBox.Show("Please enter a surname.");
+                return false;
+            }
+
+            if (dtpDOB.Value > DateTime.Now)
+            {
+                MessageBox.Show("Date of birth cannot be in the future.");
+                return false;
+            }
+
             if (txtEmail.Text == "")
             {
                 MessageBox.Show("Please enter an email.");
                 return false;
             }
+
 
             if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
             {
@@ -87,6 +105,7 @@ namespace GYMSYS
                 MessageBox.Show("Please enter a valid date of birth.");
                 return false;
             }
+
             
 
             return true;

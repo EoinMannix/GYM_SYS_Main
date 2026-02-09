@@ -137,7 +137,12 @@ INSERT INTO Instructors VALUES(2002, 'Laura', 'Kavanagh', DATE '1990-02-21','087
 INSERT INTO Instructors VALUES(2003, 'Patrick','O Neill', DATE '1982-11-05','0853456789','patrick.oneill@gmail.com','Male');
 INSERT INTO Instructors VALUES(2004, 'Emma','Fitzpatrick', DATE '1993-09-12','0864567890','emma.fitzpatrick@gmail.com','Female');
 INSERT INTO Instructors VALUES(2005, 'David','Moran', DATE '1988-03-27','0835678901','david.moran@gmail.com','Male');
-INSERT INTO Instructors VALUES(2006, 'Nadine','Power', DATE '
+INSERT INTO Instructors VALUES(2006, 'Nadine','Power', DATE '1991-01-08','084678901','nadine.power@gmail.com','Female');
+INSERT INTO Instructors VALUES(2007, 'Brian','Lynch', DATE '1980-01-08','0827890123','brian.lynch@gmail.com','Male');
+INSERT INTO Instructors VALUES(2008, 'Daniel','Courtney', DATE '2004-02-12','088901234','daniel.courtney@gmail.com','Male');
+INSERT INTO Instructors VALUES(2009, 'Tom','Clancy',DATE '1986-12-14', '0819012345','tom.clancy@gmail.com','Male');
+INSERT INTO Instructors VALUES(2010, 'Aisling','Reilly',DATE '1992-10-03','0870123987','aisling.reilly@gmail.com','Female');
+
     
     
     
