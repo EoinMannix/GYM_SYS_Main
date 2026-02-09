@@ -147,5 +147,12 @@ namespace GYM_SYS
             return ds;
         }
 
+        public void DeleteMember()
+        {
+            string sqlQuery = "DELETE FROM MEMBERS WHERE MEMBERID = " + MemberID;
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
     }
 }

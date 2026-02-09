@@ -130,9 +130,14 @@ INSERT INTO Members VALUES(1010, 'Clodagh', 'Higgins', DATE '1995-10-19','087012
 INSERT INTO Members VALUES(1011, 'Ronan', 'Mccarthy', DATE '1991-05-27', '0831234567','ronan.mccarthy@gmail.com','Male');
 INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan', DATE '1999-08-03', '0862345678','eimear.flanagan@gmail.com','Female');
 
+-- Sample data Instructors
 
-
-    
+INSERT INTO Instructors VALUES(2001, 'Michael', 'Bryne', DATE '1985-06-15', '0891234567','michael.bryne@gmail.com','Male');
+INSERT INTO Instructors VALUES(2002, 'Laura', 'Kavanagh', DATE '1990-02-21','0872345678','laura.kavanagh@gmail.com','Female');
+INSERT INTO Instructors VALUES(2003, 'Patrick','O Neill', DATE '1982-11-05','0853456789','patrick.oneill@gmail.com','Male');
+INSERT INTO Instructors VALUES(2004, 'Emma','Fitzpatrick', DATE '1993-09-12','0864567890','emma.fitzpatrick@gmail.com','Female');
+INSERT INTO Instructors VALUES(2005, 'David','Moran', DATE '1988-03-27','0835678901','david.moran@gmail.com','Male');
+INSERT INTO Instructors VALUES(2006, 'Nadine','Power', DATE '
     
     
     

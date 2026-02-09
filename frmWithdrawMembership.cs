@@ -119,14 +119,29 @@ namespace GYMSYS
 
         private void btnUpdateWithdraw_Click(object sender, EventArgs e)
         {
-            member.MemberForename = txtForename.Text;
-            member.MemberSurename = txtSurname.Text;
-            member.MemberPhone = txtPhone.Text;
-            member.MemberEmail = txtEmail.Text;
 
-            member.UpdateMember();
-            txtMemberName.Clear();
-            txtMemberName.Focus();
+            if (member == null)
+            {
+                MessageBox.Show("Please select a member to update.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to withdraw this membership?",
+                "Confirm Withdrawal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                member.DeleteMember();
+                LoadMembers();
+                MessageBox.Show("Member information updated successfully.");
+
+            }
+
+            else
+            {
+                MessageBox.Show("Membership withdrawal cancelled.");
+                return;
+            }
         }
 
         private void frmWithdrawMembership_Load(object sender, EventArgs e)
