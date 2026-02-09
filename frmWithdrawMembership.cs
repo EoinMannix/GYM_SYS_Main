@@ -125,8 +125,6 @@ namespace GYMSYS
             member.MemberEmail = txtEmail.Text;
 
             member.UpdateMember();
-
-            dgvWithdrawMembership.Visible = false;
             txtMemberName.Clear();
             txtMemberName.Focus();
         }
