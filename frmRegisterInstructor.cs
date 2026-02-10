@@ -122,6 +122,18 @@ namespace GYMSYS
                 return false;
             }
 
+            if (txtSurname.Text == "")
+            {
+                MessageBox.Show("please enter a surname. ");
+                return false;
+            }
+
+            if (dtpDOB.Value > DateTime.Now)
+            {
+                MessageBox.Show("Please enter a valid date of birth.");
+                return false;
+            }
+
             if (txtEmail.Text == "")
             {
                 MessageBox.Show("Please enter an email.");
@@ -131,6 +143,7 @@ namespace GYMSYS
             if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
             {
                 MessageBox.Show("Please enter a valid email address.");
+                return false;
             }
 
             // used a for each to validate all digits in the phone number https://www.w3schools.com/cs/cs_foreach_loop.php

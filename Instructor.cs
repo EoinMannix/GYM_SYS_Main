@@ -117,6 +117,28 @@ namespace GYM_SYS
             return ds;
         }
 
+
+        public static int GetNextInstructorID()
+        {
+
+            string sqlQuery = "SELECT MAX(INSTRUCTORID) FROM INSTRUCTORS";
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery); //an example of the data reader being used
+
+            int nextID = 1001; // Default to 1 if there are no members
+
+            if (dr.Read() && !dr.IsDBNull(0))
+            {
+                nextID = dr.GetInt32(0) + 1;
+            }
+
+            dr.Close();
+
+            return nextID;
+
+        }
+
+
     }
 }
 

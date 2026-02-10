@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace GYM_SYS
 {
@@ -47,7 +48,9 @@ namespace GYM_SYS
         public static DataSet GetAllMembers()
         {
             string sqlQuery = "SELECT MEMBERID, FORENAME, SURENAME, DOB, PHONE, EMAIL, GENDER " +
-                "FROM MEMBERS ORDER BY MEMBERID";
+                "FROM MEMBERS " +
+                "WHERE Status = 'Active' " +
+                "ORDER BY MEMBERID";
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
             return ds;
         }
@@ -83,40 +86,16 @@ namespace GYM_SYS
             }
         }
 
-        /*DataReader Method for later use
-          public static void GetAllMembersDR()
-        {
-            string sql = "SELECT * FROM MEMBERS";
-
-           OracleDataReader dr = Database.ExecuteSingleRowQuery(sql);
-
-            while (dr.Read())
-            {
-                int id = dr.GetInt32(0);
-                string forename = dr.GetString(1);
-                string surename = dr.GetString(2);
-                DateTime dob = dr.GetDateTime(3);
-                string phone = dr.GetString(4);
-                string email = dr.GetString(5);
-                Console.WriteLine("ID: " + id + ", Forename: " + forename + ", Surename: " + surename +
-                    ", DOB: " + dob.ToShortDateString() + ", Phone: " + phone + ", Email: " + email);
-            }
-        }
-        */
-
-
         public void AddMember()
         {
-           Debug.WriteLine(this);
-
-            string sqlQuery = "INSERT INTO MEMBERS Values (" +
+            string sqlQuery = "INSERT INTO Members VALUES (" +
                 MemberID + ", '" +
                 MemberForename + "', '" +
                 MemberSurename + "', TO_DATE('" +
                 MemberDOB.ToString("dd/MM/yyyy") + "', 'DD/MM/YYYY'), '" +
                 MemberPhone + "', '" +
                 MemberEmail + "', '" +
-                MemberGender + "')";
+                MemberGender + "' , 'Active')";
 
             Database.ExecuteNonQuery(sqlQuery);
         }
@@ -149,9 +128,29 @@ namespace GYM_SYS
 
         public void DeleteMember()
         {
-            string sqlQuery = "DELETE FROM MEMBERS WHERE MEMBERID = " + MemberID;
+            string sqlQuery = "UPDATE MEMBERS SET Status = 'Inactive' " +
+                "WHERE MemberID = " + MemberID;
 
             Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public static int GetNextMemberID()
+        {
+            
+            string sqlQuery = "SELECT MAX(MEMBERID) FROM MEMBERS";
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery); //an example of the data reader being used
+
+            int nextID = 1001; // Default to 1 if there are no members
+
+            if (dr.Read() && !dr.IsDBNull(0))
+            {
+                nextID = dr.GetInt32(0) + 1;
+            }
+
+            dr.Close();
+
+            return nextID;
+
         }
 
     }

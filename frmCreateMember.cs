@@ -37,9 +37,11 @@ namespace GYMSYS
         {
             if (ValidateRegisterInputs())
             {
+                int newID = Member.GetNextMemberID();
 
                 Member newMember = new Member(0, txtForename.Text, txtSurname.Text, dtpDOB.Value, txtPhone.Text, txtEmail.Text, txtGender.Text);
 
+                newMember.AddMember();
 
                 MessageBox.Show("Member " + txtForename.Text + " " + txtSurname.Text + "added successfully!");
 
@@ -85,6 +87,7 @@ namespace GYMSYS
             if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
             {
                 MessageBox.Show("Please enter a valid email address.");
+                return false;
             }
 
             // used a for each to validate all digits in the phone number https://www.w3schools.com/cs/cs_foreach_loop.php
