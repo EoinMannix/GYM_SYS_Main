@@ -67,7 +67,7 @@ namespace GYMSYS
         private void dgvWithdrawMembership_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            int id = Convert.ToInt32(
+            int id = Convert.ToInt32( // converts the value in the first cell of the clicked row to an integer, which is the member ID
                 dgvWithdrawMembership.Rows[
                 dgvWithdrawMembership.CurrentCell.RowIndex
                 ].Cells[0].Value);
@@ -78,6 +78,7 @@ namespace GYMSYS
             txtSurname.Text = member.MemberSurename;
             txtPhone.Text = member.MemberPhone;
             txtEmail.Text = member.MemberEmail;
+            lstGender.SelectedItem = member.MemberGender;
         }
 
         private void txtEnterName_KeyDown(object sender, KeyEventArgs e)

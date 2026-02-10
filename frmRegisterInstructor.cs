@@ -39,6 +39,8 @@ namespace GYMSYS
         {
             if (ValidateRegisterInputs())
             {
+
+
                 MessageBox.Show("Instructor " + txtForename.Text + " " + txtSurname.Text + " added successfully!");
                 this.Close();
             }

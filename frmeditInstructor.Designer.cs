@@ -34,12 +34,12 @@
             Column3 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             grpInstructorDetails = new GroupBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtWorkdays = new TextBox();
+            txtPhone = new TextBox();
+            txtEmail = new TextBox();
+            dtpDOB = new DateTimePicker();
+            txtSurname = new TextBox();
+            txtForename = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -101,12 +101,12 @@
             // 
             // grpInstructorDetails
             // 
-            grpInstructorDetails.Controls.Add(textBox5);
-            grpInstructorDetails.Controls.Add(textBox4);
-            grpInstructorDetails.Controls.Add(textBox3);
-            grpInstructorDetails.Controls.Add(dateTimePicker1);
-            grpInstructorDetails.Controls.Add(textBox2);
-            grpInstructorDetails.Controls.Add(textBox1);
+            grpInstructorDetails.Controls.Add(txtWorkdays);
+            grpInstructorDetails.Controls.Add(txtPhone);
+            grpInstructorDetails.Controls.Add(txtEmail);
+            grpInstructorDetails.Controls.Add(dtpDOB);
+            grpInstructorDetails.Controls.Add(txtSurname);
+            grpInstructorDetails.Controls.Add(txtForename);
             grpInstructorDetails.Controls.Add(label6);
             grpInstructorDetails.Controls.Add(label5);
             grpInstructorDetails.Controls.Add(label4);
@@ -122,54 +122,54 @@
             grpInstructorDetails.TabStop = false;
             grpInstructorDetails.Text = "Instructor Details";
             // 
-            // textBox5
+            // txtWorkdays
             // 
-            textBox5.Location = new Point(625, 264);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(176, 27);
-            textBox5.TabIndex = 11;
+            txtWorkdays.Location = new Point(625, 264);
+            txtWorkdays.Margin = new Padding(3, 4, 3, 4);
+            txtWorkdays.Name = "txtWorkdays";
+            txtWorkdays.Size = new Size(176, 27);
+            txtWorkdays.TabIndex = 11;
             // 
-            // textBox4
+            // txtPhone
             // 
-            textBox4.Location = new Point(625, 171);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(176, 27);
-            textBox4.TabIndex = 10;
+            txtPhone.Location = new Point(625, 171);
+            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(176, 27);
+            txtPhone.TabIndex = 10;
             // 
-            // textBox3
+            // txtEmail
             // 
-            textBox3.Location = new Point(625, 80);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(176, 27);
-            textBox3.TabIndex = 9;
+            txtEmail.Location = new Point(625, 80);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(176, 27);
+            txtEmail.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dtpDOB
             // 
-            dateTimePicker1.Location = new Point(200, 261);
-            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 27);
-            dateTimePicker1.TabIndex = 8;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            dtpDOB.Location = new Point(200, 261);
+            dtpDOB.Margin = new Padding(3, 4, 3, 4);
+            dtpDOB.Name = "dtpDOB";
+            dtpDOB.Size = new Size(200, 27);
+            dtpDOB.TabIndex = 8;
+            dtpDOB.ValueChanged += dateTimePicker1_ValueChanged;
             // 
-            // textBox2
+            // txtSurname
             // 
-            textBox2.Location = new Point(200, 171);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 27);
-            textBox2.TabIndex = 7;
+            txtSurname.Location = new Point(200, 171);
+            txtSurname.Margin = new Padding(3, 4, 3, 4);
+            txtSurname.Name = "txtSurname";
+            txtSurname.Size = new Size(200, 27);
+            txtSurname.TabIndex = 7;
             // 
-            // textBox1
+            // txtForename
             // 
-            textBox1.Location = new Point(200, 74);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 27);
-            textBox1.TabIndex = 6;
+            txtForename.Location = new Point(200, 74);
+            txtForename.Margin = new Padding(3, 4, 3, 4);
+            txtForename.Name = "txtForename";
+            txtForename.Size = new Size(200, 27);
+            txtForename.TabIndex = 6;
             // 
             // label6
             // 
@@ -318,11 +318,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtForename;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Label label1;
@@ -332,6 +332,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmName;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtWorkdays;
     }
 }

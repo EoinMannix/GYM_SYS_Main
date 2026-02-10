@@ -78,6 +78,7 @@ namespace GYM_SYS
                 DateTime dob = dr.GetDateTime(3);
                 string phone = dr.GetString(4);
                 string email = dr.GetString(5);
+                string gender = dr.GetString(6);
 
 
                 dr.Close();
