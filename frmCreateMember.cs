@@ -92,7 +92,7 @@ namespace GYMSYS
 
             // used a for each to validate all digits in the phone number https://www.w3schools.com/cs/cs_foreach_loop.php
 
-            foreach (char c in txtPhone.Text) 
+            foreach (char c in txtPhone.Text)
             {
 
                 if (!char.IsDigit(c))
@@ -109,7 +109,7 @@ namespace GYMSYS
                 return false;
             }
 
-            
+
 
             return true;
         }
@@ -122,6 +122,11 @@ namespace GYMSYS
         private void frmCreateMember_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

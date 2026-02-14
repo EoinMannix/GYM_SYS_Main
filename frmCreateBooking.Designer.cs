@@ -28,289 +28,321 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblSelectClass = new System.Windows.Forms.Label();
-            this.dgvCreateBooking = new System.Windows.Forms.DataGridView();
-            this.txtSelectClass = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblBalance = new System.Windows.Forms.Label();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.grpCreateBooking = new System.Windows.Forms.GroupBox();
-            this.lblRoom = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblInstructor = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblClassName = new System.Windows.Forms.Label();
-            this.txtClassName = new System.Windows.Forms.TextBox();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.txtInstructor = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtRoom = new System.Windows.Forms.TextBox();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.clmClassID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmInstructorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCreateBooking)).BeginInit();
-            this.grpCreateBooking.SuspendLayout();
-            this.SuspendLayout();
+            lblSelectClass = new Label();
+            dgvCreateBooking = new DataGridView();
+            clmClassID = new DataGridViewTextBoxColumn();
+            clmClassName = new DataGridViewTextBoxColumn();
+            clmInstructorName = new DataGridViewTextBoxColumn();
+            clmDate = new DataGridViewTextBoxColumn();
+            clmTime = new DataGridViewTextBoxColumn();
+            txtSelectClass = new TextBox();
+            label2 = new Label();
+            lblBalance = new Label();
+            txtBalance = new TextBox();
+            grpCreateBooking = new GroupBox();
+            txtDate = new TextBox();
+            lblDate = new Label();
+            txtRoom = new TextBox();
+            txtPrice = new TextBox();
+            txtInstructor = new TextBox();
+            txtTime = new TextBox();
+            txtClassName = new TextBox();
+            lblRoom = new Label();
+            lblPrice = new Label();
+            lblInstructor = new Label();
+            lblTime = new Label();
+            lblClassName = new Label();
+            btnConfirm = new Button();
+            menuStrip1 = new MenuStrip();
+            backToolStripMenuItem = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)dgvCreateBooking).BeginInit();
+            grpCreateBooking.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // lblSelectClass
             // 
-            this.lblSelectClass.AutoSize = true;
-            this.lblSelectClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectClass.Location = new System.Drawing.Point(57, 42);
-            this.lblSelectClass.Name = "lblSelectClass";
-            this.lblSelectClass.Size = new System.Drawing.Size(147, 29);
-            this.lblSelectClass.TabIndex = 1;
-            this.lblSelectClass.Text = "Select Class";
+            lblSelectClass.AutoSize = true;
+            lblSelectClass.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSelectClass.Location = new Point(57, 52);
+            lblSelectClass.Name = "lblSelectClass";
+            lblSelectClass.Size = new Size(147, 29);
+            lblSelectClass.TabIndex = 1;
+            lblSelectClass.Text = "Select Class";
             // 
             // dgvCreateBooking
             // 
-            this.dgvCreateBooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCreateBooking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmClassID,
-            this.clmClassName,
-            this.clmInstructorName,
-            this.clmDate,
-            this.clmTime});
-            this.dgvCreateBooking.Location = new System.Drawing.Point(223, 102);
-            this.dgvCreateBooking.Name = "dgvCreateBooking";
-            this.dgvCreateBooking.RowHeadersWidth = 51;
-            this.dgvCreateBooking.RowTemplate.Height = 24;
-            this.dgvCreateBooking.Size = new System.Drawing.Size(677, 167);
-            this.dgvCreateBooking.TabIndex = 2;
-            this.dgvCreateBooking.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCreateBooking_CellClick);
-            this.dgvCreateBooking.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCreateBooking_CellClick);
-            // 
-            // txtSelectClass
-            // 
-            this.txtSelectClass.Location = new System.Drawing.Point(282, 49);
-            this.txtSelectClass.Name = "txtSelectClass";
-            this.txtSelectClass.Size = new System.Drawing.Size(191, 22);
-            this.txtSelectClass.TabIndex = 3;
-            this.txtSelectClass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSelectClass_KeyDown);
-            this.txtSelectClass.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSelectClass_KeyUp);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(597, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblBalance
-            // 
-            this.lblBalance.AutoSize = true;
-            this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(597, 42);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(100, 29);
-            this.lblBalance.TabIndex = 5;
-            this.lblBalance.Text = "Balance";
-            // 
-            // txtBalance
-            // 
-            this.txtBalance.Location = new System.Drawing.Point(785, 49);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(256, 22);
-            this.txtBalance.TabIndex = 6;
-            // 
-            // grpCreateBooking
-            // 
-            this.grpCreateBooking.Controls.Add(this.txtDate);
-            this.grpCreateBooking.Controls.Add(this.lblDate);
-            this.grpCreateBooking.Controls.Add(this.txtRoom);
-            this.grpCreateBooking.Controls.Add(this.txtPrice);
-            this.grpCreateBooking.Controls.Add(this.txtInstructor);
-            this.grpCreateBooking.Controls.Add(this.txtTime);
-            this.grpCreateBooking.Controls.Add(this.txtClassName);
-            this.grpCreateBooking.Controls.Add(this.lblRoom);
-            this.grpCreateBooking.Controls.Add(this.lblPrice);
-            this.grpCreateBooking.Controls.Add(this.lblInstructor);
-            this.grpCreateBooking.Controls.Add(this.lblTime);
-            this.grpCreateBooking.Controls.Add(this.lblClassName);
-            this.grpCreateBooking.Location = new System.Drawing.Point(73, 275);
-            this.grpCreateBooking.Name = "grpCreateBooking";
-            this.grpCreateBooking.Size = new System.Drawing.Size(968, 290);
-            this.grpCreateBooking.TabIndex = 7;
-            this.grpCreateBooking.TabStop = false;
-            this.grpCreateBooking.Text = "Booking Details";
-            this.grpCreateBooking.Enter += new System.EventHandler(this.grpCreateBooking_Enter);
-            // 
-            // lblRoom
-            // 
-            this.lblRoom.AutoSize = true;
-            this.lblRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoom.Location = new System.Drawing.Point(513, 218);
-            this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(78, 29);
-            this.lblRoom.TabIndex = 16;
-            this.lblRoom.Text = "Room";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(513, 48);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(69, 29);
-            this.lblPrice.TabIndex = 14;
-            this.lblPrice.Text = "Price";
-            // 
-            // lblInstructor
-            // 
-            this.lblInstructor.AutoSize = true;
-            this.lblInstructor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructor.Location = new System.Drawing.Point(31, 218);
-            this.lblInstructor.Name = "lblInstructor";
-            this.lblInstructor.Size = new System.Drawing.Size(111, 29);
-            this.lblInstructor.TabIndex = 12;
-            this.lblInstructor.Text = "Instructor";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(513, 129);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(69, 29);
-            this.lblTime.TabIndex = 10;
-            this.lblTime.Text = "Time";
-            // 
-            // lblClassName
-            // 
-            this.lblClassName.AutoSize = true;
-            this.lblClassName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassName.Location = new System.Drawing.Point(31, 48);
-            this.lblClassName.Name = "lblClassName";
-            this.lblClassName.Size = new System.Drawing.Size(180, 36);
-            this.lblClassName.TabIndex = 8;
-            this.lblClassName.Text = "Class Name";
-            // 
-            // txtClassName
-            // 
-            this.txtClassName.Location = new System.Drawing.Point(228, 55);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(200, 22);
-            this.txtClassName.TabIndex = 17;
-            // 
-            // txtTime
-            // 
-            this.txtTime.Location = new System.Drawing.Point(659, 136);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(200, 22);
-            this.txtTime.TabIndex = 18;
-            // 
-            // txtInstructor
-            // 
-            this.txtInstructor.Location = new System.Drawing.Point(228, 225);
-            this.txtInstructor.Name = "txtInstructor";
-            this.txtInstructor.Size = new System.Drawing.Size(200, 22);
-            this.txtInstructor.TabIndex = 19;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(659, 55);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(200, 22);
-            this.txtPrice.TabIndex = 20;
-            // 
-            // txtRoom
-            // 
-            this.txtRoom.Location = new System.Drawing.Point(659, 222);
-            this.txtRoom.Name = "txtRoom";
-            this.txtRoom.Size = new System.Drawing.Size(200, 22);
-            this.txtRoom.TabIndex = 21;
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(31, 129);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(79, 36);
-            this.lblDate.TabIndex = 22;
-            this.lblDate.Text = "Date";
-            // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(228, 136);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(200, 22);
-            this.txtDate.TabIndex = 23;
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Location = new System.Drawing.Point(414, 597);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(204, 47);
-            this.btnConfirm.TabIndex = 8;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            dgvCreateBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCreateBooking.Columns.AddRange(new DataGridViewColumn[] { clmClassID, clmClassName, clmInstructorName, clmDate, clmTime });
+            dgvCreateBooking.Location = new Point(223, 128);
+            dgvCreateBooking.Margin = new Padding(3, 4, 3, 4);
+            dgvCreateBooking.Name = "dgvCreateBooking";
+            dgvCreateBooking.RowHeadersWidth = 51;
+            dgvCreateBooking.RowTemplate.Height = 24;
+            dgvCreateBooking.Size = new Size(677, 209);
+            dgvCreateBooking.TabIndex = 2;
+            dgvCreateBooking.CellClick += dgvCreateBooking_CellClick;
+            dgvCreateBooking.CellContentClick += dgvCreateBooking_CellClick;
             // 
             // clmClassID
             // 
-            this.clmClassID.HeaderText = "Class ID";
-            this.clmClassID.MinimumWidth = 6;
-            this.clmClassID.Name = "clmClassID";
-            this.clmClassID.Width = 125;
+            clmClassID.HeaderText = "Class ID";
+            clmClassID.MinimumWidth = 6;
+            clmClassID.Name = "clmClassID";
+            clmClassID.Width = 125;
             // 
             // clmClassName
             // 
-            this.clmClassName.HeaderText = "Class Name";
-            this.clmClassName.MinimumWidth = 6;
-            this.clmClassName.Name = "clmClassName";
-            this.clmClassName.Width = 125;
+            clmClassName.HeaderText = "Class Name";
+            clmClassName.MinimumWidth = 6;
+            clmClassName.Name = "clmClassName";
+            clmClassName.Width = 125;
             // 
             // clmInstructorName
             // 
-            this.clmInstructorName.HeaderText = "Instructor Name";
-            this.clmInstructorName.MinimumWidth = 6;
-            this.clmInstructorName.Name = "clmInstructorName";
-            this.clmInstructorName.Width = 125;
+            clmInstructorName.HeaderText = "Instructor Name";
+            clmInstructorName.MinimumWidth = 6;
+            clmInstructorName.Name = "clmInstructorName";
+            clmInstructorName.Width = 125;
             // 
             // clmDate
             // 
-            this.clmDate.HeaderText = "Date";
-            this.clmDate.MinimumWidth = 6;
-            this.clmDate.Name = "clmDate";
-            this.clmDate.Width = 125;
+            clmDate.HeaderText = "Date";
+            clmDate.MinimumWidth = 6;
+            clmDate.Name = "clmDate";
+            clmDate.Width = 125;
             // 
             // clmTime
             // 
-            this.clmTime.HeaderText = "Time";
-            this.clmTime.MinimumWidth = 6;
-            this.clmTime.Name = "clmTime";
-            this.clmTime.Width = 125;
+            clmTime.HeaderText = "Time";
+            clmTime.MinimumWidth = 6;
+            clmTime.Name = "clmTime";
+            clmTime.Width = 125;
+            // 
+            // txtSelectClass
+            // 
+            txtSelectClass.Location = new Point(282, 61);
+            txtSelectClass.Margin = new Padding(3, 4, 3, 4);
+            txtSelectClass.Name = "txtSelectClass";
+            txtSelectClass.Size = new Size(191, 27);
+            txtSelectClass.TabIndex = 3;
+            txtSelectClass.KeyDown += txtSelectClass_KeyDown;
+            txtSelectClass.KeyUp += txtSelectClass_KeyUp;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(597, 52);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 29);
+            label2.TabIndex = 4;
+            label2.Click += label2_Click;
+            // 
+            // lblBalance
+            // 
+            lblBalance.AutoSize = true;
+            lblBalance.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBalance.Location = new Point(597, 52);
+            lblBalance.Name = "lblBalance";
+            lblBalance.Size = new Size(100, 29);
+            lblBalance.TabIndex = 5;
+            lblBalance.Text = "Balance";
+            // 
+            // txtBalance
+            // 
+            txtBalance.Location = new Point(785, 61);
+            txtBalance.Margin = new Padding(3, 4, 3, 4);
+            txtBalance.Name = "txtBalance";
+            txtBalance.Size = new Size(256, 27);
+            txtBalance.TabIndex = 6;
+            // 
+            // grpCreateBooking
+            // 
+            grpCreateBooking.Controls.Add(txtDate);
+            grpCreateBooking.Controls.Add(lblDate);
+            grpCreateBooking.Controls.Add(txtRoom);
+            grpCreateBooking.Controls.Add(txtPrice);
+            grpCreateBooking.Controls.Add(txtInstructor);
+            grpCreateBooking.Controls.Add(txtTime);
+            grpCreateBooking.Controls.Add(txtClassName);
+            grpCreateBooking.Controls.Add(lblRoom);
+            grpCreateBooking.Controls.Add(lblPrice);
+            grpCreateBooking.Controls.Add(lblInstructor);
+            grpCreateBooking.Controls.Add(lblTime);
+            grpCreateBooking.Controls.Add(lblClassName);
+            grpCreateBooking.Location = new Point(73, 344);
+            grpCreateBooking.Margin = new Padding(3, 4, 3, 4);
+            grpCreateBooking.Name = "grpCreateBooking";
+            grpCreateBooking.Padding = new Padding(3, 4, 3, 4);
+            grpCreateBooking.Size = new Size(968, 362);
+            grpCreateBooking.TabIndex = 7;
+            grpCreateBooking.TabStop = false;
+            grpCreateBooking.Text = "Booking Details";
+            grpCreateBooking.Enter += grpCreateBooking_Enter;
+            // 
+            // txtDate
+            // 
+            txtDate.Location = new Point(228, 170);
+            txtDate.Margin = new Padding(3, 4, 3, 4);
+            txtDate.Name = "txtDate";
+            txtDate.Size = new Size(200, 27);
+            txtDate.TabIndex = 23;
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate.Location = new Point(31, 161);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(63, 29);
+            lblDate.TabIndex = 22;
+            lblDate.Text = "Date";
+            // 
+            // txtRoom
+            // 
+            txtRoom.Location = new Point(659, 278);
+            txtRoom.Margin = new Padding(3, 4, 3, 4);
+            txtRoom.Name = "txtRoom";
+            txtRoom.Size = new Size(200, 27);
+            txtRoom.TabIndex = 21;
+            // 
+            // txtPrice
+            // 
+            txtPrice.Location = new Point(659, 69);
+            txtPrice.Margin = new Padding(3, 4, 3, 4);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(200, 27);
+            txtPrice.TabIndex = 20;
+            // 
+            // txtInstructor
+            // 
+            txtInstructor.Location = new Point(228, 281);
+            txtInstructor.Margin = new Padding(3, 4, 3, 4);
+            txtInstructor.Name = "txtInstructor";
+            txtInstructor.Size = new Size(200, 27);
+            txtInstructor.TabIndex = 19;
+            // 
+            // txtTime
+            // 
+            txtTime.Location = new Point(659, 170);
+            txtTime.Margin = new Padding(3, 4, 3, 4);
+            txtTime.Name = "txtTime";
+            txtTime.Size = new Size(200, 27);
+            txtTime.TabIndex = 18;
+            // 
+            // txtClassName
+            // 
+            txtClassName.Location = new Point(228, 69);
+            txtClassName.Margin = new Padding(3, 4, 3, 4);
+            txtClassName.Name = "txtClassName";
+            txtClassName.Size = new Size(200, 27);
+            txtClassName.TabIndex = 17;
+            // 
+            // lblRoom
+            // 
+            lblRoom.AutoSize = true;
+            lblRoom.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRoom.Location = new Point(513, 272);
+            lblRoom.Name = "lblRoom";
+            lblRoom.Size = new Size(78, 29);
+            lblRoom.TabIndex = 16;
+            lblRoom.Text = "Room";
+            // 
+            // lblPrice
+            // 
+            lblPrice.AutoSize = true;
+            lblPrice.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPrice.Location = new Point(513, 60);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(69, 29);
+            lblPrice.TabIndex = 14;
+            lblPrice.Text = "Price";
+            // 
+            // lblInstructor
+            // 
+            lblInstructor.AutoSize = true;
+            lblInstructor.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInstructor.Location = new Point(31, 272);
+            lblInstructor.Name = "lblInstructor";
+            lblInstructor.Size = new Size(111, 29);
+            lblInstructor.TabIndex = 12;
+            lblInstructor.Text = "Instructor";
+            // 
+            // lblTime
+            // 
+            lblTime.AutoSize = true;
+            lblTime.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTime.Location = new Point(513, 161);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(69, 29);
+            lblTime.TabIndex = 10;
+            lblTime.Text = "Time";
+            // 
+            // lblClassName
+            // 
+            lblClassName.AutoSize = true;
+            lblClassName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblClassName.Location = new Point(31, 60);
+            lblClassName.Name = "lblClassName";
+            lblClassName.Size = new Size(144, 29);
+            lblClassName.TabIndex = 8;
+            lblClassName.Text = "Class Name";
+            // 
+            // btnConfirm
+            // 
+            btnConfirm.Location = new Point(414, 746);
+            btnConfirm.Margin = new Padding(3, 4, 3, 4);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(204, 59);
+            btnConfirm.TabIndex = 8;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1118, 28);
+            menuStrip1.TabIndex = 9;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // backToolStripMenuItem
+            // 
+            backToolStripMenuItem.Name = "backToolStripMenuItem";
+            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Text = "Back";
+            backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
             // frmCreateBooking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 678);
-            this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.grpCreateBooking);
-            this.Controls.Add(this.txtBalance);
-            this.Controls.Add(this.lblBalance);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSelectClass);
-            this.Controls.Add(this.dgvCreateBooking);
-            this.Controls.Add(this.lblSelectClass);
-            this.Name = "frmCreateBooking";
-            this.Text = "frmCreateBooking";
-            this.Load += new System.EventHandler(this.frmCreateBooking_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCreateBooking)).EndInit();
-            this.grpCreateBooking.ResumeLayout(false);
-            this.grpCreateBooking.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1118, 848);
+            Controls.Add(btnConfirm);
+            Controls.Add(grpCreateBooking);
+            Controls.Add(txtBalance);
+            Controls.Add(lblBalance);
+            Controls.Add(label2);
+            Controls.Add(txtSelectClass);
+            Controls.Add(dgvCreateBooking);
+            Controls.Add(lblSelectClass);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmCreateBooking";
+            Text = "frmCreateBooking";
+            Load += frmCreateBooking_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvCreateBooking).EndInit();
+            grpCreateBooking.ResumeLayout(false);
+            grpCreateBooking.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -341,5 +373,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmInstructorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTime;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem backToolStripMenuItem;
     }
 }

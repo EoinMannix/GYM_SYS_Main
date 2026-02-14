@@ -24,7 +24,7 @@ namespace GYMSYS
         private void frmAddFunds_Load(object sender, EventArgs e)
         {
 
-            
+
 
         }
 
@@ -34,7 +34,7 @@ namespace GYMSYS
             decimal amountToAdd = 0;
 
             if (radioButton10.Checked)
-                            {
+            {
                 amountToAdd = 10;
             }
             else if (radioButton20.Checked)
@@ -63,6 +63,11 @@ namespace GYMSYS
 
             MessageBox.Show("Successfully added €" + amountToAdd.ToString("0.00") + " to your balance.");
 
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

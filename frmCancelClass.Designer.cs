@@ -28,286 +28,317 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblSelectCancel = new System.Windows.Forms.Label();
-            this.txtSelcetCancel = new System.Windows.Forms.TextBox();
-            this.dgvCancelClass = new System.Windows.Forms.DataGridView();
-            this.lblClassName = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.grpCancelDetails = new System.Windows.Forms.GroupBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.txtInstructor = new System.Windows.Forms.TextBox();
-            this.txtClassName = new System.Windows.Forms.TextBox();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblInstructor = new System.Windows.Forms.Label();
-            this.clmClassID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmInstructorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblRoom = new System.Windows.Forms.Label();
-            this.txtRoom = new System.Windows.Forms.TextBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCancelClass)).BeginInit();
-            this.grpCancelDetails.SuspendLayout();
-            this.SuspendLayout();
+            label1 = new Label();
+            lblSelectCancel = new Label();
+            txtSelcetCancel = new TextBox();
+            dgvCancelClass = new DataGridView();
+            clmClassID = new DataGridViewTextBoxColumn();
+            clmClassName = new DataGridViewTextBoxColumn();
+            clmInstructorName = new DataGridViewTextBoxColumn();
+            clmDate = new DataGridViewTextBoxColumn();
+            clmTime = new DataGridViewTextBoxColumn();
+            lblClassName = new Label();
+            label4 = new Label();
+            grpCancelDetails = new GroupBox();
+            txtRoom = new TextBox();
+            lblRoom = new Label();
+            txtPrice = new TextBox();
+            txtTime = new TextBox();
+            lblTime = new Label();
+            lblPrice = new Label();
+            label7 = new Label();
+            txtDate = new TextBox();
+            txtInstructor = new TextBox();
+            txtClassName = new TextBox();
+            lblDate = new Label();
+            lblInstructor = new Label();
+            btnConfirm = new Button();
+            menuStrip1 = new MenuStrip();
+            backToolStripMenuItem = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)dgvCancelClass).BeginInit();
+            grpCancelDetails.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 16);
-            this.label1.TabIndex = 0;
+            label1.AutoSize = true;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 0;
             // 
             // lblSelectCancel
             // 
-            this.lblSelectCancel.AutoSize = true;
-            this.lblSelectCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectCancel.Location = new System.Drawing.Point(259, 63);
-            this.lblSelectCancel.Name = "lblSelectCancel";
-            this.lblSelectCancel.Size = new System.Drawing.Size(244, 29);
-            this.lblSelectCancel.TabIndex = 1;
-            this.lblSelectCancel.Text = "Select class to cancel";
+            lblSelectCancel.AutoSize = true;
+            lblSelectCancel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSelectCancel.Location = new Point(259, 79);
+            lblSelectCancel.Name = "lblSelectCancel";
+            lblSelectCancel.Size = new Size(244, 29);
+            lblSelectCancel.TabIndex = 1;
+            lblSelectCancel.Text = "Select class to cancel";
             // 
             // txtSelcetCancel
             // 
-            this.txtSelcetCancel.Location = new System.Drawing.Point(581, 70);
-            this.txtSelcetCancel.Name = "txtSelcetCancel";
-            this.txtSelcetCancel.Size = new System.Drawing.Size(218, 22);
-            this.txtSelcetCancel.TabIndex = 2;
+            txtSelcetCancel.Location = new Point(581, 88);
+            txtSelcetCancel.Margin = new Padding(3, 4, 3, 4);
+            txtSelcetCancel.Name = "txtSelcetCancel";
+            txtSelcetCancel.Size = new Size(218, 27);
+            txtSelcetCancel.TabIndex = 2;
             // 
             // dgvCancelClass
             // 
-            this.dgvCancelClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCancelClass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmClassID,
-            this.clmClassName,
-            this.clmInstructorName,
-            this.clmDate,
-            this.clmTime});
-            this.dgvCancelClass.Location = new System.Drawing.Point(254, 146);
-            this.dgvCancelClass.Name = "dgvCancelClass";
-            this.dgvCancelClass.RowHeadersWidth = 51;
-            this.dgvCancelClass.RowTemplate.Height = 24;
-            this.dgvCancelClass.Size = new System.Drawing.Size(659, 192);
-            this.dgvCancelClass.TabIndex = 3;
-            this.dgvCancelClass.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCancelClass_CellClick);
-            this.dgvCancelClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCancelClass_CellClick);
-            // 
-            // lblClassName
-            // 
-            this.lblClassName.AutoSize = true;
-            this.lblClassName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassName.Location = new System.Drawing.Point(31, 41);
-            this.lblClassName.Name = "lblClassName";
-            this.lblClassName.Size = new System.Drawing.Size(144, 29);
-            this.lblClassName.TabIndex = 4;
-            this.lblClassName.Text = "Class Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(188, 371);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
-            // 
-            // grpCancelDetails
-            // 
-            this.grpCancelDetails.Controls.Add(this.txtRoom);
-            this.grpCancelDetails.Controls.Add(this.lblRoom);
-            this.grpCancelDetails.Controls.Add(this.txtPrice);
-            this.grpCancelDetails.Controls.Add(this.txtTime);
-            this.grpCancelDetails.Controls.Add(this.lblTime);
-            this.grpCancelDetails.Controls.Add(this.lblPrice);
-            this.grpCancelDetails.Controls.Add(this.label7);
-            this.grpCancelDetails.Controls.Add(this.txtDate);
-            this.grpCancelDetails.Controls.Add(this.txtInstructor);
-            this.grpCancelDetails.Controls.Add(this.txtClassName);
-            this.grpCancelDetails.Controls.Add(this.lblDate);
-            this.grpCancelDetails.Controls.Add(this.lblInstructor);
-            this.grpCancelDetails.Controls.Add(this.lblClassName);
-            this.grpCancelDetails.Location = new System.Drawing.Point(141, 371);
-            this.grpCancelDetails.Name = "grpCancelDetails";
-            this.grpCancelDetails.Size = new System.Drawing.Size(839, 297);
-            this.grpCancelDetails.TabIndex = 6;
-            this.grpCancelDetails.TabStop = false;
-            this.grpCancelDetails.Text = "Class Details";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(558, 48);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(161, 22);
-            this.txtPrice.TabIndex = 14;
-            // 
-            // txtTime
-            // 
-            this.txtTime.Location = new System.Drawing.Point(558, 120);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(161, 22);
-            this.txtTime.TabIndex = 13;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(435, 113);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(69, 29);
-            this.lblTime.TabIndex = 12;
-            this.lblTime.Text = "Time";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(435, 41);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(69, 29);
-            this.lblPrice.TabIndex = 11;
-            this.lblPrice.Text = "Price";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(386, 41);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 29);
-            this.label7.TabIndex = 10;
-            // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(201, 120);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(161, 22);
-            this.txtDate.TabIndex = 9;
-            // 
-            // txtInstructor
-            // 
-            this.txtInstructor.Location = new System.Drawing.Point(199, 190);
-            this.txtInstructor.Name = "txtInstructor";
-            this.txtInstructor.Size = new System.Drawing.Size(161, 22);
-            this.txtInstructor.TabIndex = 8;
-            // 
-            // txtClassName
-            // 
-            this.txtClassName.Location = new System.Drawing.Point(199, 48);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(161, 22);
-            this.txtClassName.TabIndex = 7;
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(31, 113);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(63, 29);
-            this.lblDate.TabIndex = 6;
-            this.lblDate.Text = "Date";
-            // 
-            // lblInstructor
-            // 
-            this.lblInstructor.AutoSize = true;
-            this.lblInstructor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructor.Location = new System.Drawing.Point(31, 190);
-            this.lblInstructor.Name = "lblInstructor";
-            this.lblInstructor.Size = new System.Drawing.Size(111, 29);
-            this.lblInstructor.TabIndex = 5;
-            this.lblInstructor.Text = "Instructor";
+            dgvCancelClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCancelClass.Columns.AddRange(new DataGridViewColumn[] { clmClassID, clmClassName, clmInstructorName, clmDate, clmTime });
+            dgvCancelClass.Location = new Point(254, 182);
+            dgvCancelClass.Margin = new Padding(3, 4, 3, 4);
+            dgvCancelClass.Name = "dgvCancelClass";
+            dgvCancelClass.RowHeadersWidth = 51;
+            dgvCancelClass.RowTemplate.Height = 24;
+            dgvCancelClass.Size = new Size(659, 240);
+            dgvCancelClass.TabIndex = 3;
+            dgvCancelClass.CellClick += dgvCancelClass_CellClick;
+            dgvCancelClass.CellContentClick += dgvCancelClass_CellClick;
             // 
             // clmClassID
             // 
-            this.clmClassID.HeaderText = "Class ID";
-            this.clmClassID.MinimumWidth = 6;
-            this.clmClassID.Name = "clmClassID";
-            this.clmClassID.Width = 125;
+            clmClassID.HeaderText = "Class ID";
+            clmClassID.MinimumWidth = 6;
+            clmClassID.Name = "clmClassID";
+            clmClassID.Width = 125;
             // 
             // clmClassName
             // 
-            this.clmClassName.HeaderText = "Class Name";
-            this.clmClassName.MinimumWidth = 6;
-            this.clmClassName.Name = "clmClassName";
-            this.clmClassName.Width = 125;
+            clmClassName.HeaderText = "Class Name";
+            clmClassName.MinimumWidth = 6;
+            clmClassName.Name = "clmClassName";
+            clmClassName.Width = 125;
             // 
             // clmInstructorName
             // 
-            this.clmInstructorName.HeaderText = "Instructor Name";
-            this.clmInstructorName.MinimumWidth = 6;
-            this.clmInstructorName.Name = "clmInstructorName";
-            this.clmInstructorName.Width = 125;
+            clmInstructorName.HeaderText = "Instructor Name";
+            clmInstructorName.MinimumWidth = 6;
+            clmInstructorName.Name = "clmInstructorName";
+            clmInstructorName.Width = 125;
             // 
             // clmDate
             // 
-            this.clmDate.HeaderText = "Date";
-            this.clmDate.MinimumWidth = 6;
-            this.clmDate.Name = "clmDate";
-            this.clmDate.Width = 125;
+            clmDate.HeaderText = "Date";
+            clmDate.MinimumWidth = 6;
+            clmDate.Name = "clmDate";
+            clmDate.Width = 125;
             // 
             // clmTime
             // 
-            this.clmTime.HeaderText = "Time";
-            this.clmTime.MinimumWidth = 6;
-            this.clmTime.Name = "clmTime";
-            this.clmTime.Width = 125;
+            clmTime.HeaderText = "Time";
+            clmTime.MinimumWidth = 6;
+            clmTime.Name = "clmTime";
+            clmTime.Width = 125;
             // 
-            // lblRoom
+            // lblClassName
             // 
-            this.lblRoom.AutoSize = true;
-            this.lblRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoom.Location = new System.Drawing.Point(435, 183);
-            this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(98, 36);
-            this.lblRoom.TabIndex = 15;
-            this.lblRoom.Text = "Room";
+            lblClassName.AutoSize = true;
+            lblClassName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblClassName.Location = new Point(31, 51);
+            lblClassName.Name = "lblClassName";
+            lblClassName.Size = new Size(144, 29);
+            lblClassName.TabIndex = 4;
+            lblClassName.Text = "Class Name";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(188, 464);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 20);
+            label4.TabIndex = 5;
+            label4.Text = "label4";
+            // 
+            // grpCancelDetails
+            // 
+            grpCancelDetails.Controls.Add(txtRoom);
+            grpCancelDetails.Controls.Add(lblRoom);
+            grpCancelDetails.Controls.Add(txtPrice);
+            grpCancelDetails.Controls.Add(txtTime);
+            grpCancelDetails.Controls.Add(lblTime);
+            grpCancelDetails.Controls.Add(lblPrice);
+            grpCancelDetails.Controls.Add(label7);
+            grpCancelDetails.Controls.Add(txtDate);
+            grpCancelDetails.Controls.Add(txtInstructor);
+            grpCancelDetails.Controls.Add(txtClassName);
+            grpCancelDetails.Controls.Add(lblDate);
+            grpCancelDetails.Controls.Add(lblInstructor);
+            grpCancelDetails.Controls.Add(lblClassName);
+            grpCancelDetails.Location = new Point(141, 464);
+            grpCancelDetails.Margin = new Padding(3, 4, 3, 4);
+            grpCancelDetails.Name = "grpCancelDetails";
+            grpCancelDetails.Padding = new Padding(3, 4, 3, 4);
+            grpCancelDetails.Size = new Size(839, 371);
+            grpCancelDetails.TabIndex = 6;
+            grpCancelDetails.TabStop = false;
+            grpCancelDetails.Text = "Class Details";
             // 
             // txtRoom
             // 
-            this.txtRoom.Location = new System.Drawing.Point(558, 190);
-            this.txtRoom.Name = "txtRoom";
-            this.txtRoom.Size = new System.Drawing.Size(161, 22);
-            this.txtRoom.TabIndex = 16;
+            txtRoom.Location = new Point(558, 238);
+            txtRoom.Margin = new Padding(3, 4, 3, 4);
+            txtRoom.Name = "txtRoom";
+            txtRoom.Size = new Size(161, 27);
+            txtRoom.TabIndex = 16;
+            // 
+            // lblRoom
+            // 
+            lblRoom.AutoSize = true;
+            lblRoom.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRoom.Location = new Point(435, 229);
+            lblRoom.Name = "lblRoom";
+            lblRoom.Size = new Size(78, 29);
+            lblRoom.TabIndex = 15;
+            lblRoom.Text = "Room";
+            // 
+            // txtPrice
+            // 
+            txtPrice.Location = new Point(558, 60);
+            txtPrice.Margin = new Padding(3, 4, 3, 4);
+            txtPrice.Name = "txtPrice";
+            txtPrice.ReadOnly = true;
+            txtPrice.Size = new Size(161, 27);
+            txtPrice.TabIndex = 14;
+            // 
+            // txtTime
+            // 
+            txtTime.Location = new Point(558, 150);
+            txtTime.Margin = new Padding(3, 4, 3, 4);
+            txtTime.Name = "txtTime";
+            txtTime.Size = new Size(161, 27);
+            txtTime.TabIndex = 13;
+            // 
+            // lblTime
+            // 
+            lblTime.AutoSize = true;
+            lblTime.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTime.Location = new Point(435, 141);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(69, 29);
+            lblTime.TabIndex = 12;
+            lblTime.Text = "Time";
+            // 
+            // lblPrice
+            // 
+            lblPrice.AutoSize = true;
+            lblPrice.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPrice.Location = new Point(435, 51);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(69, 29);
+            lblPrice.TabIndex = 11;
+            lblPrice.Text = "Price";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(386, 51);
+            label7.Name = "label7";
+            label7.Size = new Size(0, 29);
+            label7.TabIndex = 10;
+            // 
+            // txtDate
+            // 
+            txtDate.Location = new Point(201, 150);
+            txtDate.Margin = new Padding(3, 4, 3, 4);
+            txtDate.Name = "txtDate";
+            txtDate.Size = new Size(161, 27);
+            txtDate.TabIndex = 9;
+            // 
+            // txtInstructor
+            // 
+            txtInstructor.Location = new Point(199, 238);
+            txtInstructor.Margin = new Padding(3, 4, 3, 4);
+            txtInstructor.Name = "txtInstructor";
+            txtInstructor.Size = new Size(161, 27);
+            txtInstructor.TabIndex = 8;
+            // 
+            // txtClassName
+            // 
+            txtClassName.Location = new Point(199, 60);
+            txtClassName.Margin = new Padding(3, 4, 3, 4);
+            txtClassName.Name = "txtClassName";
+            txtClassName.Size = new Size(161, 27);
+            txtClassName.TabIndex = 7;
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate.Location = new Point(31, 141);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(63, 29);
+            lblDate.TabIndex = 6;
+            lblDate.Text = "Date";
+            // 
+            // lblInstructor
+            // 
+            lblInstructor.AutoSize = true;
+            lblInstructor.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInstructor.Location = new Point(31, 238);
+            lblInstructor.Name = "lblInstructor";
+            lblInstructor.Size = new Size(111, 29);
+            lblInstructor.TabIndex = 5;
+            lblInstructor.Text = "Instructor";
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(452, 694);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(204, 47);
-            this.btnConfirm.TabIndex = 7;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click_1);
+            btnConfirm.Location = new Point(452, 868);
+            btnConfirm.Margin = new Padding(3, 4, 3, 4);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(204, 59);
+            btnConfirm.TabIndex = 7;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click_1;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1191, 28);
+            menuStrip1.TabIndex = 8;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // backToolStripMenuItem
+            // 
+            backToolStripMenuItem.Name = "backToolStripMenuItem";
+            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Text = "back";
+            backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
             // frmCancelClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1191, 776);
-            this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.grpCancelDetails);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dgvCancelClass);
-            this.Controls.Add(this.txtSelcetCancel);
-            this.Controls.Add(this.lblSelectCancel);
-            this.Controls.Add(this.label1);
-            this.Name = "frmCancelClass";
-            this.Text = "frmCancelClass";
-            this.Load += new System.EventHandler(this.frmCancelClass_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCancelClass)).EndInit();
-            this.grpCancelDetails.ResumeLayout(false);
-            this.grpCancelDetails.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1191, 970);
+            Controls.Add(btnConfirm);
+            Controls.Add(grpCancelDetails);
+            Controls.Add(label4);
+            Controls.Add(dgvCancelClass);
+            Controls.Add(txtSelcetCancel);
+            Controls.Add(lblSelectCancel);
+            Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmCancelClass";
+            Text = "frmCancelClass";
+            Load += frmCancelClass_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvCancelClass).EndInit();
+            grpCancelDetails.ResumeLayout(false);
+            grpCancelDetails.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -338,5 +369,7 @@
         private System.Windows.Forms.TextBox txtRoom;
         private System.Windows.Forms.Label lblRoom;
         private System.Windows.Forms.Button btnConfirm;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem backToolStripMenuItem;
     }
 }

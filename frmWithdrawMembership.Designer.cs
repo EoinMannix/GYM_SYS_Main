@@ -72,6 +72,7 @@
             backToolStripMenuItem.Name = "backToolStripMenuItem";
             backToolStripMenuItem.Size = new Size(54, 24);
             backToolStripMenuItem.Text = "Back";
+            backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
             // lblEnterMembersName
             // 

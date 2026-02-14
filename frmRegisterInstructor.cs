@@ -102,11 +102,7 @@ namespace GYMSYS
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            if (parent != null)
-            {
-                InitializeComponent();
-                parent.Visible = true;
-            }
+         
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

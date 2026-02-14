@@ -18,7 +18,7 @@ namespace GYMSYS
             InitializeComponent();
 
             //Sets the selection mode of the DataGridView to select full rows. https://stackoverflow.com/questions/13672693/how-do-i-select-a-complete-datagridview-row-when-the-user-clicks-a-cell-of-that
-            
+
             dvgDeRegisterInstructor.Columns.Clear();
 
             dvgDeRegisterInstructor.Columns.Add("InstructorID", "Instructor ID");
@@ -107,7 +107,7 @@ namespace GYMSYS
         {
             if (e.RowIndex >= 0)
             {
-                
+
                 FillFieldsFromRow(e.RowIndex);
 
             }
@@ -168,7 +168,11 @@ namespace GYMSYS
 
         }
 
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
-    
+
 }

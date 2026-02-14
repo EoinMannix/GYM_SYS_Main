@@ -45,17 +45,17 @@ namespace GYMSYS
             {
                 DataGridViewRow row = dgvScheduleClass.Rows[e.RowIndex]; // gets the clicked row 
 
-                txtClassName.Text = row.Cells[1].Value.ToString(); 
+                txtClassName.Text = row.Cells[1].Value.ToString();
 
-                txtInstructorName.Text = row.Cells[2].Value.ToString(); 
+                txtInstructorName.Text = row.Cells[2].Value.ToString();
 
-                txtDate.Text = row.Cells[3].Value.ToString(); 
+                txtDate.Text = row.Cells[3].Value.ToString();
 
                 txtTime.Text = row.Cells[4].Value.ToString();
 
                 txtRoom.Text = row.Cells[0].Value.ToString();
 
-                txtPrice.Text = "15.00"; 
+                txtPrice.Text = "15.00";
             }
         }
 
@@ -82,7 +82,7 @@ namespace GYMSYS
 
         private void txtSelectClass_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) 
+            if (e.KeyCode == Keys.Enter)
             {
                 String searchText = txtSelectClass.Text.ToLower();
                 bool found = false;
@@ -90,7 +90,7 @@ namespace GYMSYS
                 for (int i = 0; i < dgvScheduleClass.Rows.Count; i++)
                 {
                     if (dgvScheduleClass.Rows[i].Cells[1].Value != null)
-                                           {
+                    {
                         String className = dgvScheduleClass.Rows[i].Cells[1].Value.ToString().ToLower();
 
                         if (className.Contains(searchText))
@@ -113,6 +113,11 @@ namespace GYMSYS
         private void frmScheduleClass_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -66,12 +66,12 @@ namespace GYMSYS
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void frmeditInstructor_Load(object sender, EventArgs e)
         {
-
+            LoadInstructors();
         }
 
         private void dgvEditInstructors_CellClick(object sender, DataGridViewCellEventArgs e)

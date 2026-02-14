@@ -28,313 +28,320 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgvScheduleClass = new System.Windows.Forms.DataGridView();
-            this.clmClassID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmInstructorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtInstructorName = new System.Windows.Forms.TextBox();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.txtRoom = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.txtClassName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtSelectClass = new System.Windows.Forms.TextBox();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleClass)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            label1 = new Label();
+            menuStrip1 = new MenuStrip();
+            backToolStripMenuItem = new ToolStripMenuItem();
+            dgvScheduleClass = new DataGridView();
+            clmClassID = new DataGridViewTextBoxColumn();
+            clmClassName = new DataGridViewTextBoxColumn();
+            clmInstructorName = new DataGridViewTextBoxColumn();
+            clmDate = new DataGridViewTextBoxColumn();
+            clmTime = new DataGridViewTextBoxColumn();
+            groupBox1 = new GroupBox();
+            txtInstructorName = new TextBox();
+            txtTime = new TextBox();
+            txtRoom = new TextBox();
+            label10 = new Label();
+            txtPrice = new TextBox();
+            txtDate = new TextBox();
+            txtClassName = new TextBox();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            btnConfirm = new Button();
+            label9 = new Label();
+            txtSelectClass = new TextBox();
+            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvScheduleClass).BeginInit();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(253, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Select Class";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(253, 55);
+            label1.Name = "label1";
+            label1.Size = new Size(147, 29);
+            label1.TabIndex = 0;
+            label1.Text = "Select Class";
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1303, 38);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1042, 28);
+            menuStrip1.TabIndex = 1;
+            menuStrip1.Text = "menuStrip1";
             // 
             // backToolStripMenuItem
             // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.backToolStripMenuItem.Text = "Back";
+            backToolStripMenuItem.Name = "backToolStripMenuItem";
+            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Text = "Back";
+            backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
             // dgvScheduleClass
             // 
-            this.dgvScheduleClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvScheduleClass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmClassID,
-            this.clmClassName,
-            this.clmInstructorName,
-            this.clmDate,
-            this.clmTime});
-            this.dgvScheduleClass.Location = new System.Drawing.Point(165, 102);
-            this.dgvScheduleClass.Name = "dgvScheduleClass";
-            this.dgvScheduleClass.RowHeadersWidth = 51;
-            this.dgvScheduleClass.RowTemplate.Height = 24;
-            this.dgvScheduleClass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvScheduleClass.Size = new System.Drawing.Size(678, 212);
-            this.dgvScheduleClass.TabIndex = 2;
-            this.dgvScheduleClass.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScheduleClass_CellClick);
-            this.dgvScheduleClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            dgvScheduleClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvScheduleClass.Columns.AddRange(new DataGridViewColumn[] { clmClassID, clmClassName, clmInstructorName, clmDate, clmTime });
+            dgvScheduleClass.Location = new Point(165, 128);
+            dgvScheduleClass.Margin = new Padding(3, 4, 3, 4);
+            dgvScheduleClass.Name = "dgvScheduleClass";
+            dgvScheduleClass.RowHeadersWidth = 51;
+            dgvScheduleClass.RowTemplate.Height = 24;
+            dgvScheduleClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvScheduleClass.Size = new Size(678, 265);
+            dgvScheduleClass.TabIndex = 2;
+            dgvScheduleClass.CellClick += dgvScheduleClass_CellClick;
+            dgvScheduleClass.CellContentClick += dataGridView1_CellContentClick;
             // 
             // clmClassID
             // 
-            this.clmClassID.HeaderText = "Class ID";
-            this.clmClassID.MinimumWidth = 6;
-            this.clmClassID.Name = "clmClassID";
-            this.clmClassID.Width = 125;
+            clmClassID.HeaderText = "Class ID";
+            clmClassID.MinimumWidth = 6;
+            clmClassID.Name = "clmClassID";
+            clmClassID.Width = 125;
             // 
             // clmClassName
             // 
-            this.clmClassName.HeaderText = "Class Name";
-            this.clmClassName.MinimumWidth = 6;
-            this.clmClassName.Name = "clmClassName";
-            this.clmClassName.Width = 125;
+            clmClassName.HeaderText = "Class Name";
+            clmClassName.MinimumWidth = 6;
+            clmClassName.Name = "clmClassName";
+            clmClassName.Width = 125;
             // 
             // clmInstructorName
             // 
-            this.clmInstructorName.HeaderText = "Instructor Name";
-            this.clmInstructorName.MinimumWidth = 6;
-            this.clmInstructorName.Name = "clmInstructorName";
-            this.clmInstructorName.Width = 125;
+            clmInstructorName.HeaderText = "Instructor Name";
+            clmInstructorName.MinimumWidth = 6;
+            clmInstructorName.Name = "clmInstructorName";
+            clmInstructorName.Width = 125;
             // 
             // clmDate
             // 
-            this.clmDate.HeaderText = "Date";
-            this.clmDate.MinimumWidth = 6;
-            this.clmDate.Name = "clmDate";
-            this.clmDate.Width = 125;
+            clmDate.HeaderText = "Date";
+            clmDate.MinimumWidth = 6;
+            clmDate.Name = "clmDate";
+            clmDate.Width = 125;
             // 
             // clmTime
             // 
-            this.clmTime.HeaderText = "Time";
-            this.clmTime.MinimumWidth = 6;
-            this.clmTime.Name = "clmTime";
-            this.clmTime.Width = 125;
+            clmTime.HeaderText = "Time";
+            clmTime.MinimumWidth = 6;
+            clmTime.Name = "clmTime";
+            clmTime.Width = 125;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtInstructorName);
-            this.groupBox1.Controls.Add(this.txtTime);
-            this.groupBox1.Controls.Add(this.txtRoom);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Controls.Add(this.txtDate);
-            this.groupBox1.Controls.Add(this.txtClassName);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(113, 349);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(803, 239);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Booking Details";
+            groupBox1.Controls.Add(txtInstructorName);
+            groupBox1.Controls.Add(txtTime);
+            groupBox1.Controls.Add(txtRoom);
+            groupBox1.Controls.Add(label10);
+            groupBox1.Controls.Add(txtPrice);
+            groupBox1.Controls.Add(txtDate);
+            groupBox1.Controls.Add(txtClassName);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Location = new Point(113, 436);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(803, 299);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Booking Details";
             // 
             // txtInstructorName
             // 
-            this.txtInstructorName.Location = new System.Drawing.Point(195, 181);
-            this.txtInstructorName.Name = "txtInstructorName";
-            this.txtInstructorName.Size = new System.Drawing.Size(162, 22);
-            this.txtInstructorName.TabIndex = 20;
+            txtInstructorName.Location = new Point(195, 226);
+            txtInstructorName.Margin = new Padding(3, 4, 3, 4);
+            txtInstructorName.Name = "txtInstructorName";
+            txtInstructorName.Size = new Size(162, 27);
+            txtInstructorName.TabIndex = 20;
             // 
             // txtTime
             // 
-            this.txtTime.Location = new System.Drawing.Point(568, 114);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(162, 22);
-            this.txtTime.TabIndex = 19;
+            txtTime.Location = new Point(568, 142);
+            txtTime.Margin = new Padding(3, 4, 3, 4);
+            txtTime.Name = "txtTime";
+            txtTime.Size = new Size(162, 27);
+            txtTime.TabIndex = 19;
             // 
             // txtRoom
             // 
-            this.txtRoom.Location = new System.Drawing.Point(568, 183);
-            this.txtRoom.Name = "txtRoom";
-            this.txtRoom.Size = new System.Drawing.Size(162, 22);
-            this.txtRoom.TabIndex = 18;
+            txtRoom.Location = new Point(568, 229);
+            txtRoom.Margin = new Padding(3, 4, 3, 4);
+            txtRoom.Name = "txtRoom";
+            txtRoom.Size = new Size(162, 27);
+            txtRoom.TabIndex = 18;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(386, 174);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 29);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Room";
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(386, 218);
+            label10.Name = "label10";
+            label10.Size = new Size(78, 29);
+            label10.TabIndex = 17;
+            label10.Text = "Room";
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(568, 49);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(162, 22);
-            this.txtPrice.TabIndex = 16;
+            txtPrice.Location = new Point(568, 61);
+            txtPrice.Margin = new Padding(3, 4, 3, 4);
+            txtPrice.Name = "txtPrice";
+            txtPrice.ReadOnly = true;
+            txtPrice.Size = new Size(162, 27);
+            txtPrice.TabIndex = 16;
             // 
             // txtDate
             // 
-            this.txtDate.Location = new System.Drawing.Point(195, 114);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(162, 22);
-            this.txtDate.TabIndex = 12;
+            txtDate.Location = new Point(195, 142);
+            txtDate.Margin = new Padding(3, 4, 3, 4);
+            txtDate.Name = "txtDate";
+            txtDate.Size = new Size(162, 27);
+            txtDate.TabIndex = 12;
             // 
             // txtClassName
             // 
-            this.txtClassName.Location = new System.Drawing.Point(195, 49);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(162, 22);
-            this.txtClassName.TabIndex = 11;
+            txtClassName.Location = new Point(195, 61);
+            txtClassName.Margin = new Padding(3, 4, 3, 4);
+            txtClassName.Name = "txtClassName";
+            txtClassName.Size = new Size(162, 27);
+            txtClassName.TabIndex = 11;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(386, 174);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 29);
-            this.label8.TabIndex = 10;
+            label8.AutoSize = true;
+            label8.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(386, 218);
+            label8.Name = "label8";
+            label8.Size = new Size(0, 29);
+            label8.TabIndex = 10;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(386, 107);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 29);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Time";
+            label7.AutoSize = true;
+            label7.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(386, 134);
+            label7.Name = "label7";
+            label7.Size = new Size(69, 29);
+            label7.TabIndex = 9;
+            label7.Text = "Time";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(386, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 29);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Price";
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(386, 52);
+            label6.Name = "label6";
+            label6.Size = new Size(69, 29);
+            label6.TabIndex = 8;
+            label6.Text = "Price";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 174);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 29);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Instructor";
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(17, 218);
+            label5.Name = "label5";
+            label5.Size = new Size(111, 29);
+            label5.TabIndex = 7;
+            label5.Text = "Instructor";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 29);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Date";
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(17, 134);
+            label4.Name = "label4";
+            label4.Size = new Size(63, 29);
+            label4.TabIndex = 6;
+            label4.Text = "Date";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 29);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Class Name";
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(17, 52);
+            label3.Name = "label3";
+            label3.Size = new Size(144, 29);
+            label3.TabIndex = 5;
+            label3.Text = "Class Name";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(644, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 29);
-            this.label2.TabIndex = 4;
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(644, 55);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 29);
+            label2.TabIndex = 4;
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(392, 603);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(204, 47);
-            this.btnConfirm.TabIndex = 5;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.button1_Click);
+            btnConfirm.Location = new Point(392, 754);
+            btnConfirm.Margin = new Padding(3, 4, 3, 4);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(204, 59);
+            btnConfirm.TabIndex = 5;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += button1_Click;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 102);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 16);
-            this.label9.TabIndex = 18;
+            label9.AutoSize = true;
+            label9.Location = new Point(12, 128);
+            label9.Name = "label9";
+            label9.Size = new Size(0, 20);
+            label9.TabIndex = 18;
             // 
             // txtSelectClass
             // 
-            this.txtSelectClass.Location = new System.Drawing.Point(484, 51);
-            this.txtSelectClass.Name = "txtSelectClass";
-            this.txtSelectClass.Size = new System.Drawing.Size(234, 22);
-            this.txtSelectClass.TabIndex = 19;
-            this.txtSelectClass.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            this.txtSelectClass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSelectClass_KeyDown);
+            txtSelectClass.Location = new Point(484, 64);
+            txtSelectClass.Margin = new Padding(3, 4, 3, 4);
+            txtSelectClass.Name = "txtSelectClass";
+            txtSelectClass.Size = new Size(234, 27);
+            txtSelectClass.TabIndex = 19;
+            txtSelectClass.TextChanged += textBox5_TextChanged;
+            txtSelectClass.KeyDown += txtSelectClass_KeyDown;
             // 
             // frmScheduleClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 685);
-            this.Controls.Add(this.txtSelectClass);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvScheduleClass);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmScheduleClass";
-            this.Text = "frmScheduleClass";
-            this.Load += new System.EventHandler(this.frmScheduleClass_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleClass)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1042, 856);
+            Controls.Add(txtSelectClass);
+            Controls.Add(label9);
+            Controls.Add(btnConfirm);
+            Controls.Add(label2);
+            Controls.Add(groupBox1);
+            Controls.Add(dgvScheduleClass);
+            Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmScheduleClass";
+            Text = "frmScheduleClass";
+            Load += frmScheduleClass_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvScheduleClass).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

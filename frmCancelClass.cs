@@ -105,5 +105,10 @@ namespace GYMSYS
                 // User clicked No, do nothing
             }
         }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

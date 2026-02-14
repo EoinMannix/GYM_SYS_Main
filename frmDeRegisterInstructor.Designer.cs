@@ -28,286 +28,291 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblInstructorName = new System.Windows.Forms.Label();
-            this.grpDeRegisterInstructor = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.lsbGender = new System.Windows.Forms.ListBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.txtForename = new System.Windows.Forms.TextBox();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblDOB = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.lblForename = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEnterInstructorName = new System.Windows.Forms.TextBox();
-            this.dvgDeRegisterInstructor = new System.Windows.Forms.DataGridView();
-            this.clmMemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1.SuspendLayout();
-            this.grpDeRegisterInstructor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDeRegisterInstructor)).BeginInit();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            backToolStripMenuItem = new ToolStripMenuItem();
+            lblInstructorName = new Label();
+            grpDeRegisterInstructor = new GroupBox();
+            dateTimePicker = new DateTimePicker();
+            lsbGender = new ListBox();
+            txtPhone = new TextBox();
+            txtEmail = new TextBox();
+            txtSurname = new TextBox();
+            txtForename = new TextBox();
+            lblGender = new Label();
+            lblPhone = new Label();
+            lblEmail = new Label();
+            lblDOB = new Label();
+            lblSurname = new Label();
+            lblForename = new Label();
+            button1 = new Button();
+            label8 = new Label();
+            txtEnterInstructorName = new TextBox();
+            dvgDeRegisterInstructor = new DataGridView();
+            clmMemberID = new DataGridViewTextBoxColumn();
+            clmName = new DataGridViewTextBoxColumn();
+            clmPhone = new DataGridViewTextBoxColumn();
+            clmEmail = new DataGridViewTextBoxColumn();
+            menuStrip1.SuspendLayout();
+            grpDeRegisterInstructor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dvgDeRegisterInstructor).BeginInit();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1065, 30);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1065, 28);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // backToolStripMenuItem
             // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.backToolStripMenuItem.Text = "Back";
+            backToolStripMenuItem.Name = "backToolStripMenuItem";
+            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Text = "Back";
+            backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
             // lblInstructorName
             // 
-            this.lblInstructorName.AutoSize = true;
-            this.lblInstructorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructorName.Location = new System.Drawing.Point(228, 27);
-            this.lblInstructorName.Name = "lblInstructorName";
-            this.lblInstructorName.Size = new System.Drawing.Size(239, 32);
-            this.lblInstructorName.TabIndex = 1;
-            this.lblInstructorName.Text = "Enter Instructor Name";
-            this.lblInstructorName.UseCompatibleTextRendering = true;
+            lblInstructorName.AutoSize = true;
+            lblInstructorName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInstructorName.Location = new Point(228, 34);
+            lblInstructorName.Name = "lblInstructorName";
+            lblInstructorName.Size = new Size(239, 32);
+            lblInstructorName.TabIndex = 1;
+            lblInstructorName.Text = "Enter Instructor Name";
+            lblInstructorName.UseCompatibleTextRendering = true;
             // 
             // grpDeRegisterInstructor
             // 
-            this.grpDeRegisterInstructor.Controls.Add(this.dateTimePicker);
-            this.grpDeRegisterInstructor.Controls.Add(this.lsbGender);
-            this.grpDeRegisterInstructor.Controls.Add(this.txtPhone);
-            this.grpDeRegisterInstructor.Controls.Add(this.txtEmail);
-            this.grpDeRegisterInstructor.Controls.Add(this.txtSurname);
-            this.grpDeRegisterInstructor.Controls.Add(this.txtForename);
-            this.grpDeRegisterInstructor.Controls.Add(this.lblGender);
-            this.grpDeRegisterInstructor.Controls.Add(this.lblPhone);
-            this.grpDeRegisterInstructor.Controls.Add(this.lblEmail);
-            this.grpDeRegisterInstructor.Controls.Add(this.lblDOB);
-            this.grpDeRegisterInstructor.Controls.Add(this.lblSurname);
-            this.grpDeRegisterInstructor.Controls.Add(this.lblForename);
-            this.grpDeRegisterInstructor.Location = new System.Drawing.Point(116, 229);
-            this.grpDeRegisterInstructor.Name = "grpDeRegisterInstructor";
-            this.grpDeRegisterInstructor.Size = new System.Drawing.Size(867, 282);
-            this.grpDeRegisterInstructor.TabIndex = 2;
-            this.grpDeRegisterInstructor.TabStop = false;
-            this.grpDeRegisterInstructor.Text = "De-Register an Instructor";
+            grpDeRegisterInstructor.Controls.Add(dateTimePicker);
+            grpDeRegisterInstructor.Controls.Add(lsbGender);
+            grpDeRegisterInstructor.Controls.Add(txtPhone);
+            grpDeRegisterInstructor.Controls.Add(txtEmail);
+            grpDeRegisterInstructor.Controls.Add(txtSurname);
+            grpDeRegisterInstructor.Controls.Add(txtForename);
+            grpDeRegisterInstructor.Controls.Add(lblGender);
+            grpDeRegisterInstructor.Controls.Add(lblPhone);
+            grpDeRegisterInstructor.Controls.Add(lblEmail);
+            grpDeRegisterInstructor.Controls.Add(lblDOB);
+            grpDeRegisterInstructor.Controls.Add(lblSurname);
+            grpDeRegisterInstructor.Controls.Add(lblForename);
+            grpDeRegisterInstructor.Location = new Point(116, 286);
+            grpDeRegisterInstructor.Margin = new Padding(3, 4, 3, 4);
+            grpDeRegisterInstructor.Name = "grpDeRegisterInstructor";
+            grpDeRegisterInstructor.Padding = new Padding(3, 4, 3, 4);
+            grpDeRegisterInstructor.Size = new Size(867, 352);
+            grpDeRegisterInstructor.TabIndex = 2;
+            grpDeRegisterInstructor.TabStop = false;
+            grpDeRegisterInstructor.Text = "De-Register an Instructor";
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(235, 211);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(168, 22);
-            this.dateTimePicker.TabIndex = 11;
+            dateTimePicker.Location = new Point(235, 264);
+            dateTimePicker.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(168, 27);
+            dateTimePicker.TabIndex = 11;
             // 
             // lsbGender
             // 
-            this.lsbGender.FormattingEnabled = true;
-            this.lsbGender.ItemHeight = 16;
-            this.lsbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.lsbGender.Location = new System.Drawing.Point(648, 215);
-            this.lsbGender.Name = "lsbGender";
-            this.lsbGender.Size = new System.Drawing.Size(167, 20);
-            this.lsbGender.TabIndex = 10;
+            lsbGender.FormattingEnabled = true;
+            lsbGender.Items.AddRange(new object[] { "Male", "Female" });
+            lsbGender.Location = new Point(648, 269);
+            lsbGender.Margin = new Padding(3, 4, 3, 4);
+            lsbGender.Name = "lsbGender";
+            lsbGender.Size = new Size(167, 24);
+            lsbGender.TabIndex = 10;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(648, 136);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(167, 22);
-            this.txtPhone.TabIndex = 9;
+            txtPhone.Location = new Point(648, 170);
+            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(167, 27);
+            txtPhone.TabIndex = 9;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(648, 56);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(167, 22);
-            this.txtEmail.TabIndex = 8;
+            txtEmail.Location = new Point(648, 70);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(167, 27);
+            txtEmail.TabIndex = 8;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(236, 136);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(167, 22);
-            this.txtSurname.TabIndex = 7;
+            txtSurname.Location = new Point(236, 170);
+            txtSurname.Margin = new Padding(3, 4, 3, 4);
+            txtSurname.Name = "txtSurname";
+            txtSurname.Size = new Size(167, 27);
+            txtSurname.TabIndex = 7;
             // 
             // txtForename
             // 
-            this.txtForename.Location = new System.Drawing.Point(236, 56);
-            this.txtForename.Name = "txtForename";
-            this.txtForename.Size = new System.Drawing.Size(167, 22);
-            this.txtForename.TabIndex = 6;
+            txtForename.Location = new Point(236, 70);
+            txtForename.Margin = new Padding(3, 4, 3, 4);
+            txtForename.Name = "txtForename";
+            txtForename.Size = new Size(167, 27);
+            txtForename.TabIndex = 6;
             // 
             // lblGender
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(441, 206);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(94, 29);
-            this.lblGender.TabIndex = 5;
-            this.lblGender.Text = "Gender";
+            lblGender.AutoSize = true;
+            lblGender.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblGender.Location = new Point(441, 258);
+            lblGender.Name = "lblGender";
+            lblGender.Size = new Size(94, 29);
+            lblGender.TabIndex = 5;
+            lblGender.Text = "Gender";
             // 
             // lblPhone
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(441, 129);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(176, 29);
-            this.lblPhone.TabIndex = 4;
-            this.lblPhone.Text = "Phone Number";
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhone.Location = new Point(441, 161);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(176, 29);
+            lblPhone.TabIndex = 4;
+            lblPhone.Text = "Phone Number";
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(441, 49);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(74, 29);
-            this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "Email";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEmail.Location = new Point(441, 61);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(74, 29);
+            lblEmail.TabIndex = 3;
+            lblEmail.Text = "Email";
             // 
             // lblDOB
             // 
-            this.lblDOB.AutoSize = true;
-            this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDOB.Location = new System.Drawing.Point(39, 206);
-            this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(144, 29);
-            this.lblDOB.TabIndex = 2;
-            this.lblDOB.Text = "Date of Birth";
+            lblDOB.AutoSize = true;
+            lblDOB.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDOB.Location = new Point(39, 258);
+            lblDOB.Name = "lblDOB";
+            lblDOB.Size = new Size(144, 29);
+            lblDOB.TabIndex = 2;
+            lblDOB.Text = "Date of Birth";
             // 
             // lblSurname
             // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurname.Location = new System.Drawing.Point(39, 129);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(124, 29);
-            this.lblSurname.TabIndex = 1;
-            this.lblSurname.Text = "Surename";
+            lblSurname.AutoSize = true;
+            lblSurname.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSurname.Location = new Point(39, 161);
+            lblSurname.Name = "lblSurname";
+            lblSurname.Size = new Size(124, 29);
+            lblSurname.TabIndex = 1;
+            lblSurname.Text = "Surename";
             // 
             // lblForename
             // 
-            this.lblForename.AutoSize = true;
-            this.lblForename.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForename.Location = new System.Drawing.Point(39, 49);
-            this.lblForename.Name = "lblForename";
-            this.lblForename.Size = new System.Drawing.Size(124, 29);
-            this.lblForename.TabIndex = 0;
-            this.lblForename.Text = "Forename";
+            lblForename.AutoSize = true;
+            lblForename.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblForename.Location = new Point(39, 61);
+            lblForename.Name = "lblForename";
+            lblForename.Size = new Size(124, 29);
+            lblForename.TabIndex = 0;
+            lblForename.Text = "Forename";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(475, 538);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 41);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(475, 672);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(176, 51);
+            button1.TabIndex = 3;
+            button1.Text = "Confirm";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(505, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 16);
-            this.label8.TabIndex = 5;
+            label8.AutoSize = true;
+            label8.Location = new Point(505, 54);
+            label8.Name = "label8";
+            label8.Size = new Size(0, 20);
+            label8.TabIndex = 5;
             // 
             // txtEnterInstructorName
             // 
-            this.txtEnterInstructorName.Location = new System.Drawing.Point(511, 31);
-            this.txtEnterInstructorName.Name = "txtEnterInstructorName";
-            this.txtEnterInstructorName.Size = new System.Drawing.Size(231, 22);
-            this.txtEnterInstructorName.TabIndex = 6;
-            this.txtEnterInstructorName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEnterInstructorName_KeyDown);
+            txtEnterInstructorName.Location = new Point(511, 39);
+            txtEnterInstructorName.Margin = new Padding(3, 4, 3, 4);
+            txtEnterInstructorName.Name = "txtEnterInstructorName";
+            txtEnterInstructorName.Size = new Size(231, 27);
+            txtEnterInstructorName.TabIndex = 6;
+            txtEnterInstructorName.KeyDown += txtEnterInstructorName_KeyDown;
             // 
             // dvgDeRegisterInstructor
             // 
-            this.dvgDeRegisterInstructor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgDeRegisterInstructor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmMemberID,
-            this.clmName,
-            this.clmPhone,
-            this.clmEmail});
-            this.dvgDeRegisterInstructor.Location = new System.Drawing.Point(301, 73);
-            this.dvgDeRegisterInstructor.Name = "dvgDeRegisterInstructor";
-            this.dvgDeRegisterInstructor.RowHeadersWidth = 51;
-            this.dvgDeRegisterInstructor.RowTemplate.Height = 24;
-            this.dvgDeRegisterInstructor.Size = new System.Drawing.Size(551, 150);
-            this.dvgDeRegisterInstructor.TabIndex = 4;
-            this.dvgDeRegisterInstructor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgDeRegisterInstructor_CellClick);
-            this.dvgDeRegisterInstructor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            dvgDeRegisterInstructor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dvgDeRegisterInstructor.Columns.AddRange(new DataGridViewColumn[] { clmMemberID, clmName, clmPhone, clmEmail });
+            dvgDeRegisterInstructor.Location = new Point(301, 91);
+            dvgDeRegisterInstructor.Margin = new Padding(3, 4, 3, 4);
+            dvgDeRegisterInstructor.Name = "dvgDeRegisterInstructor";
+            dvgDeRegisterInstructor.RowHeadersWidth = 51;
+            dvgDeRegisterInstructor.RowTemplate.Height = 24;
+            dvgDeRegisterInstructor.Size = new Size(551, 188);
+            dvgDeRegisterInstructor.TabIndex = 4;
+            dvgDeRegisterInstructor.CellClick += dvgDeRegisterInstructor_CellClick;
+            dvgDeRegisterInstructor.CellContentClick += dataGridView1_CellContentClick;
             // 
             // clmMemberID
             // 
-            this.clmMemberID.HeaderText = "MemberID";
-            this.clmMemberID.MinimumWidth = 6;
-            this.clmMemberID.Name = "clmMemberID";
-            this.clmMemberID.Width = 125;
+            clmMemberID.HeaderText = "MemberID";
+            clmMemberID.MinimumWidth = 6;
+            clmMemberID.Name = "clmMemberID";
+            clmMemberID.Width = 125;
             // 
             // clmName
             // 
-            this.clmName.HeaderText = "Name";
-            this.clmName.MinimumWidth = 6;
-            this.clmName.Name = "clmName";
-            this.clmName.Width = 125;
+            clmName.HeaderText = "Name";
+            clmName.MinimumWidth = 6;
+            clmName.Name = "clmName";
+            clmName.Width = 125;
             // 
             // clmPhone
             // 
-            this.clmPhone.HeaderText = "Phone";
-            this.clmPhone.MinimumWidth = 6;
-            this.clmPhone.Name = "clmPhone";
-            this.clmPhone.Width = 125;
+            clmPhone.HeaderText = "Phone";
+            clmPhone.MinimumWidth = 6;
+            clmPhone.Name = "clmPhone";
+            clmPhone.Width = 125;
             // 
             // clmEmail
             // 
-            this.clmEmail.HeaderText = "Email";
-            this.clmEmail.MinimumWidth = 6;
-            this.clmEmail.Name = "clmEmail";
-            this.clmEmail.Width = 125;
+            clmEmail.HeaderText = "Email";
+            clmEmail.MinimumWidth = 6;
+            clmEmail.Name = "clmEmail";
+            clmEmail.Width = 125;
             // 
             // frmDeRegisterInstructor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 629);
-            this.Controls.Add(this.txtEnterInstructorName);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.dvgDeRegisterInstructor);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.grpDeRegisterInstructor);
-            this.Controls.Add(this.lblInstructorName);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmDeRegisterInstructor";
-            this.Text = "De-register Instructor";
-            this.Load += new System.EventHandler(this.frmDeRegisterInstructor_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.grpDeRegisterInstructor.ResumeLayout(false);
-            this.grpDeRegisterInstructor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDeRegisterInstructor)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1065, 786);
+            Controls.Add(txtEnterInstructorName);
+            Controls.Add(label8);
+            Controls.Add(dvgDeRegisterInstructor);
+            Controls.Add(button1);
+            Controls.Add(grpDeRegisterInstructor);
+            Controls.Add(lblInstructorName);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmDeRegisterInstructor";
+            Text = "De-register Instructor";
+            Load += frmDeRegisterInstructor_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            grpDeRegisterInstructor.ResumeLayout(false);
+            grpDeRegisterInstructor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dvgDeRegisterInstructor).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

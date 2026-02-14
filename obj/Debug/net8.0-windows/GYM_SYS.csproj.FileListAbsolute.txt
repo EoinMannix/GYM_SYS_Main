@@ -11,7 +11,6 @@ C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\osx\l
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.DirectoryServices.Protocols.dll
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.csproj.AssemblyReference.cache
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.Form1.resources
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.frmAddFunds.resources
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.frmCancelBooking.resources
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.frmCancelClass.resources
@@ -34,3 +33,4 @@ C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\refint\GYM_SYS
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.pdb
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.genruntimeconfig.cache
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\ref\GYM_SYS.dll
+C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.sourcelink.json

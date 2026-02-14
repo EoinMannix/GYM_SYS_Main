@@ -73,7 +73,17 @@ namespace GYMSYS
                 "Please confirm ",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                // User chose No, do nothing
+            }
         }
+          
 
         private void GYMSYS_Main_Menu_Load(object sender, EventArgs e)
         {

@@ -28,274 +28,306 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvCancelBooking = new System.Windows.Forms.DataGridView();
-            this.clmClassID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmInstructorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSelectClass = new System.Windows.Forms.TextBox();
-            this.lblBalance = new System.Windows.Forms.Label();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtRoom = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtInstructor = new System.Windows.Forms.TextBox();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.txtClassName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCancelBooking)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            dgvCancelBooking = new DataGridView();
+            clmClassID = new DataGridViewTextBoxColumn();
+            clmClassName = new DataGridViewTextBoxColumn();
+            clmInstructorName = new DataGridViewTextBoxColumn();
+            clmDate = new DataGridViewTextBoxColumn();
+            clmTime = new DataGridViewTextBoxColumn();
+            label1 = new Label();
+            txtSelectClass = new TextBox();
+            lblBalance = new Label();
+            txtBalance = new TextBox();
+            txtDate = new TextBox();
+            label2 = new Label();
+            txtRoom = new TextBox();
+            txtPrice = new TextBox();
+            txtInstructor = new TextBox();
+            txtTime = new TextBox();
+            txtClassName = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            groupBox1 = new GroupBox();
+            btnConfirm = new Button();
+            menuStrip1 = new MenuStrip();
+            backToolStripMenuItem = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)dgvCancelBooking).BeginInit();
+            groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // dgvCancelBooking
             // 
-            this.dgvCancelBooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCancelBooking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmClassID,
-            this.clmClassName,
-            this.clmInstructorName,
-            this.clmDate,
-            this.clmTime});
-            this.dgvCancelBooking.Location = new System.Drawing.Point(165, 126);
-            this.dgvCancelBooking.Name = "dgvCancelBooking";
-            this.dgvCancelBooking.RowHeadersWidth = 51;
-            this.dgvCancelBooking.RowTemplate.Height = 24;
-            this.dgvCancelBooking.Size = new System.Drawing.Size(677, 167);
-            this.dgvCancelBooking.TabIndex = 3;
-            this.dgvCancelBooking.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCancelBooking_CellClick);
+            dgvCancelBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCancelBooking.Columns.AddRange(new DataGridViewColumn[] { clmClassID, clmClassName, clmInstructorName, clmDate, clmTime });
+            dgvCancelBooking.Location = new Point(165, 158);
+            dgvCancelBooking.Margin = new Padding(3, 4, 3, 4);
+            dgvCancelBooking.Name = "dgvCancelBooking";
+            dgvCancelBooking.RowHeadersWidth = 51;
+            dgvCancelBooking.RowTemplate.Height = 24;
+            dgvCancelBooking.Size = new Size(677, 209);
+            dgvCancelBooking.TabIndex = 3;
+            dgvCancelBooking.CellClick += dgvCancelBooking_CellClick;
             // 
             // clmClassID
             // 
-            this.clmClassID.HeaderText = "Class ID";
-            this.clmClassID.MinimumWidth = 6;
-            this.clmClassID.Name = "clmClassID";
-            this.clmClassID.Width = 125;
+            clmClassID.HeaderText = "Class ID";
+            clmClassID.MinimumWidth = 6;
+            clmClassID.Name = "clmClassID";
+            clmClassID.Width = 125;
             // 
             // clmClassName
             // 
-            this.clmClassName.HeaderText = "Class Name";
-            this.clmClassName.MinimumWidth = 6;
-            this.clmClassName.Name = "clmClassName";
-            this.clmClassName.Width = 125;
+            clmClassName.HeaderText = "Class Name";
+            clmClassName.MinimumWidth = 6;
+            clmClassName.Name = "clmClassName";
+            clmClassName.Width = 125;
             // 
             // clmInstructorName
             // 
-            this.clmInstructorName.HeaderText = "Instructor Name";
-            this.clmInstructorName.MinimumWidth = 6;
-            this.clmInstructorName.Name = "clmInstructorName";
-            this.clmInstructorName.Width = 125;
+            clmInstructorName.HeaderText = "Instructor Name";
+            clmInstructorName.MinimumWidth = 6;
+            clmInstructorName.Name = "clmInstructorName";
+            clmInstructorName.Width = 125;
             // 
             // clmDate
             // 
-            this.clmDate.HeaderText = "Date";
-            this.clmDate.MinimumWidth = 6;
-            this.clmDate.Name = "clmDate";
-            this.clmDate.Width = 125;
+            clmDate.HeaderText = "Date";
+            clmDate.MinimumWidth = 6;
+            clmDate.Name = "clmDate";
+            clmDate.Width = 125;
             // 
             // clmTime
             // 
-            this.clmTime.HeaderText = "Time";
-            this.clmTime.MinimumWidth = 6;
-            this.clmTime.Name = "clmTime";
-            this.clmTime.Width = 125;
+            clmTime.HeaderText = "Time";
+            clmTime.MinimumWidth = 6;
+            clmTime.Name = "clmTime";
+            clmTime.Width = 125;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 29);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Select Class";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(51, 61);
+            label1.Name = "label1";
+            label1.Size = new Size(147, 29);
+            label1.TabIndex = 9;
+            label1.Text = "Select Class";
             // 
             // txtSelectClass
             // 
-            this.txtSelectClass.Location = new System.Drawing.Point(255, 56);
-            this.txtSelectClass.Name = "txtSelectClass";
-            this.txtSelectClass.Size = new System.Drawing.Size(191, 22);
-            this.txtSelectClass.TabIndex = 9;
-            this.txtSelectClass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSelectClass_KeyDown);
+            txtSelectClass.Location = new Point(255, 70);
+            txtSelectClass.Margin = new Padding(3, 4, 3, 4);
+            txtSelectClass.Name = "txtSelectClass";
+            txtSelectClass.Size = new Size(191, 27);
+            txtSelectClass.TabIndex = 9;
+            txtSelectClass.KeyDown += txtSelectClass_KeyDown;
             // 
             // lblBalance
             // 
-            this.lblBalance.AutoSize = true;
-            this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(549, 49);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(100, 29);
-            this.lblBalance.TabIndex = 10;
-            this.lblBalance.Text = "Balance";
+            lblBalance.AutoSize = true;
+            lblBalance.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBalance.Location = new Point(549, 61);
+            lblBalance.Name = "lblBalance";
+            lblBalance.Size = new Size(100, 29);
+            lblBalance.TabIndex = 10;
+            lblBalance.Text = "Balance";
             // 
             // txtBalance
             // 
-            this.txtBalance.Location = new System.Drawing.Point(703, 56);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(256, 22);
-            this.txtBalance.TabIndex = 11;
+            txtBalance.Location = new Point(703, 70);
+            txtBalance.Margin = new Padding(3, 4, 3, 4);
+            txtBalance.Name = "txtBalance";
+            txtBalance.Size = new Size(256, 27);
+            txtBalance.TabIndex = 11;
             // 
             // txtDate
             // 
-            this.txtDate.Location = new System.Drawing.Point(228, 136);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(200, 22);
-            this.txtDate.TabIndex = 23;
+            txtDate.Location = new Point(228, 170);
+            txtDate.Margin = new Padding(3, 4, 3, 4);
+            txtDate.Name = "txtDate";
+            txtDate.Size = new Size(200, 27);
+            txtDate.TabIndex = 23;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 29);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Date";
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(31, 161);
+            label2.Name = "label2";
+            label2.Size = new Size(63, 29);
+            label2.TabIndex = 22;
+            label2.Text = "Date";
             // 
             // txtRoom
             // 
-            this.txtRoom.Location = new System.Drawing.Point(659, 222);
-            this.txtRoom.Name = "txtRoom";
-            this.txtRoom.Size = new System.Drawing.Size(200, 22);
-            this.txtRoom.TabIndex = 21;
+            txtRoom.Location = new Point(659, 278);
+            txtRoom.Margin = new Padding(3, 4, 3, 4);
+            txtRoom.Name = "txtRoom";
+            txtRoom.Size = new Size(200, 27);
+            txtRoom.TabIndex = 21;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(659, 55);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(200, 22);
-            this.txtPrice.TabIndex = 20;
+            txtPrice.Location = new Point(659, 69);
+            txtPrice.Margin = new Padding(3, 4, 3, 4);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(200, 27);
+            txtPrice.TabIndex = 20;
             // 
             // txtInstructor
             // 
-            this.txtInstructor.Location = new System.Drawing.Point(228, 225);
-            this.txtInstructor.Name = "txtInstructor";
-            this.txtInstructor.Size = new System.Drawing.Size(200, 22);
-            this.txtInstructor.TabIndex = 19;
+            txtInstructor.Location = new Point(228, 281);
+            txtInstructor.Margin = new Padding(3, 4, 3, 4);
+            txtInstructor.Name = "txtInstructor";
+            txtInstructor.Size = new Size(200, 27);
+            txtInstructor.TabIndex = 19;
             // 
             // txtTime
             // 
-            this.txtTime.Location = new System.Drawing.Point(659, 136);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(200, 22);
-            this.txtTime.TabIndex = 18;
+            txtTime.Location = new Point(659, 170);
+            txtTime.Margin = new Padding(3, 4, 3, 4);
+            txtTime.Name = "txtTime";
+            txtTime.Size = new Size(200, 27);
+            txtTime.TabIndex = 18;
             // 
             // txtClassName
             // 
-            this.txtClassName.Location = new System.Drawing.Point(228, 55);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(200, 22);
-            this.txtClassName.TabIndex = 17;
+            txtClassName.Location = new Point(228, 69);
+            txtClassName.Margin = new Padding(3, 4, 3, 4);
+            txtClassName.Name = "txtClassName";
+            txtClassName.Size = new Size(200, 27);
+            txtClassName.TabIndex = 17;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(513, 218);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 29);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Room";
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(513, 272);
+            label3.Name = "label3";
+            label3.Size = new Size(78, 29);
+            label3.TabIndex = 16;
+            label3.Text = "Room";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(513, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 29);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Price";
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(513, 60);
+            label4.Name = "label4";
+            label4.Size = new Size(69, 29);
+            label4.TabIndex = 14;
+            label4.Text = "Price";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 218);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 29);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Instructor";
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(31, 272);
+            label5.Name = "label5";
+            label5.Size = new Size(111, 29);
+            label5.TabIndex = 12;
+            label5.Text = "Instructor";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(513, 129);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 29);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Time";
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(513, 161);
+            label6.Name = "label6";
+            label6.Size = new Size(69, 29);
+            label6.TabIndex = 10;
+            label6.Text = "Time";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(31, 48);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 29);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Class Name";
+            label7.AutoSize = true;
+            label7.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(31, 60);
+            label7.Name = "label7";
+            label7.Size = new Size(144, 29);
+            label7.TabIndex = 8;
+            label7.Text = "Class Name";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtDate);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtRoom);
-            this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Controls.Add(this.txtInstructor);
-            this.groupBox1.Controls.Add(this.txtTime);
-            this.groupBox1.Controls.Add(this.txtClassName);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(27, 315);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(968, 290);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Booking Details";
+            groupBox1.Controls.Add(txtDate);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txtRoom);
+            groupBox1.Controls.Add(txtPrice);
+            groupBox1.Controls.Add(txtInstructor);
+            groupBox1.Controls.Add(txtTime);
+            groupBox1.Controls.Add(txtClassName);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Location = new Point(27, 394);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(968, 362);
+            groupBox1.TabIndex = 24;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Booking Details";
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(371, 628);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(204, 47);
-            this.btnConfirm.TabIndex = 25;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            btnConfirm.Location = new Point(371, 785);
+            btnConfirm.Margin = new Padding(3, 4, 3, 4);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(204, 59);
+            btnConfirm.TabIndex = 25;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1020, 28);
+            menuStrip1.TabIndex = 26;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // backToolStripMenuItem
+            // 
+            backToolStripMenuItem.Name = "backToolStripMenuItem";
+            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Text = "back";
+            backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
             // frmCancelBooking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 707);
-            this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtBalance);
-            this.Controls.Add(this.lblBalance);
-            this.Controls.Add(this.txtSelectClass);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvCancelBooking);
-            this.Name = "frmCancelBooking";
-            this.Text = "frmCancelBooking";
-            this.Load += new System.EventHandler(this.frmCancelBooking_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCancelBooking)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1020, 884);
+            Controls.Add(btnConfirm);
+            Controls.Add(groupBox1);
+            Controls.Add(txtBalance);
+            Controls.Add(lblBalance);
+            Controls.Add(txtSelectClass);
+            Controls.Add(label1);
+            Controls.Add(dgvCancelBooking);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmCancelBooking";
+            Text = "frmCancelBooking";
+            Load += frmCancelBooking_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvCancelBooking).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -325,5 +357,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnConfirm;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem backToolStripMenuItem;
     }
 }

@@ -50,9 +50,9 @@ namespace GYMSYS
 
         private void dgvCreateBooking_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) 
+            if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvCreateBooking.Rows[e.RowIndex]; 
+                DataGridViewRow row = dgvCreateBooking.Rows[e.RowIndex];
 
                 txtClassName.Text = row.Cells[1].Value.ToString();
 
@@ -95,7 +95,7 @@ namespace GYMSYS
                 bool found = false;
 
                 for (int i = 0; i < dgvCreateBooking.Rows.Count; i++)
-                { 
+                {
 
                     if (dgvCreateBooking.Rows[i].Cells[1].Value != null)
                     {
@@ -108,7 +108,7 @@ namespace GYMSYS
                             found = true;
                             break;
                         }
-                    }  
+                    }
                 }
                 if (!found)
                 {
@@ -126,6 +126,11 @@ namespace GYMSYS
         private void grpCreateBooking_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

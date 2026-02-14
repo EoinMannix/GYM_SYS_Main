@@ -73,7 +73,7 @@ namespace GYMSYS
 
             else
             {
-               // User clicked no, do nothing 
+                // User clicked no, do nothing 
             }
 
         }
@@ -113,11 +113,13 @@ namespace GYMSYS
 
             }
 
-   
+
 
         }
 
-        
-
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

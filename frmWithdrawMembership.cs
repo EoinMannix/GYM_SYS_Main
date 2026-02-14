@@ -20,7 +20,7 @@ namespace GYMSYS
         {
             InitializeComponent();
 
-            
+
         }
 
 
@@ -156,7 +156,7 @@ namespace GYMSYS
         }
 
 
-        
+
         private void LoadMembers()
         {
             DataSet ds = GYM_SYS.Member.GetAllMembers(); // runs the method to get all members from the database
@@ -175,12 +175,15 @@ namespace GYMSYS
             // Bind data
             dgvWithdrawMembership.DataSource = ds.Tables[0]; // sets the data source of the DataGridView to the first table in the dataset
 
-            Utility.FormatGrid(dgvWithdrawMembership); 
+            Utility.FormatGrid(dgvWithdrawMembership);
 
             dgvWithdrawMembership.Refresh(); // refreshes the DataGridView to display the new data
         }
 
-
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 
