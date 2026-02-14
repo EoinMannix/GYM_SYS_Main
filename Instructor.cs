@@ -16,15 +16,15 @@ namespace GYM_SYS
         public string InstructorForename { get; set; }
         public string InstructorSurname { get; set; }
         public DateTime InstructorDOB { get; set; }
-        public int InstructorPhone { get; set; }
-        public String InstructorEmail { get; set; }
-        public String InstructorGender { get; set; }
-        public String InstructorClassName { get; set; }
-        public String InstructorWorkdays { get; set; }
+        public string InstructorPhone { get; set; }
+        public string InstructorEmail { get; set; }
+        public string InstructorGender { get; set; }
+        public string InstructorClassName { get; set; }
+        public string InstructorWorkdays { get; set; }
 
 
         public Instructor(int instructorID, string instructorForename, string instructorSurname,
-            DateTime instructorDOB, int instructorPhone, string instructorEmail, string instructorGender,
+            DateTime instructorDOB, string instructorPhone, string instructorEmail, string instructorGender,
             string instructorClassName, string instructorWorkdays)
         {
             InstructorID = instructorID;
@@ -68,7 +68,7 @@ namespace GYM_SYS
             string forename = dr.GetString(1);
             string surname = dr.GetString(2);
             DateTime dob = dr.GetDateTime(3);
-            int phone = dr.GetInt32(4);
+            string phone = dr.GetString(4);
             string email = dr.GetString(5);
 
             dr.Close();
@@ -94,12 +94,11 @@ namespace GYM_SYS
         public void UpdateInstructor()
         {
             string sqlQuery = "UPDATE Instructors SET " +
-                              "InstructorForename = '" + InstructorForename + "', " +
-                              "InstructorSurname = '" + InstructorSurname + "', " +
-                              "InstructorDOB = TO_DATE('" + InstructorDOB.ToString("dd-MM-yyyy") +
-                              "', 'DD-MM-YYYY'), " +
-                              "InstructorPhone = " + InstructorPhone + ", " +
-                              "InstructorEmail = '" + InstructorEmail + "' " +
+                              "FORENAME = '" + InstructorForename + "', " +
+                              "SURENAME = '" + InstructorSurname + "', " +
+                              "DOB = TO_DATE('" + InstructorDOB.ToString("dd-MM-yyyy") + "', 'DD-MM-YYYY'), " +
+                              "PHONE = " + InstructorPhone + ", " +
+                              "EMAIL = '" + InstructorEmail + "' " +
                               "WHERE InstructorID = " + InstructorID;
 
             Database.ExecuteNonQuery(sqlQuery);

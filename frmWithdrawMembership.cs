@@ -29,41 +29,6 @@ namespace GYMSYS
 
         }
 
-        /*private void dgvWithdrawMembership_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.RowIndex >= 0) // makes sure the user clicked a real row not the header
-            {
-                DataGridViewRow row = dgvWithdrawMembership.Rows[e.RowIndex]; ; // gets the clicked row
-
-                    txtForename.Text = row.Cells["FORENAME"].Value.ToString(); 
-                                                                               
-                    txtSurname.Text = row.Cells["SURENAME"].Value.ToString(); 
-
-
-                if (row.Cells["PHONE"].Value != null)
-                {
-                    txtPhone.Text = row.Cells["PHONE"].Value.ToString(); 
-                }
-
-                else
-                {
-                    txtPhone.Text = "";
-                }
-
-                if (row.Cells["EMAIL"].Value != null)
-                {
-                    txtEmail.Text = row.Cells["EMAIL"].Value.ToString(); // email
-                }
-
-                else
-                {
-                    txtEmail.Text = ""; 
-                }
-
-            }
-
-        }*/
         private void dgvWithdrawMembership_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -83,6 +48,7 @@ namespace GYMSYS
 
         private void txtEnterName_KeyDown(object sender, KeyEventArgs e)
         {
+
             if (e.KeyCode == Keys.Enter)
             {
                 String searchText = txtMemberName.Text.ToLower();
@@ -104,8 +70,6 @@ namespace GYMSYS
 
                     }
 
-                    if (found) break;
-
                 }
 
                 if (!found)
@@ -123,7 +87,7 @@ namespace GYMSYS
 
             if (member == null)
             {
-                MessageBox.Show("Please select a member to update.");
+                MessageBox.Show("Please select a member to withdraw.");
                 return;
             }
 
@@ -134,7 +98,7 @@ namespace GYMSYS
             {
                 member.DeleteMember();
                 LoadMembers();
-                MessageBox.Show("Member information updated successfully.");
+                MessageBox.Show("Member Withdrawn successfully.");
 
             }
 
@@ -175,7 +139,7 @@ namespace GYMSYS
             // Bind data
             dgvWithdrawMembership.DataSource = ds.Tables[0]; // sets the data source of the DataGridView to the first table in the dataset
 
-            Utility.FormatGrid(dgvWithdrawMembership);
+            UtilityMember.FormatGrid(dgvWithdrawMembership);
 
             dgvWithdrawMembership.Refresh(); // refreshes the DataGridView to display the new data
         }

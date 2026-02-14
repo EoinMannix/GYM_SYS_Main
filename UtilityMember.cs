@@ -8,7 +8,7 @@ using System.Drawing; // needed for DataGridViewContentAlignment
 
 namespace GYM_SYS
 {
-    internal class Utility
+    internal class UtilityMember
     {
 
         public static void FormatGrid(DataGridView dg)

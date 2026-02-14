@@ -18,7 +18,7 @@ namespace GYM_SYS
         public string MemberSurename { get; set; }
         public DateTime MemberDOB { get; set; }
         public string MemberPhone { get; set; }
-        public String MemberEmail { get; set; }
+        public string MemberEmail { get; set; }
         public string MemberGender { get; set; }
 
 

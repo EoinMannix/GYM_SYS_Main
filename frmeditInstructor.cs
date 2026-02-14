@@ -14,7 +14,7 @@ namespace GYMSYS
     public partial class frmeditInstructor : Form
     {
 
-        private Instructor Instructor;
+        private Instructor selectedInstructor;
         public frmeditInstructor()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace GYMSYS
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             
-            if (Instructor == null)
+            if (selectedInstructor == null)
             {
                 MessageBox.Show("Please select an instructor to edit.");
                 return;
@@ -47,7 +47,7 @@ namespace GYMSYS
 
             if (result == DialogResult.Yes)
             {
-                Instructor.UpdateInstructor();
+                selectedInstructor.UpdateInstructor();
                 LoadInstructors();
                 MessageBox.Show("Instructor edited successfully.");
             }
@@ -82,14 +82,14 @@ namespace GYMSYS
                 dgvEditInstructors.CurrentCell.RowIndex
                 ].Cells[0].Value);
 
-            Instructor = Instructor.GetInstructor(id);
+            selectedInstructor = Instructor.GetInstructor(id);
 
-            txtForename.Text = Instructor.InstructorForename;
-            txtSurname.Text = Instructor.InstructorSurname;
-            dtpDOB.Value = Instructor.InstructorDOB;
-            txtPhone.Text = Instructor.InstructorPhone.ToString();
-            txtEmail.Text = Instructor.InstructorEmail;
-            txtWorkdays.Text = Instructor.InstructorWorkdays;
+            txtForename.Text = selectedInstructor.InstructorForename;
+            txtSurname.Text = selectedInstructor.InstructorSurname;
+            dtpDOB.Value = selectedInstructor.InstructorDOB;
+            txtPhone.Text = selectedInstructor.InstructorPhone.ToString();
+            txtEmail.Text = selectedInstructor.InstructorEmail;
+            txtWorkdays.Text = selectedInstructor.InstructorWorkdays;
 
         }
 
@@ -116,8 +116,6 @@ namespace GYMSYS
                             break;
                         }
                     }
-
-                    if (found) break;
 
                 }
 
@@ -152,7 +150,7 @@ namespace GYMSYS
             dgvEditInstructors.AutoGenerateColumns = true;
 
             dgvEditInstructors.DataSource = ds.Tables[0];
-            Utility.FormatGrid(dgvEditInstructors);
+            UtilityInstructor.FormatGrid(dgvEditInstructors);
             dgvEditInstructors.Refresh();
 
         }
