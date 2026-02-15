@@ -23,19 +23,19 @@ namespace GYM_SYS
         public string InstructorWorkdays { get; set; }
 
 
-        public Instructor(int instructorID, string instructorForename, string instructorSurname,
-            DateTime instructorDOB, string instructorPhone, string instructorEmail, string instructorGender,
-            string instructorClassName, string instructorWorkdays)
+        public Instructor(int id, string Forename, string Surname,
+            DateTime DOB, string Phone, string Email, string instructorGender,
+            string ClassName, string Workdays)
         {
-            InstructorID = instructorID;
-            InstructorForename = instructorForename;
-            InstructorSurname = instructorSurname;
-            InstructorDOB = instructorDOB;
-            InstructorPhone = instructorPhone;
-            InstructorEmail = instructorEmail;
+            InstructorID = id;
+            InstructorForename = Forename;
+            InstructorSurname = Surname;
+            InstructorDOB = DOB;
+            InstructorPhone = Phone;
+            InstructorEmail = Email;
             InstructorGender = instructorGender;
-            InstructorClassName = instructorClassName;
-            InstructorWorkdays = instructorWorkdays;
+            InstructorClassName = ClassName;
+            InstructorWorkdays = Workdays;
         }
 
 

@@ -102,7 +102,7 @@ namespace GYMSYS
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-         
+
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -165,6 +165,11 @@ namespace GYMSYS
 
 
             return true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

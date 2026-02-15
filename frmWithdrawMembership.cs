@@ -33,9 +33,7 @@ namespace GYMSYS
         {
 
             int id = Convert.ToInt32( // converts the value in the first cell of the clicked row to an integer, which is the member ID
-                dgvWithdrawMembership.Rows[
-                dgvWithdrawMembership.CurrentCell.RowIndex
-                ].Cells[0].Value);
+                dgvWithdrawMembership.Rows[e.RowIndex].Cells[0].Value);
 
             member = Member.GetMembers(id);
 
@@ -43,7 +41,8 @@ namespace GYMSYS
             txtSurname.Text = member.MemberSurename;
             txtPhone.Text = member.MemberPhone;
             txtEmail.Text = member.MemberEmail;
-            lstGender.SelectedItem = member.MemberGender;
+            dtpDOB.Value = member.MemberDOB;
+            lstGender.Text = member.MemberGender.Trim();
         }
 
         private void txtEnterName_KeyDown(object sender, KeyEventArgs e)

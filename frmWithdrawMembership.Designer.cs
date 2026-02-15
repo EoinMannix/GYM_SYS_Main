@@ -41,7 +41,7 @@
             lstGender = new ListBox();
             txtPhone = new TextBox();
             txtEmail = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            dtpDOB = new DateTimePicker();
             txtSurname = new TextBox();
             txtForename = new TextBox();
             label5 = new Label();
@@ -142,7 +142,7 @@
             groupBox1.Controls.Add(lstGender);
             groupBox1.Controls.Add(txtPhone);
             groupBox1.Controls.Add(txtEmail);
-            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(dtpDOB);
             groupBox1.Controls.Add(txtSurname);
             groupBox1.Controls.Add(txtForename);
             groupBox1.Controls.Add(label5);
@@ -186,13 +186,13 @@
             txtEmail.Size = new Size(158, 27);
             txtEmail.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dtpDOB
             // 
-            dateTimePicker1.Location = new Point(230, 209);
-            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(158, 27);
-            dateTimePicker1.TabIndex = 8;
+            dtpDOB.Location = new Point(230, 209);
+            dtpDOB.Margin = new Padding(3, 4, 3, 4);
+            dtpDOB.Name = "dtpDOB";
+            dtpDOB.Size = new Size(158, 27);
+            dtpDOB.TabIndex = 8;
             // 
             // txtSurname
             // 
@@ -323,7 +323,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnUpdateWithdraw;
         private System.Windows.Forms.TextBox txtForename;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.ListBox lstGender;
         private System.Windows.Forms.TextBox txtPhone;

@@ -39,13 +39,21 @@
             txtSurname = new TextBox();
             txtPhone = new TextBox();
             txtEmail = new TextBox();
-            txtGender = new TextBox();
             lblRegisterInstrructor = new Label();
             btnConfirm = new Button();
             menuStrip1 = new MenuStrip();
             backToolStripMenuItem = new ToolStripMenuItem();
             bindingSource1 = new BindingSource(components);
             dtpDOB = new DateTimePicker();
+            lstGender = new ListBox();
+            label1 = new Label();
+            chkMonday = new CheckBox();
+            chkTuesday = new CheckBox();
+            chkWednesday = new CheckBox();
+            chkThursday = new CheckBox();
+            chkFriday = new CheckBox();
+            chkSaturday = new CheckBox();
+            chkSunday = new CheckBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
@@ -152,15 +160,6 @@
             txtEmail.TabIndex = 10;
             txtEmail.TextChanged += textBox5_TextChanged;
             // 
-            // txtGender
-            // 
-            txtGender.Location = new Point(279, 479);
-            txtGender.Margin = new Padding(3, 4, 3, 4);
-            txtGender.Name = "txtGender";
-            txtGender.Size = new Size(240, 27);
-            txtGender.TabIndex = 11;
-            txtGender.TextChanged += textBox6_TextChanged;
-            // 
             // lblRegisterInstrructor
             // 
             lblRegisterInstrructor.AutoSize = true;
@@ -173,7 +172,7 @@
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(279, 532);
+            btnConfirm.Location = new Point(255, 919);
             btnConfirm.Margin = new Padding(3, 4, 3, 4);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(240, 59);
@@ -207,15 +206,113 @@
             dtpDOB.Size = new Size(240, 27);
             dtpDOB.TabIndex = 15;
             // 
+            // lstGender
+            // 
+            lstGender.FormattingEnabled = true;
+            lstGender.Items.AddRange(new object[] { "Male", "Female" });
+            lstGender.Location = new Point(279, 476);
+            lstGender.Name = "lstGender";
+            lstGender.Size = new Size(240, 24);
+            lstGender.TabIndex = 16;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(66, 542);
+            label1.Name = "label1";
+            label1.Size = new Size(119, 29);
+            label1.TabIndex = 17;
+            label1.Text = "Workdays";
+            label1.Click += label1_Click;
+            // 
+            // chkMonday
+            // 
+            chkMonday.AutoSize = true;
+            chkMonday.Location = new Point(174, 604);
+            chkMonday.Name = "chkMonday";
+            chkMonday.Size = new Size(85, 24);
+            chkMonday.TabIndex = 18;
+            chkMonday.Text = "Monday";
+            chkMonday.UseVisualStyleBackColor = true;
+            // 
+            // chkTuesday
+            // 
+            chkTuesday.AutoSize = true;
+            chkTuesday.Location = new Point(458, 604);
+            chkTuesday.Name = "chkTuesday";
+            chkTuesday.Size = new Size(85, 24);
+            chkTuesday.TabIndex = 19;
+            chkTuesday.Text = "Tuesday";
+            chkTuesday.UseVisualStyleBackColor = true;
+            // 
+            // chkWednesday
+            // 
+            chkWednesday.AutoSize = true;
+            chkWednesday.Location = new Point(174, 679);
+            chkWednesday.Name = "chkWednesday";
+            chkWednesday.Size = new Size(107, 24);
+            chkWednesday.TabIndex = 20;
+            chkWednesday.Text = "Wednesday";
+            chkWednesday.UseVisualStyleBackColor = true;
+            // 
+            // chkThursday
+            // 
+            chkThursday.AutoSize = true;
+            chkThursday.Location = new Point(458, 679);
+            chkThursday.Name = "chkThursday";
+            chkThursday.Size = new Size(90, 24);
+            chkThursday.TabIndex = 21;
+            chkThursday.Text = "Thursday";
+            chkThursday.UseVisualStyleBackColor = true;
+            // 
+            // chkFriday
+            // 
+            chkFriday.AutoSize = true;
+            chkFriday.Location = new Point(174, 753);
+            chkFriday.Name = "chkFriday";
+            chkFriday.Size = new Size(71, 24);
+            chkFriday.TabIndex = 22;
+            chkFriday.Text = "Friday";
+            chkFriday.UseVisualStyleBackColor = true;
+            // 
+            // chkSaturday
+            // 
+            chkSaturday.AutoSize = true;
+            chkSaturday.Location = new Point(458, 753);
+            chkSaturday.Name = "chkSaturday";
+            chkSaturday.Size = new Size(89, 24);
+            chkSaturday.TabIndex = 23;
+            chkSaturday.Text = "Saturday";
+            chkSaturday.UseVisualStyleBackColor = true;
+            // 
+            // chkSunday
+            // 
+            chkSunday.AutoSize = true;
+            chkSunday.Location = new Point(174, 825);
+            chkSunday.Name = "chkSunday";
+            chkSunday.Size = new Size(79, 24);
+            chkSunday.TabIndex = 24;
+            chkSunday.Text = "Sunday";
+            chkSunday.UseVisualStyleBackColor = true;
+            // 
             // frmRegisterInstructor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 630);
+            ClientSize = new Size(800, 1162);
+            Controls.Add(chkSunday);
+            Controls.Add(chkSaturday);
+            Controls.Add(chkFriday);
+            Controls.Add(chkThursday);
+            Controls.Add(chkWednesday);
+            Controls.Add(chkTuesday);
+            Controls.Add(chkMonday);
+            Controls.Add(label1);
+            Controls.Add(lstGender);
             Controls.Add(dtpDOB);
             Controls.Add(btnConfirm);
             Controls.Add(lblRegisterInstrructor);
-            Controls.Add(txtGender);
             Controls.Add(txtEmail);
             Controls.Add(txtPhone);
             Controls.Add(txtSurname);
@@ -252,12 +349,20 @@
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.Label lblRegisterInstrructor;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.BindingSource bindingSource1;
         private DateTimePicker dtpDOB;
+        private ListBox lstGender;
+        private Label label1;
+        private CheckBox chkMonday;
+        private CheckBox chkTuesday;
+        private CheckBox chkWednesday;
+        private CheckBox chkThursday;
+        private CheckBox chkFriday;
+        private CheckBox chkSaturday;
+        private CheckBox chkSunday;
     }
 }

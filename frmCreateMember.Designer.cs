@@ -42,8 +42,8 @@
             txtSurname = new TextBox();
             txtPhone = new TextBox();
             txtEmail = new TextBox();
-            txtGender = new TextBox();
             dtpDOB = new DateTimePicker();
+            lstGender = new ListBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -181,15 +181,6 @@
             txtEmail.Size = new Size(259, 27);
             txtEmail.TabIndex = 14;
             // 
-            // txtGender
-            // 
-            txtGender.Location = new Point(401, 552);
-            txtGender.Margin = new Padding(3, 4, 3, 4);
-            txtGender.Name = "txtGender";
-            txtGender.Size = new Size(259, 27);
-            txtGender.TabIndex = 15;
-            txtGender.TextChanged += txtGender_TextChanged;
-            // 
             // dtpDOB
             // 
             dtpDOB.Location = new Point(401, 332);
@@ -197,13 +188,22 @@
             dtpDOB.Size = new Size(259, 27);
             dtpDOB.TabIndex = 16;
             // 
+            // lstGender
+            // 
+            lstGender.FormattingEnabled = true;
+            lstGender.Items.AddRange(new object[] { "Male", "Female" });
+            lstGender.Location = new Point(401, 548);
+            lstGender.Name = "lstGender";
+            lstGender.Size = new Size(259, 24);
+            lstGender.TabIndex = 18;
+            // 
             // frmCreateMember
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 726);
+            Controls.Add(lstGender);
             Controls.Add(dtpDOB);
-            Controls.Add(txtGender);
             Controls.Add(txtEmail);
             Controls.Add(txtPhone);
             Controls.Add(txtSurname);
@@ -245,7 +245,7 @@
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtGender;
         private DateTimePicker dtpDOB;
+        private ListBox lstGender;
     }
 }

@@ -39,7 +39,7 @@ namespace GYMSYS
             {
                 int newID = Member.GetNextMemberID();
 
-                Member newMember = new Member(0, txtForename.Text, txtSurname.Text, dtpDOB.Value, txtPhone.Text, txtEmail.Text, txtGender.Text);
+                Member newMember = new Member(newID, txtForename.Text, txtSurname.Text, dtpDOB.Value, txtPhone.Text, txtEmail.Text, lstGender.Text);
 
                 newMember.AddMember();
 
@@ -47,7 +47,7 @@ namespace GYMSYS
 
                 this.Close();
             }
-            ;
+
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -92,31 +92,25 @@ namespace GYMSYS
 
             // used a for each to validate all digits in the phone number https://www.w3schools.com/cs/cs_foreach_loop.php
 
-            foreach (char c in txtPhone.Text)
+            if (txtPhone.Text == "")
             {
 
-                if (!char.IsDigit(c))
+                foreach (char c in txtPhone.Text)
                 {
-                    MessageBox.Show("Phone number must conain number only. ");
-                    return false;
+
+                    if (!char.IsDigit(c))
+                    {
+                        MessageBox.Show("Phone number must conain number only. ");
+                        return false;
+                    }
+
                 }
 
-            }
-
-            if (txtGender.Text == "")
-            {
-                MessageBox.Show("Please enter a valid date of birth.");
-                return false;
             }
 
 
 
             return true;
-        }
-
-        private void txtGender_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void frmCreateMember_Load(object sender, EventArgs e)
@@ -128,5 +122,7 @@ namespace GYMSYS
         {
             this.Close();
         }
+
+       
     }
 }

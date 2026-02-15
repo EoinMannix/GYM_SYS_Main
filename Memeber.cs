@@ -83,7 +83,7 @@ namespace GYM_SYS
 
                 dr.Close();
 
-                return new Member(id, forename, surename, dob, phone, email, "");
+                return new Member(id, forename, surename, dob, phone, email, gender);
             }
         }
 
