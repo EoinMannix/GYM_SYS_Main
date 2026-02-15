@@ -55,6 +55,7 @@ CREATE TABLE Instructors
     Phone VARCHAR2(15),
     Email VARCHAR2(40),
     Gender VARCHAR2(6),
+    Workdays VARCHAR2(50),
     
     CONSTRAINT pk_Instructors PRIMARY KEY (InstructorID)
 );

@@ -39,6 +39,21 @@ namespace GYMSYS
         {
             if (ValidateRegisterInputs())
             {
+                string workdays = "";
+
+                if (chkMonday.Checked) workdays += "Monday ";
+
+                if (chkTuesday.Checked) workdays += "Tuesday ";
+
+                if (chkWednesday.Checked) workdays += "Wednesday ";
+
+                if (chkThursday.Checked) workdays += "Thursday ";
+
+                if (chkFriday.Checked) workdays += "Friday ";
+
+                if (chkSaturday.Checked) workdays += "Saturday ";
+
+                if (chkSunday.Checked) workdays += "Sunday ";
 
 
                 MessageBox.Show("Instructor " + txtForename.Text + " " + txtSurname.Text + " added successfully!");
@@ -157,11 +172,22 @@ namespace GYMSYS
 
             }
 
-            if (txtGender.Text == "")
+            if (lstGender.Text == "")
             {
                 MessageBox.Show("Please enter a valid date of birth.");
                 return false;
             }
+
+            if (!chkMonday.Checked && !chkTuesday.Checked &&  
+                !chkWednesday.Checked && !chkThursday.Checked &&
+                !chkFriday.Checked && !chkSaturday.Checked &&
+                !chkSunday.Checked)
+            {
+                MessageBox.Show("Please select at least one day of availability.");
+                return false;
+            }
+
+
 
 
             return true;
