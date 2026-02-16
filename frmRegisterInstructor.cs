@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM_SYS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +56,12 @@ namespace GYMSYS
 
                 if (chkSunday.Checked) workdays += "Sunday ";
 
+                int newID = Instructor.GetNextInstructorID();
+
+                Instructor instructor = new Instructor(newID, txtForename.Text, txtSurname.Text, dtpDOB.Value,
+                    txtPhone.Text, txtEmail.Text, lstGender.Text, workdays);
+              
+                instructor.AddInstructor();
 
                 MessageBox.Show("Instructor " + txtForename.Text + " " + txtSurname.Text + " added successfully!");
                 this.Close();

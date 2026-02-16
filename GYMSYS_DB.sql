@@ -134,16 +134,16 @@ INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan', DATE '1999-08-03', '086234
 
 -- Sample data Instructors
 
-INSERT INTO Instructors VALUES(2001, 'Michael', 'Bryne', DATE '1985-06-15', '0891234567','michael.bryne@gmail.com','Male');
-INSERT INTO Instructors VALUES(2002, 'Laura', 'Kavanagh', DATE '1990-02-21','0872345678','laura.kavanagh@gmail.com','Female');
-INSERT INTO Instructors VALUES(2003, 'Patrick','O Neill', DATE '1982-11-05','0853456789','patrick.oneill@gmail.com','Male');
-INSERT INTO Instructors VALUES(2004, 'Emma','Fitzpatrick', DATE '1993-09-12','0864567890','emma.fitzpatrick@gmail.com','Female');
-INSERT INTO Instructors VALUES(2005, 'David','Moran', DATE '1988-03-27','0835678901','david.moran@gmail.com','Male');
-INSERT INTO Instructors VALUES(2006, 'Nadine','Power', DATE '1991-01-08','084678901','nadine.power@gmail.com','Female');
-INSERT INTO Instructors VALUES(2007, 'Brian','Lynch', DATE '1980-01-08','0827890123','brian.lynch@gmail.com','Male');
-INSERT INTO Instructors VALUES(2008, 'David','Cornally', DATE '2004-02-12','088901234','david.cornally@gmail.com','Male');
-INSERT INTO Instructors VALUES(2009, 'Tom','Clancy',DATE '1986-12-14', '0819012345','tom.clancy@gmail.com','Male');
-INSERT INTO Instructors VALUES(2010, 'Aisling','Reilly',DATE '1992-10-03','0870123987','aisling.reilly@gmail.com','Female');
+INSERT INTO Instructors VALUES(2001, 'Michael', 'Bryne', DATE '1985-06-15', '0891234567','michael.bryne@gmail.com','Male','Monday Tuesday');
+INSERT INTO Instructors VALUES(2002, 'Laura', 'Kavanagh', DATE '1990-02-21','0872345678','laura.kavanagh@gmail.com','Female','Wednesday Friday');
+INSERT INTO Instructors VALUES(2003, 'Patrick','O Neill', DATE '1982-11-05','0853456789','patrick.oneill@gmail.com','Male','Monday Thursday');
+INSERT INTO Instructors VALUES(2004, 'Emma','Fitzpatrick', DATE '1993-09-12','0864567890','emma.fitzpatrick@gmail.com','Female','Tuesday Saturday');
+INSERT INTO Instructors VALUES(2005, 'David','Moran', DATE '1988-03-27','0835678901','david.moran@gmail.com','Male','Monday Friday');
+INSERT INTO Instructors VALUES(2006, 'Nadine','Power', DATE '1991-01-08','084678901','nadine.power@gmail.com','Female','Wednesday Sunday');
+INSERT INTO Instructors VALUES(2007, 'Brian','Lynch', DATE '1980-01-08','0827890123','brian.lynch@gmail.com','Male','Thursday Saturday');
+INSERT INTO Instructors VALUES(2008, 'David','Cornally', DATE '2004-02-12','088901234','david.cornally@gmail.com','Male','Monday Tuesday');
+INSERT INTO Instructors VALUES(2009, 'Tom','Clancy',DATE '1986-12-14', '0819012345','tom.clancy@gmail.com','Male','Friday Sunday');
+INSERT INTO Instructors VALUES(2010, 'Aisling','Reilly',DATE '1992-10-03','0870123987','aisling.reilly@gmail.com','Female','Tuesday Thursday');
 
     
 -- 

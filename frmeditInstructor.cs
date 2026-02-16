@@ -47,6 +47,14 @@ namespace GYMSYS
 
             if (result == DialogResult.Yes)
             {
+
+                selectedInstructor.InstructorForename = txtForename.Text;
+                selectedInstructor.InstructorSurname = txtSurname.Text;
+                selectedInstructor.InstructorDOB = dtpDOB.Value;
+                selectedInstructor.InstructorPhone = txtPhone.Text;
+                selectedInstructor.InstructorEmail = txtEmail.Text;
+                selectedInstructor.InstructorWorkdays = txtWorkdays.Text;
+
                 selectedInstructor.UpdateInstructor();
                 LoadInstructors();
                 MessageBox.Show("Instructor edited successfully.");
@@ -78,9 +86,7 @@ namespace GYMSYS
         {
 
             int id = Convert.ToInt32(
-                dgvEditInstructors.Rows[
-                dgvEditInstructors.CurrentCell.RowIndex
-                ].Cells[0].Value);
+                dgvEditInstructors.Rows[dgvEditInstructors.CurrentCell.RowIndex].Cells[0].Value);
 
             selectedInstructor = Instructor.GetInstructor(id);
 
