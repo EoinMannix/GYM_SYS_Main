@@ -91,6 +91,12 @@ namespace GYMSYS
                 return false;
             }
 
+            if (lstGender.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a gender");
+                return false;
+            }
+
             // used a for each to validate all digits in the phone number https://www.w3schools.com/cs/cs_foreach_loop.php
 
             if (txtPhone.Text == "")

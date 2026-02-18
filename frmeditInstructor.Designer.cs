@@ -40,11 +40,11 @@
             dtpDOB = new DateTimePicker();
             txtSurname = new TextBox();
             txtForename = new TextBox();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
+            lblWorkdays = new Label();
+            lblPhone = new Label();
+            lblEmail = new Label();
+            lblDOB = new Label();
+            lblSurname = new Label();
             lblForename = new Label();
             btnConfirm = new Button();
             menuStrip1 = new MenuStrip();
@@ -107,11 +107,11 @@
             grpInstructorDetails.Controls.Add(dtpDOB);
             grpInstructorDetails.Controls.Add(txtSurname);
             grpInstructorDetails.Controls.Add(txtForename);
-            grpInstructorDetails.Controls.Add(label6);
-            grpInstructorDetails.Controls.Add(label5);
-            grpInstructorDetails.Controls.Add(label4);
-            grpInstructorDetails.Controls.Add(label3);
-            grpInstructorDetails.Controls.Add(label2);
+            grpInstructorDetails.Controls.Add(lblWorkdays);
+            grpInstructorDetails.Controls.Add(lblPhone);
+            grpInstructorDetails.Controls.Add(lblEmail);
+            grpInstructorDetails.Controls.Add(lblDOB);
+            grpInstructorDetails.Controls.Add(lblSurname);
             grpInstructorDetails.Controls.Add(lblForename);
             grpInstructorDetails.Location = new Point(119, 294);
             grpInstructorDetails.Margin = new Padding(3, 4, 3, 4);
@@ -171,55 +171,55 @@
             txtForename.Size = new Size(200, 27);
             txtForename.TabIndex = 6;
             // 
-            // label6
+            // lblWorkdays
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(438, 252);
-            label6.Name = "label6";
-            label6.Size = new Size(119, 29);
-            label6.TabIndex = 5;
-            label6.Text = "Workdays";
+            lblWorkdays.AutoSize = true;
+            lblWorkdays.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblWorkdays.Location = new Point(438, 252);
+            lblWorkdays.Name = "lblWorkdays";
+            lblWorkdays.Size = new Size(119, 29);
+            lblWorkdays.TabIndex = 5;
+            lblWorkdays.Text = "Workdays";
             // 
-            // label5
+            // lblPhone
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(438, 162);
-            label5.Name = "label5";
-            label5.Size = new Size(176, 29);
-            label5.TabIndex = 4;
-            label5.Text = "Phone Number";
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhone.Location = new Point(438, 162);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(176, 29);
+            lblPhone.TabIndex = 4;
+            lblPhone.Text = "Phone Number";
             // 
-            // label4
+            // lblEmail
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(438, 74);
-            label4.Name = "label4";
-            label4.Size = new Size(74, 29);
-            label4.TabIndex = 3;
-            label4.Text = "Email";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEmail.Location = new Point(438, 74);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(74, 29);
+            lblEmail.TabIndex = 3;
+            lblEmail.Text = "Email";
             // 
-            // label3
+            // lblDOB
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(46, 255);
-            label3.Name = "label3";
-            label3.Size = new Size(73, 29);
-            label3.TabIndex = 2;
-            label3.Text = "Class";
+            lblDOB.AutoSize = true;
+            lblDOB.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDOB.Location = new Point(46, 255);
+            lblDOB.Name = "lblDOB";
+            lblDOB.Size = new Size(65, 29);
+            lblDOB.TabIndex = 2;
+            lblDOB.Text = "DOB";
             // 
-            // label2
+            // lblSurname
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(46, 162);
-            label2.Name = "label2";
-            label2.Size = new Size(110, 29);
-            label2.TabIndex = 1;
-            label2.Text = "Surname";
+            lblSurname.AutoSize = true;
+            lblSurname.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSurname.Location = new Point(46, 162);
+            lblSurname.Name = "lblSurname";
+            lblSurname.Size = new Size(110, 29);
+            lblSurname.TabIndex = 1;
+            lblSurname.Text = "Surname";
             // 
             // lblForename
             // 
@@ -311,12 +311,12 @@
 
         private System.Windows.Forms.DataGridView dgvEditInstructors;
         private System.Windows.Forms.GroupBox grpInstructorDetails;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDOB;
+        private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblForename;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblWorkdays;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtForename;

@@ -181,7 +181,7 @@ namespace GYMSYS
 
             if (lstGender.Text == "")
             {
-                MessageBox.Show("Please enter a valid date of birth.");
+                MessageBox.Show("Please select a gender");
                 return false;
             }
 

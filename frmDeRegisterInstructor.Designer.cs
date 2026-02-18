@@ -32,7 +32,7 @@
             backToolStripMenuItem = new ToolStripMenuItem();
             lblInstructorName = new Label();
             grpDeRegisterInstructor = new GroupBox();
-            dateTimePicker = new DateTimePicker();
+            dtpDOB = new DateTimePicker();
             lsbGender = new ListBox();
             txtPhone = new TextBox();
             txtEmail = new TextBox();
@@ -44,7 +44,7 @@
             lblDOB = new Label();
             lblSurname = new Label();
             lblForename = new Label();
-            button1 = new Button();
+            btnConfirmDeRegInst = new Button();
             label8 = new Label();
             txtEnterInstructorName = new TextBox();
             dvgDeRegisterInstructor = new DataGridView();
@@ -87,7 +87,7 @@
             // 
             // grpDeRegisterInstructor
             // 
-            grpDeRegisterInstructor.Controls.Add(dateTimePicker);
+            grpDeRegisterInstructor.Controls.Add(dtpDOB);
             grpDeRegisterInstructor.Controls.Add(lsbGender);
             grpDeRegisterInstructor.Controls.Add(txtPhone);
             grpDeRegisterInstructor.Controls.Add(txtEmail);
@@ -108,13 +108,13 @@
             grpDeRegisterInstructor.TabStop = false;
             grpDeRegisterInstructor.Text = "De-Register an Instructor";
             // 
-            // dateTimePicker
+            // dtpDOB
             // 
-            dateTimePicker.Location = new Point(235, 264);
-            dateTimePicker.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker.Name = "dateTimePicker";
-            dateTimePicker.Size = new Size(168, 27);
-            dateTimePicker.TabIndex = 11;
+            dtpDOB.Location = new Point(235, 264);
+            dtpDOB.Margin = new Padding(3, 4, 3, 4);
+            dtpDOB.Name = "dtpDOB";
+            dtpDOB.Size = new Size(168, 27);
+            dtpDOB.TabIndex = 11;
             // 
             // lsbGender
             // 
@@ -218,17 +218,17 @@
             lblForename.TabIndex = 0;
             lblForename.Text = "Forename";
             // 
-            // button1
+            // btnConfirmDeRegInst
             // 
-            button1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(475, 672);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(176, 51);
-            button1.TabIndex = 3;
-            button1.Text = "Confirm";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnConfirmDeRegInst.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnConfirmDeRegInst.Location = new Point(475, 672);
+            btnConfirmDeRegInst.Margin = new Padding(3, 4, 3, 4);
+            btnConfirmDeRegInst.Name = "btnConfirmDeRegInst";
+            btnConfirmDeRegInst.Size = new Size(176, 51);
+            btnConfirmDeRegInst.TabIndex = 3;
+            btnConfirmDeRegInst.Text = "Confirm";
+            btnConfirmDeRegInst.UseVisualStyleBackColor = true;
+            btnConfirmDeRegInst.Click += button1_Click;
             // 
             // label8
             // 
@@ -297,7 +297,7 @@
             Controls.Add(txtEnterInstructorName);
             Controls.Add(label8);
             Controls.Add(dvgDeRegisterInstructor);
-            Controls.Add(button1);
+            Controls.Add(btnConfirmDeRegInst);
             Controls.Add(grpDeRegisterInstructor);
             Controls.Add(lblInstructorName);
             Controls.Add(menuStrip1);
@@ -322,7 +322,7 @@
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Label lblInstructorName;
         private System.Windows.Forms.GroupBox grpDeRegisterInstructor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfirmDeRegInst;
         private System.Windows.Forms.TextBox txtForename;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblPhone;
@@ -333,7 +333,7 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSurname;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.ListBox lsbGender;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEnterInstructorName;
