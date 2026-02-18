@@ -74,7 +74,6 @@ namespace GYM_SYS
 
             else
             {
-                dr.Read();
 
                 string forename = dr.GetString(1);
                 string surname = dr.GetString(2);
@@ -114,9 +113,9 @@ namespace GYM_SYS
                               "FORENAME = '" + InstructorForename + "', " +
                               "SURENAME = '" + InstructorSurname + "', " +
                               "DOB = TO_DATE('" + InstructorDOB.ToString("dd-MM-yyyy") + "', 'DD-MM-YYYY'), " +
-                              "PHONE = " + InstructorPhone + ", " +
-                              "EMAIL = '" + InstructorEmail + "' " +
-                              "GENDER = '" + InstructorGender + "' " +
+                              "PHONE = '" + InstructorPhone + "', " +
+                              "EMAIL = '" + InstructorEmail + "', " +
+                              "GENDER = '" + InstructorGender + "', " +
                               "WORKDAYS = '" + InstructorWorkdays + "' " +
                               "WHERE InstructorID = " + InstructorID;
 

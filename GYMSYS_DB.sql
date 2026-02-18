@@ -145,8 +145,7 @@ INSERT INTO Instructors VALUES(2008, 'David','Cornally', DATE '2004-02-12','0889
 INSERT INTO Instructors VALUES(2009, 'Tom','Clancy',DATE '1986-12-14', '0819012345','tom.clancy@gmail.com','Male','Friday Sunday');
 INSERT INTO Instructors VALUES(2010, 'Aisling','Reilly',DATE '1992-10-03','0870123987','aisling.reilly@gmail.com','Female','Tuesday Thursday');
 
-    
--- 
+COMMIT; 
     
 
 

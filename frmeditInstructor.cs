@@ -86,7 +86,7 @@ namespace GYMSYS
         {
 
             int id = Convert.ToInt32(
-                dgvEditInstructors.Rows[dgvEditInstructors.CurrentCell.RowIndex].Cells[0].Value);
+                dgvEditInstructors.Rows[e.RowIndex].Cells[0].Value);
 
             selectedInstructor = Instructor.GetInstructor(id);
 
