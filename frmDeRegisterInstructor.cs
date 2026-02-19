@@ -34,11 +34,21 @@ namespace GYMSYS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to de-register the selected instructor?", "Confirm De-Registration", MessageBoxButtons.YesNo);
+            if (selectedInstructor == null)
+            {
+                MessageBox.Show("Please select an instructor to de-register.");
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to de-register the selected instructor?",
+                "Confirm De-Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (dialogResult == DialogResult.Yes)
             {
+                selectedInstructor.DeleteInstructor();
+
                 MessageBox.Show("Instructor de-registered successfully.");
-                this.Close();
+                
             }
             else if (dialogResult == DialogResult.No)
             {
