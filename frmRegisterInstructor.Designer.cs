@@ -187,7 +187,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Size = new Size(782, 28);
             menuStrip1.TabIndex = 14;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -300,7 +300,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 1162);
+            ClientSize = new Size(782, 553);
             Controls.Add(chkSunday);
             Controls.Add(chkSaturday);
             Controls.Add(chkFriday);
@@ -326,6 +326,7 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(800, 600);
             Name = "frmRegisterInstructor";
             Text = "Register Instructor";
             Load += frmRegInstructor_Load;

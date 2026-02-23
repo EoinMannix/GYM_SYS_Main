@@ -21,9 +21,11 @@ namespace GYM_SYS
         public string MemberEmail { get; set; }
         public string MemberGender { get; set; }
 
+        public decimal Balance { get; set; }
 
-        public Member (int id, string forename, string surename,
-            DateTime dob, string phone, string email, string gender )
+
+        public Member(int id, string forename, string surename,
+            DateTime dob, string phone, string email, string gender)
         {
             MemberID = id;
             MemberForename = forename;
@@ -79,11 +81,12 @@ namespace GYM_SYS
                 string phone = dr.GetString(4);
                 string email = dr.GetString(5);
                 string gender = dr.GetString(6);
+                decimal balance = dr.GetDecimal(7);
 
 
                 dr.Close();
 
-                return new Member(id, forename, surename, dob, phone, email, gender);
+                return new Member(id, forename, surename, dob, phone, email, gender, balance);
             }
         }
 
@@ -137,7 +140,7 @@ namespace GYM_SYS
 
         public static int GetNextMemberID()
         {
-            
+
             string sqlQuery = "SELECT MAX(MEMBERID) FROM MEMBERS";
             OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery); //an example of the data reader being used
 
@@ -151,6 +154,17 @@ namespace GYM_SYS
             dr.Close();
 
             return nextID;
+
+        }
+
+        public void AddFunds(decimal amount)
+        {
+            Balance += amount;
+            string sqlQuery = "UPDATE MEMBERS SET BALANCE = "
+                + Balance +
+                " WHERE MEMBERID = " + MemberID;
+            Database.ExecuteNonQuery(sqlQuery);
+
 
         }
 
