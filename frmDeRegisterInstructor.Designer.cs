@@ -251,7 +251,7 @@
             // 
             dvgDeRegisterInstructor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dvgDeRegisterInstructor.Columns.AddRange(new DataGridViewColumn[] { clmMemberID, clmName, clmPhone, clmEmail });
-            dvgDeRegisterInstructor.Location = new Point(301, 91);
+            dvgDeRegisterInstructor.Location = new Point(295, 90);
             dvgDeRegisterInstructor.Margin = new Padding(3, 4, 3, 4);
             dvgDeRegisterInstructor.Name = "dvgDeRegisterInstructor";
             dvgDeRegisterInstructor.RowHeadersWidth = 51;

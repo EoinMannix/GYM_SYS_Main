@@ -53,15 +53,17 @@ namespace GYM_SYS
         {
             string sqlQuery = "SELECT INSTRUCTORID, FORENAME, SURENAME, DOB, PHONE, EMAIL, GENDER, WORKDAYS " +
                 "FROM INSTRUCTORS " +
+                "WHERE Status = 'Active' " +
                 "ORDER BY INSTRUCTORID";
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
             return ds;
         }
 
-        public static Instructor GetInstructor (int id)
+        public static Instructor GetInstructor(int id)
         {
 
             string sqlQuery = "SELECT * FROM Instructors WHERE InstructorID = " + id;
+                
 
             OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
 
@@ -101,8 +103,8 @@ namespace GYM_SYS
                               InstructorDOB.ToString("dd-MM-yyyy") + "', 'DD-MM-YYYY'), " +
                               InstructorPhone + ", '" +
                               InstructorEmail + "' , '" +
-                              InstructorGender + "', '" + 
-                              InstructorWorkdays + "')";
+                              InstructorGender + "', '" +
+                              InstructorWorkdays + "', 'Active')";
 
             Database.ExecuteNonQuery(sqlQuery);
         }
@@ -139,7 +141,7 @@ namespace GYM_SYS
 
             string sqlQuery = "SELECT MAX(INSTRUCTORID) FROM INSTRUCTORS";
 
-            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery); 
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
 
             int nextID = 2001; // Default to 1 if there are no members
 
@@ -154,6 +156,15 @@ namespace GYM_SYS
 
         }
 
+        public void DeleteInstructor()
+        {
+            string sqlQuery =
+                "UPDATE Instructors SET Status = 'Inactive' " +
+                "WHERE InstructorID = " + InstructorID;
+            Database.ExecuteNonQuery(sqlQuery);
+
+
+        }
 
     }
 }

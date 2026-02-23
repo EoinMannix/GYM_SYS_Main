@@ -29,7 +29,7 @@ namespace GYMSYS
 
         private void frmDeRegisterInstructor_Load(object sender, EventArgs e)
         {
-
+            LoadInstructors();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace GYMSYS
                 selectedInstructor.DeleteInstructor();
 
                 MessageBox.Show("Instructor de-registered successfully.");
-                
+
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -73,7 +73,7 @@ namespace GYMSYS
 
         }
 
- 
+
 
 
         private void txtEnterInstructorName_KeyDown(object sender, KeyEventArgs e)
@@ -115,7 +115,30 @@ namespace GYMSYS
         {
             this.Close();
         }
-    }
 
+
+        private void LoadInstructors()
+        {
+            DataSet ds = Instructor.GetAllInstructors();
+            
+            if (ds == null || ds.Tables.Count == 0)
+            {
+                MessageBox.Show("No instructors found.");
+                return;
+            }
+
+            dvgDeRegisterInstructor.DataSource = null;
+            dvgDeRegisterInstructor.Columns.Clear();
+            dvgDeRegisterInstructor.AutoGenerateColumns = true;
+
+            dvgDeRegisterInstructor.DataSource = ds.Tables[0];
+
+            UtilityInstructor.FormatGrid(dvgDeRegisterInstructor);
+
+            dvgDeRegisterInstructor.Refresh();
+
+        }
+
+    }
 
 }
