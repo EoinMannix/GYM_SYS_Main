@@ -35,6 +35,7 @@ CREATE TABLE Members
     Phone VARCHAR2(15),
     Email VARCHAR2(40),
     Gender VARCHAR2(6),
+    Balance NUMERIC(8,2) DEFAULT 0,
     Status VARCHAR2(10) DEFAULT 'Active' NOT NULL,
     
     CONSTRAINT pk_Members PRIMARY KEY (MemberID)

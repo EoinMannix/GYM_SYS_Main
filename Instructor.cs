@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GYM_SYS
+namespace GYMSYS
 {
     internal class Instructor
     {

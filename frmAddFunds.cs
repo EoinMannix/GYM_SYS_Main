@@ -13,12 +13,14 @@ namespace GYMSYS
     public partial class frmAddFunds : Form
     {
 
-        decimal balance = 0m;
-        public frmAddFunds()
+        private Member currentMember;
+
+        public frmAddFunds(Member member)
         {
             InitializeComponent();
 
-            txtCurrentBalance.Text = "€" + BalanceManager.Balance.ToString("0.00");
+            currentMember = member;
+            txtCurrentBalance.Text = "€" + currentMember.Balance.ToString("0.00");
         }
 
         private void frmAddFunds_Load(object sender, EventArgs e)
@@ -57,9 +59,9 @@ namespace GYMSYS
                 return;
             }
 
-            BalanceManager.Balance += amountToAdd;
+            currentMember.AddFunds(amountToAdd);
 
-            txtCurrentBalance.Text = "€" + BalanceManager.Balance.ToString("0.00");
+            txtCurrentBalance.Text = "€" + currentMember.Balance.ToString("0.00");
 
             MessageBox.Show("Successfully added €" + amountToAdd.ToString("0.00") + " to your balance.");
 
@@ -69,5 +71,7 @@ namespace GYMSYS
         {
             this.Close();
         }
+
     }
+
 }

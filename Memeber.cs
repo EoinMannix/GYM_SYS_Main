@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace GYM_SYS
+namespace GYMSYS
 {
     internal class Member
     {
@@ -25,7 +25,7 @@ namespace GYM_SYS
 
 
         public Member(int id, string forename, string surename,
-            DateTime dob, string phone, string email, string gender)
+            DateTime dob, string phone, string email, string gender, decimal balance)
         {
             MemberID = id;
             MemberForename = forename;
@@ -34,6 +34,7 @@ namespace GYM_SYS
             MemberPhone = phone;
             MemberEmail = email;
             MemberGender = gender;
+            Balance = balance;
 
         }
 
