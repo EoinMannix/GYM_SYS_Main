@@ -143,7 +143,7 @@ namespace GYMSYS
 
         private void LoadInstructors()
         {
-            DataSet ds = GYM_SYS.Instructor.GetAllInstructors();
+            DataSet ds = Instructor.GetAllInstructors();
 
             if (ds == null || ds.Tables.Count == 0)
             {

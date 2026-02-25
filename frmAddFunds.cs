@@ -15,12 +15,10 @@ namespace GYMSYS
 
         private Member currentMember;
 
-        public frmAddFunds(Member member)
+        public frmAddFunds()
         {
             InitializeComponent();
 
-            currentMember = member;
-            txtCurrentBalance.Text = "€" + currentMember.Balance.ToString("0.00");
         }
 
         private void frmAddFunds_Load(object sender, EventArgs e)
@@ -70,6 +68,12 @@ namespace GYMSYS
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LoadMember(Member member)
+        {
+            currentMember = member;
+            txtCurrentBalance.Text = "€" + currentMember.Balance.ToString("0.00");
         }
 
     }

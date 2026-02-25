@@ -488,9 +488,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYM_SYS.csproj",
-      "projectName": "GYM_SYS",
-      "projectPath": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYM_SYS.csproj",
+      "projectUniqueName": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYMSYS.csproj",
+      "projectName": "GYMSYS",
+      "projectPath": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYMSYS.csproj",
       "packagesPath": "C:\\Users\\eoinm\\.nuget\\packages\\",
       "outputPath": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\obj\\",
       "projectStyle": "PackageReference",

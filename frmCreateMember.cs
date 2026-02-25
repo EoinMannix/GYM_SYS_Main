@@ -40,7 +40,7 @@ namespace GYMSYS
                 int newID = Member.GetNextMemberID();
 
                 Member newMember = new Member(newID, txtForename.Text, txtSurname.Text, dtpDOB.Value,
-                    txtPhone.Text, txtEmail.Text, lstGender.Text);
+                    txtPhone.Text, txtEmail.Text, lstGender.Text,Convert.ToDecimal(0.0));
 
                 newMember.AddMember();
 

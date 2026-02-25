@@ -2,7 +2,7 @@
 using System.Data;
 using System.Security.Cryptography.X509Certificates;
 
-namespace GYM_SYS
+namespace GYMSYS
 {
     class Database
     {

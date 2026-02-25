@@ -1,15 +1,3 @@
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\GYM_SYS.exe
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\GYM_SYS.deps.json
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\GYM_SYS.runtimeconfig.json
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\GYM_SYS.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\GYM_SYS.pdb
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\Oracle.ManagedDataAccess.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\System.DirectoryServices.Protocols.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\linux\lib\net8.0\System.DirectoryServices.Protocols.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\osx\lib\net8.0\System.DirectoryServices.Protocols.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.DirectoryServices.Protocols.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.csproj.AssemblyReference.cache
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.frmAddFunds.resources
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.frmCancelBooking.resources
@@ -27,10 +15,4 @@ C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.Genera
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.AssemblyInfoInputs.cache
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.AssemblyInfo.cs
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.csproj.CoreCompileInputs.cache
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.csproj.Up2Date
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\refint\GYM_SYS.dll
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.pdb
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.genruntimeconfig.cache
-C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\ref\GYM_SYS.dll
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYM_SYS.sourcelink.json

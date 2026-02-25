@@ -122,7 +122,7 @@ namespace GYMSYS
 
         private void LoadMembers()
         {
-            DataSet ds = GYM_SYS.Member.GetAllMembers(); // runs the method to get all members from the database
+            DataSet ds = Member.GetAllMembers(); // runs the method to get all members from the database
 
             if (ds == null || ds.Tables.Count == 0) // checks if the dataset is null or contains no tables
             {

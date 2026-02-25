@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3KQmG9cy988=",
+  "dgSpecHash": "H18MSsJh3pM=",
   "success": true,
-  "projectFilePath": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYM_SYS.csproj",
+  "projectFilePath": "C:\\Software_Project_Main\\GYM_SYS\\GYM_SYS\\GYMSYS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eoinm\\.nuget\\packages\\oracle.manageddataaccess.core\\23.26.100\\oracle.manageddataaccess.core.23.26.100.nupkg.sha512",
     "C:\\Users\\eoinm\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",

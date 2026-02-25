@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("GYM_SYS")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("GYMSYS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c7c1a98b8133ae2f49ce96c2ae64ffa8fb16866")]
-[assembly: System.Reflection.AssemblyProductAttribute("GYM_SYS")]
-[assembly: System.Reflection.AssemblyTitleAttribute("GYM_SYS")]
+[assembly: System.Reflection.AssemblyProductAttribute("GYMSYS")]
+[assembly: System.Reflection.AssemblyTitleAttribute("GYMSYS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
