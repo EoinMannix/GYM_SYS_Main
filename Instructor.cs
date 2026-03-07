@@ -93,9 +93,7 @@ namespace GYMSYS
         }
 
         public void AddInstructor()
-        {
-            Debug.WriteLine(this);
-
+        { 
             string sqlQuery = "INSERT INTO Instructors VALUES (" +
                               InstructorID + ", '" +
                               InstructorForename + "', '" +

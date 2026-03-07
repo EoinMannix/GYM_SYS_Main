@@ -11,24 +11,26 @@ namespace GYMSYS
 {
     internal class Classes
     {
-        public string ClassID { get; set; }
+        public int ClassID { get; set; }
         public string ClassName { get; set; }
         public int InstructorID { get; set; }
         public decimal ClassPrice { get; set; }
         public DateTime ClassDate { get; set; }
         public string ClassTime { get; set; }
         public string Room { get; set; }
+        public string TypeCode { get; set; }
 
         public Classes(int id, string name, int instructorID, decimal price,
-            DateTime date, string time, string room)
+            DateTime date, string time, string room, string typeCode)
         {
-            ClassID = id.ToString();
+            ClassID = id;
             ClassName = name;
             InstructorID = instructorID;
             ClassPrice = price;
             ClassDate = date;
             ClassTime = time;
             Room = room;
+            TypeCode = typeCode;
         }
 
 
@@ -45,17 +47,18 @@ namespace GYMSYS
 
         public static DataSet GetAllClasses()
         {   
-            string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOM " +
+            string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOM, TYPECODE " +
                 "FROM CLASSES " +
                 "WHERE Status = 'Active' " +
                 "ORDER BY CLASSID";
+
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
             return ds;
         }
 
         public static Classes GetClass (int id)
         {
-            string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOM " +
+            string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOM, TYPECODE " +
                 "FROM CLASSES " +
                 "WHERE CLASSID = " + id;
 
@@ -77,10 +80,11 @@ namespace GYMSYS
                 DateTime date = dr.GetDateTime(4);
                 string time = dr.GetString(5);
                 string room = dr.GetString(6);
+                string typeCode = dr.GetString(7);
 
                 dr.Close();
 
-                return new Classes(id, name, instructorID, price, date, time, room);
+                return new Classes(id, name, instructorID, price, date, time, room, typeCode);
 
             }
 
@@ -93,9 +97,11 @@ namespace GYMSYS
                 ClassName + "', " +
                 InstructorID + ", " +
                 ClassPrice + ", TO_DATE('" +
-                ClassDate.ToString("yyyy-MM-dd") + "', 'YYYY-MM-DD'), '" +
+                ClassDate.ToString("dd-MM-yyyy") + "', 'dd-MM-yyyy'), '" +
                 ClassTime + "', '" +
-                Room + "', 'Active')";
+                Room + "', '" +
+                TypeCode + "', 'Active')";
+
 
             Database.ExecuteMultiRowQuery(sqlQuery);
         }
@@ -109,7 +115,9 @@ namespace GYMSYS
                 "CLASSDATE = TO_DATE('" + ClassDate.ToString("yyyy-MM-dd") + "', 'YYYY-MM-DD'), " +
                 "CLASSTIME = '" + ClassTime + "', " +
                 "ROOM = '" + Room + "' " +
+                "TYPECODE = '" + TypeCode + "' " +
                 "WHERE CLASSID = " + ClassID;
+
             Database.ExecuteMultiRowQuery(sqlQuery);
         }
          public void DeleteClass()
@@ -117,8 +125,6 @@ namespace GYMSYS
             string sqlQuery = "UPDATE CLASSES SET Status = 'Inactive' WHERE CLASSID = " + ClassID;
             Database.ExecuteMultiRowQuery(sqlQuery);
         }
-
-      
 
 
 

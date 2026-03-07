@@ -201,7 +201,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 726);
+            ClientSize = new Size(800, 1055);
             Controls.Add(lstGender);
             Controls.Add(dtpDOB);
             Controls.Add(txtEmail);

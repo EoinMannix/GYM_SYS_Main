@@ -77,7 +77,7 @@ CREATE TABLE Classes
     ClassDate DATE,
     ClassTime VARCHAR2(5), -- I put varchar as there is then room for a semi colon eg 10:00
     Price NUMERIC(6,2),
-    Room VARCHAR2(10),
+    RoomID NUMERIC(2),
     Status VARCHAR2(10),
     
     CONSTRAINT pk_Classes PRIMARY KEY (ClassID),
@@ -110,6 +110,22 @@ CREATE TABLE Bookings
     CONSTRAINT fk_Bookings_Classes
         FOREIGN KEY (ClassID) REFERENCES Classes
 );
+
+-- Rooms Tables
+
+PROMPT CREATING Table Bookings
+PROMPT
+
+CREATE TABLE Rooms 
+(
+    RoomID NUMERIC(2),
+    RoomName VARCHAR2(20),
+    
+    CONSTRAINT pk_Rooms PRIMARY KEY (RoomID)
+    
+);
+
+
 
 -- Sample Class Types
 
@@ -146,6 +162,15 @@ INSERT INTO Instructors VALUES(2007, 'Brian','Lynch', DATE '1980-01-08','0827890
 INSERT INTO Instructors VALUES(2008, 'David','Cornally', DATE '2004-02-12','088901234','david.cornally@gmail.com','Male','Monday Tuesday', 'Active');
 INSERT INTO Instructors VALUES(2009, 'Tom','Clancy',DATE '1986-12-14', '0819012345','tom.clancy@gmail.com','Male','Friday Sunday', 'Active');
 INSERT INTO Instructors VALUES(2010, 'Aisling','Reilly',DATE '1992-10-03','0870123987','aisling.reilly@gmail.com','Female','Tuesday Thursday', 'Active');
+
+-- Sample data Rooms
+
+INSERT INTO Rooms VALUES (1, 'Yoga Studio');
+INSERT INTO Rooms VALUES (2, 'Spin Studio');
+INSERT INTO Rooms VALUES (3, 'Hyrox Floor');
+INSERT INTO Rooms VALUES (4, 'Main Gym Floor');
+INSERT INTO Rooms VALUES (5, 'Pilates Studio');
+
 
 COMMIT; 
     

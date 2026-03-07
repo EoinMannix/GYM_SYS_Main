@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM_SYS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,25 +13,11 @@ namespace GYMSYS
 {
     public partial class frmScheduleClass : Form
     {
+        private Classes selectedClass;
         public frmScheduleClass()
         {
             InitializeComponent();
 
-            dgvScheduleClass.ColumnCount = 5;
-            dgvScheduleClass.Columns[0].HeaderText = "Class ID";
-            dgvScheduleClass.Columns[1].Name = "Class Name";
-            dgvScheduleClass.Columns[2].Name = "Instructor Name";
-            dgvScheduleClass.Columns[3].Name = "Date";
-            dgvScheduleClass.Columns[4].Name = "Time";
-
-            dgvScheduleClass.Rows.Add("C001", "Yoga", "Aoife Murphy", "2025-07-01", "10:00 AM");
-            dgvScheduleClass.Rows.Add("C002", "Pilates", "Ciaran O Donnell", "2025-07-02", "11:00 AM");
-            dgvScheduleClass.Rows.Add("C003", "Spinning", "Niamh Kelly", "2025-07-03", "12:00 PM");
-            dgvScheduleClass.Rows.Add("C004", "Hyrox", "Darragh Byrne", "2025-07-04", "01:00 PM");
-            dgvScheduleClass.Rows.Add("C005", "Pilates", "Siobhan McCarthy", "2025-07-05", "02:00 PM");
-            dgvScheduleClass.Rows.Add("C006", "Yoga", "Eimear Walsh", "2025-07-06", "03:00 PM");
-            dgvScheduleClass.Rows.Add("C007", "Spinning", "Kevin O Sullivan", "2025-07-07", "04:00 PM");
-            dgvScheduleClass.Rows.Add("C008", "Hyrox", "Laura Brennan", "2025-07-08", "05:00 PM");
 
         }
 
@@ -41,22 +28,22 @@ namespace GYMSYS
 
         private void dgvScheduleClass_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // makes sure the user clicked a real row not the header
-            {
-                DataGridViewRow row = dgvScheduleClass.Rows[e.RowIndex]; // gets the clicked row 
 
-                txtClassName.Text = row.Cells[1].Value.ToString();
+            Instructor instructor = Instructor.GetInstructor(selectedClass.InstructorID);
 
-                txtInstructorName.Text = row.Cells[2].Value.ToString();
+            int id = Convert.ToInt32(
+                dgvScheduleClass.Rows[e.RowIndex].Cells[0].Value);
 
-                txtDate.Text = row.Cells[3].Value.ToString();
+            selectedClass = Classes.GetClass(id);
 
-                txtTime.Text = row.Cells[4].Value.ToString();
+            txtClassName.Text = selectedClass.ClassName;
+            dtpClassDate.Value = selectedClass.ClassDate;
+            txtInstructorName.Text = instructor.InstructorForename + " " + instructor.InstructorSurname;
+            txtClassPrice.Text = selectedClass.ClassPrice.ToString();
 
-                txtRoom.Text = row.Cells[0].Value.ToString();
 
-                txtPrice.Text = "15.00";
-            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,6 +65,12 @@ namespace GYMSYS
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmScheduleClass_Load_1(object sender, EventArgs e)
+        {
+            LoadClasses();
+            LoadRooms();
         }
 
         private void txtSelectClass_KeyDown(object sender, KeyEventArgs e)
@@ -115,9 +108,41 @@ namespace GYMSYS
 
         }
 
+
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void LoadClasses()
+        {
+            DataSet ds = Classes.GetAllClasses();
+
+            if (ds == null || ds.Tables.Count == 0)
+            {
+                MessageBox.Show("No classes found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            dgvScheduleClass.DataSource = null;
+            dgvScheduleClass.Columns.Clear();
+            dgvScheduleClass.AutoGenerateColumns = true;
+
+            dgvScheduleClass.DataSource = ds.Tables[0];
+            UtilityInstructor.FormatGrid(dgvScheduleClass);
+            dgvScheduleClass.Refresh();
+
+
+        }
+
+        private void LoadRooms()
+        {
+            DataSet ds = Database.ExecuteMultiRowQuery("SELECT ROOMID, ROOMNAME FROM ROOMS");
+
+            cboRoom.DataSource = ds.Tables[0];
+            cboRoom.DisplayMember = "ROOMNAME";
+            cboRoom.ValueMember = "ROOMID";
+        }
+
     }
 }
