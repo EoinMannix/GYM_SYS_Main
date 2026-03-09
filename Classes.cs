@@ -17,11 +17,11 @@ namespace GYMSYS
         public decimal ClassPrice { get; set; }
         public DateTime ClassDate { get; set; }
         public string ClassTime { get; set; }
-        public string Room { get; set; }
+        public int RoomId { get; set; }
         public string TypeCode { get; set; }
 
         public Classes(int id, string name, int instructorID, decimal price,
-            DateTime date, string time, string room, string typeCode)
+            DateTime date, string time, int roomId, string typeCode)
         {
             ClassID = id;
             ClassName = name;
@@ -29,7 +29,7 @@ namespace GYMSYS
             ClassPrice = price;
             ClassDate = date;
             ClassTime = time;
-            Room = room;
+            RoomId = roomId;
             TypeCode = typeCode;
         }
 
@@ -42,12 +42,12 @@ namespace GYMSYS
                    ", Class Price: " + ClassPrice +
                    ", Class Date: " + ClassDate.ToShortDateString() +
                    ", Class Time: " + ClassTime +
-                   ", Room: " + Room;
+                   ", RoomID: " + RoomId;
         }
 
         public static DataSet GetAllClasses()
         {   
-            string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOM, TYPECODE " +
+            string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOMID, TYPECODE " +
                 "FROM CLASSES " +
                 "WHERE Status = 'Active' " +
                 "ORDER BY CLASSID";
@@ -58,7 +58,7 @@ namespace GYMSYS
 
         public static Classes GetClass (int id)
         {
-            string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOM, TYPECODE " +
+            string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOMID, TYPECODE " +
                 "FROM CLASSES " +
                 "WHERE CLASSID = " + id;
 
@@ -79,12 +79,12 @@ namespace GYMSYS
                 decimal price = dr.GetDecimal(3);
                 DateTime date = dr.GetDateTime(4);
                 string time = dr.GetString(5);
-                string room = dr.GetString(6);
+                int roomId = dr.GetInt32(6);
                 string typeCode = dr.GetString(7);
 
                 dr.Close();
 
-                return new Classes(id, name, instructorID, price, date, time, room, typeCode);
+                return new Classes(id, name, instructorID, price, date, time, roomId, typeCode);
 
             }
 
@@ -99,7 +99,7 @@ namespace GYMSYS
                 ClassPrice + ", TO_DATE('" +
                 ClassDate.ToString("dd-MM-yyyy") + "', 'dd-MM-yyyy'), '" +
                 ClassTime + "', '" +
-                Room + "', '" +
+                RoomId + "', '" +
                 TypeCode + "', 'Active')";
 
 
@@ -114,7 +114,7 @@ namespace GYMSYS
                 "PRICE = " + ClassPrice + ", " +
                 "CLASSDATE = TO_DATE('" + ClassDate.ToString("yyyy-MM-dd") + "', 'YYYY-MM-DD'), " +
                 "CLASSTIME = '" + ClassTime + "', " +
-                "ROOM = '" + Room + "' " +
+                "ROOMID = '" + RoomId + "' " +
                 "TYPECODE = '" + TypeCode + "' " +
                 "WHERE CLASSID = " + ClassID;
 
@@ -124,6 +124,26 @@ namespace GYMSYS
         {
             string sqlQuery = "UPDATE CLASSES SET Status = 'Inactive' WHERE CLASSID = " + ClassID;
             Database.ExecuteMultiRowQuery(sqlQuery);
+        }
+
+        public static string GetRoomName(int roomID)
+        {
+            string sqlQuery = "SELECT ROOMNAME FROM ROOMS WHERE ROOMID = " + roomID;
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            if (!dr.Read())
+            {
+                MessageBox.Show("Room with ID " + roomID + " not found.");
+                dr.Close();
+                return null;
+            }
+            else
+            {
+                string roomName = dr.GetString(0);
+                dr.Close();
+                return roomName;
+            }
         }
 
 

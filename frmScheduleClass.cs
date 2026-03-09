@@ -29,17 +29,22 @@ namespace GYMSYS
         private void dgvScheduleClass_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            Instructor instructor = Instructor.GetInstructor(selectedClass.InstructorID);
-
             int id = Convert.ToInt32(
                 dgvScheduleClass.Rows[e.RowIndex].Cells[0].Value);
 
             selectedClass = Classes.GetClass(id);
 
+            Instructor instructor = Instructor.GetInstructor(selectedClass.InstructorID);
+
+            string roomName = Classes.GetRoomName(selectedClass.Room);
+
             txtClassName.Text = selectedClass.ClassName;
             dtpClassDate.Value = selectedClass.ClassDate;
             txtInstructorName.Text = instructor.InstructorForename + " " + instructor.InstructorSurname;
             txtClassPrice.Text = selectedClass.ClassPrice.ToString();
+            txtClassTime.Text = selectedClass.ClassTime;
+            cboRoom.SelectedValue = selectedClass.Room;
+
 
 
 

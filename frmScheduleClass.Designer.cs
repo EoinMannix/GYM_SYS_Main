@@ -39,8 +39,8 @@
             clmTime = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
             cboRoom = new ComboBox();
-            ClassTime = new TextBox();
-            ClassPrice = new TextBox();
+            txtClassTime = new TextBox();
+            txtClassPrice = new TextBox();
             dtpClassDate = new DateTimePicker();
             txtInstructorName = new TextBox();
             label10 = new Label();
@@ -140,8 +140,8 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(cboRoom);
-            groupBox1.Controls.Add(ClassTime);
-            groupBox1.Controls.Add(ClassPrice);
+            groupBox1.Controls.Add(txtClassTime);
+            groupBox1.Controls.Add(txtClassPrice);
             groupBox1.Controls.Add(dtpClassDate);
             groupBox1.Controls.Add(txtInstructorName);
             groupBox1.Controls.Add(label10);
@@ -167,19 +167,19 @@
             cboRoom.Size = new Size(200, 23);
             cboRoom.TabIndex = 24;
             // 
-            // ClassTime
+            // txtClassTime
             // 
-            ClassTime.Location = new Point(504, 105);
-            ClassTime.Name = "ClassTime";
-            ClassTime.Size = new Size(200, 23);
-            ClassTime.TabIndex = 23;
+            txtClassTime.Location = new Point(504, 105);
+            txtClassTime.Name = "txtClassTime";
+            txtClassTime.Size = new Size(200, 23);
+            txtClassTime.TabIndex = 23;
             // 
-            // ClassPrice
+            // txtClassPrice
             // 
-            ClassPrice.Location = new Point(504, 44);
-            ClassPrice.Name = "ClassPrice";
-            ClassPrice.Size = new Size(200, 23);
-            ClassPrice.TabIndex = 22;
+            txtClassPrice.Location = new Point(504, 44);
+            txtClassPrice.Name = "txtClassPrice";
+            txtClassPrice.Size = new Size(200, 23);
+            txtClassPrice.TabIndex = 22;
             // 
             // dtpClassDate
             // 
@@ -360,8 +360,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTime;
         private DateTimePicker dtpClassDate;
-        private TextBox ClassTime;
-        private TextBox ClassPrice;
+        private TextBox txtClassTime;
+        private TextBox txtClassPrice;
         private ComboBox cboRoom;
     }
 }
