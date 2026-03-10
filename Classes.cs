@@ -97,9 +97,9 @@ namespace GYMSYS
                 ClassName + "', " +
                 InstructorID + ", " +
                 ClassPrice + ", TO_DATE('" +
-                ClassDate.ToString("dd-MM-yyyy") + "', 'dd-MM-yyyy'), '" +
-                ClassTime + "', '" +
-                RoomId + "', '" +
+                ClassDate.ToString("yyyy-MM-dd") + "', 'yyyy-MM-dd'), '" +
+                ClassTime + "', " +
+                RoomId + ", '" +
                 TypeCode + "', 'Active')";
 
 
@@ -114,7 +114,7 @@ namespace GYMSYS
                 "PRICE = " + ClassPrice + ", " +
                 "CLASSDATE = TO_DATE('" + ClassDate.ToString("yyyy-MM-dd") + "', 'YYYY-MM-DD'), " +
                 "CLASSTIME = '" + ClassTime + "', " +
-                "ROOMID = '" + RoomId + "' " +
+                "ROOMID = " + RoomId + ", " +
                 "TYPECODE = '" + TypeCode + "' " +
                 "WHERE CLASSID = " + ClassID;
 
