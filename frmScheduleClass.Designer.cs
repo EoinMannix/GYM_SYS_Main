@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblSelectRoom = new Label();
             menuStrip1 = new MenuStrip();
             backToolStripMenuItem = new ToolStripMenuItem();
             dgvScheduleClass = new DataGridView();
@@ -54,21 +54,25 @@
             label2 = new Label();
             btnConfirm = new Button();
             label9 = new Label();
-            txtSelectClass = new TextBox();
+            cboRoom1 = new ComboBox();
+            dtpClassDate1 = new DateTimePicker();
+            lblDate1 = new Label();
+            btnViewTimetable = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvScheduleClass).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lblSelectRoom
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(221, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(112, 24);
-            label1.TabIndex = 0;
-            label1.Text = "Select Class";
+            lblSelectRoom.AutoSize = true;
+            lblSelectRoom.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSelectRoom.Location = new Point(45, 38);
+            lblSelectRoom.Name = "lblSelectRoom";
+            lblSelectRoom.Size = new Size(118, 24);
+            lblSelectRoom.TabIndex = 0;
+            lblSelectRoom.Text = "Select Room";
+            lblSelectRoom.Click += label1_Click;
             // 
             // menuStrip1
             // 
@@ -166,10 +170,11 @@
             cboRoom.Name = "cboRoom";
             cboRoom.Size = new Size(200, 23);
             cboRoom.TabIndex = 24;
+            cboRoom.SelectedIndexChanged += cboRoom_SelectedIndexChanged;
             // 
             // txtClassTime
             // 
-            txtClassTime.Location = new Point(504, 105);
+            txtClassTime.Location = new Point(504, 108);
             txtClassTime.Name = "txtClassTime";
             txtClassTime.Size = new Size(200, 23);
             txtClassTime.TabIndex = 23;
@@ -282,7 +287,7 @@
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(470, 576);
+            btnConfirm.Location = new Point(470, 586);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(178, 44);
             btnConfirm.TabIndex = 5;
@@ -298,27 +303,56 @@
             label9.Size = new Size(0, 15);
             label9.TabIndex = 18;
             // 
-            // txtSelectClass
+            // cboRoom1
             // 
-            txtSelectClass.Location = new Point(387, 41);
-            txtSelectClass.Name = "txtSelectClass";
-            txtSelectClass.Size = new Size(205, 23);
-            txtSelectClass.TabIndex = 19;
-            txtSelectClass.TextChanged += textBox5_TextChanged;
-            txtSelectClass.KeyDown += txtSelectClass_KeyDown;
+            cboRoom1.FormattingEnabled = true;
+            cboRoom1.Location = new Point(200, 41);
+            cboRoom1.Name = "cboRoom1";
+            cboRoom1.Size = new Size(200, 23);
+            cboRoom1.TabIndex = 25;
+            // 
+            // dtpClassDate1
+            // 
+            dtpClassDate1.Location = new Point(513, 41);
+            dtpClassDate1.Name = "dtpClassDate1";
+            dtpClassDate1.Size = new Size(200, 23);
+            dtpClassDate1.TabIndex = 27;
+            // 
+            // lblDate1
+            // 
+            lblDate1.AutoSize = true;
+            lblDate1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate1.Location = new Point(425, 40);
+            lblDate1.Name = "lblDate1";
+            lblDate1.Size = new Size(48, 24);
+            lblDate1.TabIndex = 28;
+            lblDate1.Text = "Date";
+            // 
+            // btnViewTimetable
+            // 
+            btnViewTimetable.Location = new Point(777, 35);
+            btnViewTimetable.Name = "btnViewTimetable";
+            btnViewTimetable.Size = new Size(103, 38);
+            btnViewTimetable.TabIndex = 29;
+            btnViewTimetable.Text = "View Timetable";
+            btnViewTimetable.UseVisualStyleBackColor = true;
+            btnViewTimetable.Click += btnViewTimetable_Click;
             // 
             // frmScheduleClass
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1144, 642);
-            Controls.Add(txtSelectClass);
+            Controls.Add(btnViewTimetable);
+            Controls.Add(lblDate1);
+            Controls.Add(dtpClassDate1);
+            Controls.Add(cboRoom1);
             Controls.Add(label9);
             Controls.Add(btnConfirm);
             Controls.Add(label2);
             Controls.Add(groupBox1);
             Controls.Add(dgvScheduleClass);
-            Controls.Add(label1);
+            Controls.Add(lblSelectRoom);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "frmScheduleClass";
@@ -336,7 +370,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSelectRoom;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvScheduleClass;
@@ -353,7 +387,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtInstructorName;
-        private System.Windows.Forms.TextBox txtSelectClass;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmClassID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmClassName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmInstructorName;
@@ -363,5 +396,9 @@
         private TextBox txtClassTime;
         private TextBox txtClassPrice;
         private ComboBox cboRoom;
+        private ComboBox cboRoom1;
+        private DateTimePicker dtpClassDate1;
+        private Label lblDate1;
+        private Button btnViewTimetable;
     }
 }

@@ -101,7 +101,7 @@ namespace GYMSYS
                 MemberDOB.ToString("dd/MM/yyyy") + "', 'DD/MM/YYYY'), '" +
                 MemberPhone + "', '" +
                 MemberEmail + "', '" +
-                MemberGender + "' , 'Active')";
+                MemberGender + "', " + 0 + " , 'Active')";
 
             Database.ExecuteNonQuery(sqlQuery);
         }
@@ -146,7 +146,7 @@ namespace GYMSYS
             string sqlQuery = "SELECT MAX(MEMBERID) FROM MEMBERS";
             OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery); //an example of the data reader being used
 
-            int nextID = 1001; // Default to 1 if there are no members
+            int nextID = 1001; 
 
             if (dr.Read() && !dr.IsDBNull(0))
             {

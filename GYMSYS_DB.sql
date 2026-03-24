@@ -4,6 +4,7 @@ DROP TABLE Classes CASCADE CONSTRAINTS;
 DROP TABLE Members CASCADE CONSTRAINTS;
 DROP TABLE Instructors CASCADE CONSTRAINTS;
 DROP TABLE ClassTypes CASCADE CONSTRAINTS;
+DROP TABLE Rooms CASCADE CONSTRAINTS;
 
 
 -- Class Types Table
@@ -137,18 +138,18 @@ INSERT INTO ClassTypes VALUES('SP','Spinning');
 
 -- Sample data members
 
-INSERT INTO Members VALUES(1001, 'Sean', 'O Brien', DATE '1995-04-12', '0712345678','sean.obrien@gmail.com','Male','Active');
-INSERT INTO Members VALUES(1002, 'Aoife', 'Murphy', DATE '1996-08-18', '0847652390','aoife.murphy@gmail.com','Female','Active');
-INSERT INTO Members VALUES(1003, 'Connor', 'Kelly', DATE '2002-05-02','0723748090','connor.kelly@gmail.com','Male','Active');
-INSERT INTO Members VALUES(1004, 'Niamh', 'Doyle', DATE '2000-04-18','0864567890','niamh.doyle@gmail.com','Female','Active');
-INSERT INTO Members VALUES(1005, 'Ciaran', 'Bryne', DATE '1996-09-12','0855678910','ciaran.bryne@gmail.com','Male','Active');
-INSERT INTO Members VALUES(1006, 'Saoirse', 'Ryan', DATE '2001-01-30','0876789012','saoirse.ryan@gmail.com','Female','Active');
-INSERT INTO Members VALUES(1007, 'Darragh', 'Walsh', DATE '2001-01-30','0837890123','darragh.walsh@gmail.com','Male','Active');
-INSERT INTO Members VALUES(1008, 'Orla', 'O Connor', DATE '1997-03-14','0868901234','orla.oconnor@gmail.com','Female','Active');
-INSERT INTO Members VALUES(1009, 'Padraig', 'fitzgerald', DATE '1989-12-08', '0859012345','padraig.fitzgerald@gmail.com','Male','Active');
-INSERT INTO Members VALUES(1010, 'Clodagh', 'Higgins', DATE '1995-10-19','0870123456','clodagh.higgins@gmail.com','Female','Active');
-INSERT INTO Members VALUES(1011, 'Ronan', 'Mccarthy', DATE '1991-05-27', '0831234567','ronan.mccarthy@gmail.com','Male','Active');
-INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan', DATE '1999-08-03', '0862345678','eimear.flanagan@gmail.com','Female','Active');
+INSERT INTO Members VALUES(1001, 'Sean', 'O Brien', DATE '1995-04-12', '0712345678','sean.obrien@gmail.com','Male',0,'Active');
+INSERT INTO Members VALUES(1002, 'Aoife', 'Murphy', DATE '1996-08-18', '0847652390','aoife.murphy@gmail.com','Female',0,'Active');
+INSERT INTO Members VALUES(1003, 'Connor', 'Kelly', DATE '2002-05-02','0723748090','connor.kelly@gmail.com','Male',0,'Active');
+INSERT INTO Members VALUES(1004, 'Niamh', 'Doyle', DATE '2000-04-18','0864567890','niamh.doyle@gmail.com','Female',0,'Active');
+INSERT INTO Members VALUES(1005, 'Ciaran', 'Bryne', DATE '1996-09-12','0855678910','ciaran.bryne@gmail.com','Male',0,'Active');
+INSERT INTO Members VALUES(1006, 'Saoirse', 'Ryan', DATE '2001-01-30','0876789012','saoirse.ryan@gmail.com','Female',0,'Active');
+INSERT INTO Members VALUES(1007, 'Darragh', 'Walsh', DATE '2001-01-30','0837890123','darragh.walsh@gmail.com','Male',0,'Active');
+INSERT INTO Members VALUES(1008, 'Orla', 'O Connor', DATE '1997-03-14','0868901234','orla.oconnor@gmail.com','Female',0,'Active');
+INSERT INTO Members VALUES(1009, 'Padraig', 'fitzgerald', DATE '1989-12-08', '0859012345','padraig.fitzgerald@gmail.com','Male',0,'Active');
+INSERT INTO Members VALUES(1010, 'Clodagh', 'Higgins', DATE '1995-10-19','0870123456','clodagh.higgins@gmail.com','Female',0,'Active');
+INSERT INTO Members VALUES(1011, 'Ronan', 'Mccarthy', DATE '1991-05-27', '0831234567','ronan.mccarthy@gmail.com','Male',0,'Active');
+INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan', DATE '1999-08-03', '0862345678','eimear.flanagan@gmail.com','Female',0,'Active');
 
 -- Sample data Instructors
 
@@ -171,6 +172,11 @@ INSERT INTO Rooms VALUES (3, 'Hyrox Floor');
 INSERT INTO Rooms VALUES (4, 'Main Gym Floor');
 INSERT INTO Rooms VALUES (5, 'Pilates Studio');
 
+-- Sample data Classes
+
+INSERT INTO Classes VALUES(3001,'Yoga Class',2002, 'YG',DATE '2025-04-01','15:00',15.00,1,'Active');
+INSERT INTO Classes VALUES(2001,'Hyrox Training',2001,'HX',DATE '2025-04-02','18:00',20.00,3,'Active');
+INSERT INTO Classes VALUES(3003,'Pilates Session',2004,'PL',DATE '2025-04-01','12:00',15.00,5,'Active');
 
 COMMIT; 
     

@@ -25,8 +25,6 @@ namespace GYM_SYS
             dg.Columns["INSTRUCTORID"].DefaultCellStyle.Format = "0000";
             dg.Columns["INSTRUCTORID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            dg.Columns["DOB"].DefaultCellStyle.Format = "dd/MM/yyyy";
-
         }
 
     }

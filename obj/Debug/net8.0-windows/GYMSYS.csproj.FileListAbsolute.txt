@@ -34,3 +34,4 @@ C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\refint\GYMSYS.
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.pdb
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.genruntimeconfig.cache
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\ref\GYMSYS.dll
+C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.frmTimetableView.resources

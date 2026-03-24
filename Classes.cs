@@ -35,7 +35,7 @@ namespace GYMSYS
 
 
         public override string ToString()  // to display class information
-            {
+        {
             return "Class ID: " + ClassID +
                    ", Class Name: " + ClassName +
                    ", Instructor ID: " + InstructorID +
@@ -46,7 +46,7 @@ namespace GYMSYS
         }
 
         public static DataSet GetAllClasses()
-        {   
+        {
             string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOMID, TYPECODE " +
                 "FROM CLASSES " +
                 "WHERE Status = 'Active' " +
@@ -56,7 +56,7 @@ namespace GYMSYS
             return ds;
         }
 
-        public static Classes GetClass (int id)
+        public static Classes GetClass(int id)
         {
             string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOMID, TYPECODE " +
                 "FROM CLASSES " +
@@ -120,7 +120,7 @@ namespace GYMSYS
 
             Database.ExecuteMultiRowQuery(sqlQuery);
         }
-         public void DeleteClass()
+        public void DeleteClass()
         {
             string sqlQuery = "UPDATE CLASSES SET Status = 'Inactive' WHERE CLASSID = " + ClassID;
             Database.ExecuteMultiRowQuery(sqlQuery);
@@ -146,8 +146,23 @@ namespace GYMSYS
             }
         }
 
+        public static int GetNextClassID()
+        {
+            string sqlQuery = "SELECT MAX(CLASSID) FROM CLASSES";
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
 
+            int nextID = 1; // Default to 1 if there are no classes
 
+            if (dr.Read() && !dr.IsDBNull(0))
+            {
+                nextID = dr.GetInt32(0) + 1;
+            }
+
+            dr.Close();
+
+            return nextID;
+
+        }
 
     }
 }

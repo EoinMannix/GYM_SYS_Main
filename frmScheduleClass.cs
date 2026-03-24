@@ -29,42 +29,26 @@ namespace GYMSYS
         private void dgvScheduleClass_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            int id = Convert.ToInt32(
-                dgvScheduleClass.Rows[e.RowIndex].Cells[0].Value);
-
-            selectedClass = Classes.GetClass(id);
-
-            Instructor instructor = Instructor.GetInstructor(selectedClass.InstructorID);
-
-            string roomName = Classes.GetRoomName(selectedClass.Room);
-
-            txtClassName.Text = selectedClass.ClassName;
-            dtpClassDate.Value = selectedClass.ClassDate;
-            txtInstructorName.Text = instructor.InstructorForename + " " + instructor.InstructorSurname;
-            txtClassPrice.Text = selectedClass.ClassPrice.ToString();
-            txtClassTime.Text = selectedClass.ClassTime;
-            cboRoom.SelectedValue = selectedClass.Room;
-
-
-
-
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to schedule this class?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)
+            if (ClassScheduleInputs())
             {
-                MessageBox.Show("Class scheduled successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                int newID = Classes.GetNextClassID();
+
+                Classes newClass = new Classes(newID, txtClassName.Text, 0, decimal.Parse(txtClassPrice.Text),
+                    dtpClassDate.Value, txtClassTime.Text, (int)cboRoom.SelectedValue, "");
+
+                newClass.AddClass();
+
+                MessageBox.Show("Class " + txtClassName.Text + "With Instructor "  + " Class scheduled successfully!");
+
+
             }
 
-            else
-            {
-                // User clicked No, do nothing
-            }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -72,43 +56,12 @@ namespace GYMSYS
 
         }
 
-        private void frmScheduleClass_Load_1(object sender, EventArgs e)
+        private void frmScheduleClass_Load(object sender, EventArgs e)
         {
-            LoadClasses();
             LoadRooms();
         }
 
         private void txtSelectClass_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                String searchText = txtSelectClass.Text.ToLower();
-                bool found = false;
-
-                for (int i = 0; i < dgvScheduleClass.Rows.Count; i++)
-                {
-                    if (dgvScheduleClass.Rows[i].Cells[1].Value != null)
-                    {
-                        String className = dgvScheduleClass.Rows[i].Cells[1].Value.ToString().ToLower();
-
-                        if (className.Contains(searchText))
-                        {
-                            dgvScheduleClass.Rows[i].Selected = true;
-                            dgvScheduleClass.FirstDisplayedScrollingRowIndex = i;
-                            found = true;
-                            break;
-                        }
-                    }
-                }
-
-                if (!found)
-                {
-                    MessageBox.Show("Class not found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-        }
-
-        private void frmScheduleClass_Load(object sender, EventArgs e)
         {
 
         }
@@ -119,27 +72,6 @@ namespace GYMSYS
             this.Close();
         }
 
-        private void LoadClasses()
-        {
-            DataSet ds = Classes.GetAllClasses();
-
-            if (ds == null || ds.Tables.Count == 0)
-            {
-                MessageBox.Show("No classes found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            dgvScheduleClass.DataSource = null;
-            dgvScheduleClass.Columns.Clear();
-            dgvScheduleClass.AutoGenerateColumns = true;
-
-            dgvScheduleClass.DataSource = ds.Tables[0];
-            UtilityInstructor.FormatGrid(dgvScheduleClass);
-            dgvScheduleClass.Refresh();
-
-
-        }
-
         private void LoadRooms()
         {
             DataSet ds = Database.ExecuteMultiRowQuery("SELECT ROOMID, ROOMNAME FROM ROOMS");
@@ -147,7 +79,64 @@ namespace GYMSYS
             cboRoom.DataSource = ds.Tables[0];
             cboRoom.DisplayMember = "ROOMNAME";
             cboRoom.ValueMember = "ROOMID";
+
+            cboRoom1.DataSource = ds.Tables[0];
+            cboRoom1.DisplayMember = "ROOMNAME";
+            cboRoom1.ValueMember = "ROOMID";
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool ClassScheduleInputs()
+        {
+            if (txtClassName.Text == "")
+            {
+                MessageBox.Show("Please enter a class name.");
+                return false;
+            }
+            if (cboRoom.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a room.");
+                return false;
+            }
+            if (txtClassTime.Text == "")
+            {
+                MessageBox.Show("Please enter a class time.");
+                return false;
+
+            }
+            if (dtpClassDate.Value < DateTime.Today)
+            {
+                MessageBox.Show("Class date cannot be in the past.");
+                return false;
+            }
+            if (txtClassPrice.Text == "")
+            {
+                MessageBox.Show("Please enter a class price.");
+                return false;
+            }
+            if (txtClassPrice.Text == "0")
+            {
+                MessageBox.Show("Class price cannot be zero.");
+                return false;
+            }
+
+            return true;
+
+        }
+
+        private void cboRoom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewTimetable_Click(object sender, EventArgs e)
+        {
+            frmTimetableView frm = new frmTimetableView();
+            frm.ShowDialog();
+        }
     }
 }
