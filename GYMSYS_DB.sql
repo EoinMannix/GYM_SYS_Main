@@ -169,14 +169,12 @@ INSERT INTO Instructors VALUES(2010, 'Aisling','Reilly',DATE '1992-10-03','08701
 INSERT INTO Rooms VALUES (1, 'Yoga Studio');
 INSERT INTO Rooms VALUES (2, 'Spin Studio');
 INSERT INTO Rooms VALUES (3, 'Hyrox Floor');
-INSERT INTO Rooms VALUES (4, 'Main Gym Floor');
-INSERT INTO Rooms VALUES (5, 'Pilates Studio');
 
 -- Sample data Classes
 
 INSERT INTO Classes VALUES(3001,'Yoga Class',2002, 'YG',DATE '2025-04-01','15:00',15.00,1,'Active');
 INSERT INTO Classes VALUES(2001,'Hyrox Training',2001,'HX',DATE '2025-04-02','18:00',20.00,3,'Active');
-INSERT INTO Classes VALUES(3003,'Pilates Session',2004,'PL',DATE '2025-04-01','12:00',15.00,5,'Active');
+INSERT INTO Classes VALUES(3003,'Pilates Session',2004,'PL',DATE '2025-04-01','12:00',15.00,2,'Active');
 
 COMMIT; 
     

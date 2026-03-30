@@ -38,6 +38,8 @@
             clmDate = new DataGridViewTextBoxColumn();
             clmTime = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
+            cboDuration = new ComboBox();
+            lblDuration = new Label();
             cboRoom = new ComboBox();
             txtClassTime = new TextBox();
             txtClassPrice = new TextBox();
@@ -143,6 +145,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(cboDuration);
+            groupBox1.Controls.Add(lblDuration);
             groupBox1.Controls.Add(cboRoom);
             groupBox1.Controls.Add(txtClassTime);
             groupBox1.Controls.Add(txtClassPrice);
@@ -158,10 +162,28 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Location = new Point(200, 322);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(724, 248);
+            groupBox1.Size = new Size(724, 291);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Booking Details";
+            // 
+            // cboDuration
+            // 
+            cboDuration.FormattingEnabled = true;
+            cboDuration.Location = new Point(504, 223);
+            cboDuration.Name = "cboDuration";
+            cboDuration.Size = new Size(200, 23);
+            cboDuration.TabIndex = 26;
+            // 
+            // lblDuration
+            // 
+            lblDuration.AutoSize = true;
+            lblDuration.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDuration.Location = new Point(395, 222);
+            lblDuration.Name = "lblDuration";
+            lblDuration.Size = new Size(80, 24);
+            lblDuration.TabIndex = 25;
+            lblDuration.Text = "Duration";
             // 
             // cboRoom
             // 
@@ -287,7 +309,7 @@
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(470, 586);
+            btnConfirm.Location = new Point(470, 649);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(178, 44);
             btnConfirm.TabIndex = 5;
@@ -342,7 +364,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1144, 642);
+            ClientSize = new Size(1144, 789);
             Controls.Add(btnViewTimetable);
             Controls.Add(lblDate1);
             Controls.Add(dtpClassDate1);
@@ -400,5 +422,7 @@
         private DateTimePicker dtpClassDate1;
         private Label lblDate1;
         private Button btnViewTimetable;
+        private Label lblDuration;
+        private ComboBox cboDuration;
     }
 }

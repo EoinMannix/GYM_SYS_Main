@@ -35,19 +35,31 @@ namespace GYMSYS
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (ClassScheduleInputs())
+            if (!ClassScheduleInputs())
             {
-                int newID = Classes.GetNextClassID();
+                return;
+            }
 
-                Classes newClass = new Classes(newID, txtClassName.Text, 0, decimal.Parse(txtClassPrice.Text),
-                    dtpClassDate.Value, txtClassTime.Text, (int)cboRoom.SelectedValue, "");
+            int weeks = int.Parse(cboDuration.Text.Substring(0, 1));
+            DateTime date = dtpClassDate.Value;
 
-                newClass.AddClass();
+            for (int i = 0; i < weeks; i++) 
+            { 
+            
+                if (Classes.ClassExists((int)cboRoom.SelectedValue, date, txtClassTime.Text))
+                {
+                    MessageBox.Show("Time already booked! Please select another Time.");
+                    return;
+                }
 
-                MessageBox.Show("Class " + txtClassName.Text + "With Instructor "  + " Class scheduled successfully!");
+                new Classes(Classes.GetNextClassID(), txtClassName.Text, 0, decimal.Parse(txtClassPrice.Text),
+                    date, txtClassTime.Text, (int)cboRoom.SelectedValue, "YG").AddClass();
 
+                date = date.AddDays(7);
 
             }
+
+            MessageBox.Show("Class Successfully Scheduled!");
 
         }
 
@@ -59,6 +71,7 @@ namespace GYMSYS
         private void frmScheduleClass_Load(object sender, EventArgs e)
         {
             LoadRooms();
+            LoadDuration();
         }
 
         private void txtSelectClass_KeyDown(object sender, KeyEventArgs e)
@@ -71,6 +84,14 @@ namespace GYMSYS
         {
             this.Close();
         }
+
+        private void LoadDuration()
+        {
+            cboDuration.Items.Add("2 Weeks");
+            cboDuration.Items.Add("3 Weeks");
+            cboDuration.Items.Add("4 Weeks");
+
+        } 
 
         private void LoadRooms()
         {
@@ -97,30 +118,41 @@ namespace GYMSYS
                 MessageBox.Show("Please enter a class name.");
                 return false;
             }
+
             if (cboRoom.SelectedIndex == -1)
             {
                 MessageBox.Show("Please select a room.");
                 return false;
             }
+
             if (txtClassTime.Text == "")
             {
                 MessageBox.Show("Please enter a class time.");
                 return false;
 
             }
+
             if (dtpClassDate.Value < DateTime.Today)
             {
                 MessageBox.Show("Class date cannot be in the past.");
                 return false;
             }
+
             if (txtClassPrice.Text == "")
             {
                 MessageBox.Show("Please enter a class price.");
                 return false;
             }
+
             if (txtClassPrice.Text == "0")
             {
                 MessageBox.Show("Class price cannot be zero.");
+                return false;
+            }
+
+            if (cboDuration.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select duration.");
                 return false;
             }
 
@@ -135,8 +167,11 @@ namespace GYMSYS
 
         private void btnViewTimetable_Click(object sender, EventArgs e)
         {
-            frmTimetableView frm = new frmTimetableView();
-            frm.ShowDialog();
+
+            int roomID = Convert.ToInt32(cboRoom1.SelectedValue);
+
+            frmTimetableView timetable = new frmTimetableView(roomID, dtpClassDate.Value);
+            timetable.ShowDialog();
         }
     }
 }

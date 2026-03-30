@@ -164,5 +164,30 @@ namespace GYMSYS
 
         }
 
+        public static bool ClassExists(int roomId, DateTime date, string time)
+        {
+            string sqlQuery = "SELECT COUNT(*) FROM CLASSES WHERE ROOMID = " + roomId +
+                " AND CLASSDATE = TO_DATE('" + date.ToString("yyyy-MM-dd") + "', 'yyyy-MM-dd')" +
+                " AND CLASSTIME = '" + time.Trim() + "'";
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            int count = 0;
+
+            if (dr.Read())
+            {
+
+                count = dr.GetInt32(0);
+
+            }
+
+            dr.Close();
+
+            return count > 0;
+        }
+
+
     }
+
+    
 }
