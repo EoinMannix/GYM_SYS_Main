@@ -95,12 +95,12 @@ namespace GYMSYS
             string sqlQuery = "INSERT INTO CLASSES VALUES (" +
                 ClassID + ", '" +
                 ClassName + "', " +
-                InstructorID + ", " +
-                ClassPrice + ", TO_DATE('" +
+                InstructorID + ", '" +
+                TypeCode + "', TO_DATE('" +
                 ClassDate.ToString("yyyy-MM-dd") + "', 'yyyy-MM-dd'), '" +
                 ClassTime + "', " +
-                RoomId + ", '" +
-                TypeCode + "', 'Active')";
+                ClassPrice + ", " +
+                RoomId + ", 'Active')";
 
 
             Database.ExecuteMultiRowQuery(sqlQuery);

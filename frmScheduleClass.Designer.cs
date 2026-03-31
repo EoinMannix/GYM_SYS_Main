@@ -32,19 +32,14 @@
             menuStrip1 = new MenuStrip();
             backToolStripMenuItem = new ToolStripMenuItem();
             dgvScheduleClass = new DataGridView();
-            clmClassID = new DataGridViewTextBoxColumn();
-            clmClassName = new DataGridViewTextBoxColumn();
-            clmInstructorName = new DataGridViewTextBoxColumn();
-            clmDate = new DataGridViewTextBoxColumn();
-            clmTime = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
+            cboInstructor = new ComboBox();
             cboDuration = new ComboBox();
             lblDuration = new Label();
             cboRoom = new ComboBox();
             txtClassTime = new TextBox();
             txtClassPrice = new TextBox();
             dtpClassDate = new DateTimePicker();
-            txtInstructorName = new TextBox();
             label10 = new Label();
             txtClassName = new TextBox();
             label8 = new Label();
@@ -97,9 +92,9 @@
             // dgvScheduleClass
             // 
             dgvScheduleClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvScheduleClass.Columns.AddRange(new DataGridViewColumn[] { clmClassID, clmClassName, clmInstructorName, clmDate, clmTime });
             dgvScheduleClass.Location = new Point(221, 96);
             dgvScheduleClass.Name = "dgvScheduleClass";
+            dgvScheduleClass.ReadOnly = true;
             dgvScheduleClass.RowHeadersWidth = 51;
             dgvScheduleClass.RowTemplate.Height = 24;
             dgvScheduleClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -108,50 +103,15 @@
             dgvScheduleClass.CellClick += dgvScheduleClass_CellClick;
             dgvScheduleClass.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // clmClassID
-            // 
-            clmClassID.HeaderText = "Class ID";
-            clmClassID.MinimumWidth = 6;
-            clmClassID.Name = "clmClassID";
-            clmClassID.Width = 125;
-            // 
-            // clmClassName
-            // 
-            clmClassName.HeaderText = "Class Name";
-            clmClassName.MinimumWidth = 6;
-            clmClassName.Name = "clmClassName";
-            clmClassName.Width = 125;
-            // 
-            // clmInstructorName
-            // 
-            clmInstructorName.HeaderText = "Instructor Name";
-            clmInstructorName.MinimumWidth = 6;
-            clmInstructorName.Name = "clmInstructorName";
-            clmInstructorName.Width = 125;
-            // 
-            // clmDate
-            // 
-            clmDate.HeaderText = "Date";
-            clmDate.MinimumWidth = 6;
-            clmDate.Name = "clmDate";
-            clmDate.Width = 125;
-            // 
-            // clmTime
-            // 
-            clmTime.HeaderText = "Time";
-            clmTime.MinimumWidth = 6;
-            clmTime.Name = "clmTime";
-            clmTime.Width = 125;
-            // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(cboInstructor);
             groupBox1.Controls.Add(cboDuration);
             groupBox1.Controls.Add(lblDuration);
             groupBox1.Controls.Add(cboRoom);
             groupBox1.Controls.Add(txtClassTime);
             groupBox1.Controls.Add(txtClassPrice);
             groupBox1.Controls.Add(dtpClassDate);
-            groupBox1.Controls.Add(txtInstructorName);
             groupBox1.Controls.Add(label10);
             groupBox1.Controls.Add(txtClassName);
             groupBox1.Controls.Add(label8);
@@ -167,10 +127,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Booking Details";
             // 
+            // cboInstructor
+            // 
+            cboInstructor.FormattingEnabled = true;
+            cboInstructor.Location = new Point(147, 154);
+            cboInstructor.Name = "cboInstructor";
+            cboInstructor.Size = new Size(200, 23);
+            cboInstructor.TabIndex = 27;
+            // 
             // cboDuration
             // 
             cboDuration.FormattingEnabled = true;
-            cboDuration.Location = new Point(504, 223);
+            cboDuration.Location = new Point(504, 213);
             cboDuration.Name = "cboDuration";
             cboDuration.Size = new Size(200, 23);
             cboDuration.TabIndex = 26;
@@ -179,7 +147,7 @@
             // 
             lblDuration.AutoSize = true;
             lblDuration.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDuration.Location = new Point(395, 222);
+            lblDuration.Location = new Point(395, 210);
             lblDuration.Name = "lblDuration";
             lblDuration.Size = new Size(80, 24);
             lblDuration.TabIndex = 25;
@@ -188,7 +156,7 @@
             // cboRoom
             // 
             cboRoom.FormattingEnabled = true;
-            cboRoom.Location = new Point(504, 168);
+            cboRoom.Location = new Point(504, 157);
             cboRoom.Name = "cboRoom";
             cboRoom.Size = new Size(200, 23);
             cboRoom.TabIndex = 24;
@@ -196,7 +164,7 @@
             // 
             // txtClassTime
             // 
-            txtClassTime.Location = new Point(504, 108);
+            txtClassTime.Location = new Point(504, 100);
             txtClassTime.Name = "txtClassTime";
             txtClassTime.Size = new Size(200, 23);
             txtClassTime.TabIndex = 23;
@@ -215,18 +183,11 @@
             dtpClassDate.Size = new Size(200, 23);
             dtpClassDate.TabIndex = 21;
             // 
-            // txtInstructorName
-            // 
-            txtInstructorName.Location = new Point(147, 170);
-            txtInstructorName.Name = "txtInstructorName";
-            txtInstructorName.Size = new Size(200, 23);
-            txtInstructorName.TabIndex = 20;
-            // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(395, 167);
+            label10.Location = new Point(395, 154);
             label10.Name = "label10";
             label10.Size = new Size(61, 24);
             label10.TabIndex = 17;
@@ -252,7 +213,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(395, 105);
+            label7.Location = new Point(395, 100);
             label7.Name = "label7";
             label7.Size = new Size(53, 24);
             label7.TabIndex = 9;
@@ -272,7 +233,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(15, 164);
+            label5.Location = new Point(15, 154);
             label5.Name = "label5";
             label5.Size = new Size(86, 24);
             label5.TabIndex = 7;
@@ -408,12 +369,6 @@
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtInstructorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmClassID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmClassName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmInstructorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTime;
         private DateTimePicker dtpClassDate;
         private TextBox txtClassTime;
         private TextBox txtClassPrice;
@@ -424,5 +379,6 @@
         private Button btnViewTimetable;
         private Label lblDuration;
         private ComboBox cboDuration;
+        private ComboBox cboInstructor;
     }
 }
