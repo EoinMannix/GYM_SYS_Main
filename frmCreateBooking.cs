@@ -16,21 +16,6 @@ namespace GYMSYS
         {
             InitializeComponent();
 
-            dgvCreateBooking.ColumnCount = 5;
-            dgvCreateBooking.Columns[0].HeaderText = "Class ID";
-            dgvCreateBooking.Columns[1].Name = "Class Name";
-            dgvCreateBooking.Columns[2].Name = "Instructor Name";
-            dgvCreateBooking.Columns[3].Name = "Date";
-            dgvCreateBooking.Columns[4].Name = "Time";
-
-            dgvCreateBooking.Rows.Add("C001", "Yoga", "Aoife Murphy", "2025-07-01", "10:00 AM");
-            dgvCreateBooking.Rows.Add("C002", "Pilates", "Ciaran O Donnell", "2025-07-02", "11:00 AM");
-            dgvCreateBooking.Rows.Add("C003", "Spinning", "Niamh Kelly", "2025-07-03", "12:00 PM");
-            dgvCreateBooking.Rows.Add("C004", "Hyrox", "Darragh Byrne", "2025-07-04", "01:00 PM");
-            dgvCreateBooking.Rows.Add("C005", "Pilates", "Siobhan McCarthy", "2025-07-05", "02:00 PM");
-            dgvCreateBooking.Rows.Add("C006", "Yoga", "Eimear Walsh", "2025-07-06", "03:00 PM");
-            dgvCreateBooking.Rows.Add("C007", "Spinning", "Kevin O Sullivan", "2025-07-07", "04:00 PM");
-            dgvCreateBooking.Rows.Add("C008", "Hyrox", "Laura Brennan", "2025-07-08", "05:00 PM");
 
             txtBalance.Text = "€" + BalanceManager.Balance.ToString("0.00");
 

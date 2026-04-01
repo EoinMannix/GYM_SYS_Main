@@ -120,10 +120,12 @@ namespace GYMSYS
 
             Database.ExecuteMultiRowQuery(sqlQuery);
         }
-        public void DeleteClass()
+
+        public void CancelClass()
         {
-            string sqlQuery = "UPDATE CLASSES SET Status = 'Inactive' WHERE CLASSID = " + ClassID;
-            Database.ExecuteMultiRowQuery(sqlQuery);
+            string sqlQuery = "UPDATE CLASSES SET STATUS = 'Cancelled' WHERE CLASSID = " + ClassID;
+
+            Database.ExecuteSingleRowQuery(sqlQuery);
         }
 
         public static string GetRoomName(int roomID)

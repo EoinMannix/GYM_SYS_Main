@@ -146,7 +146,7 @@ namespace GYMSYS
             string sqlQuery = "SELECT MAX(MEMBERID) FROM MEMBERS";
             OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery); //an example of the data reader being used
 
-            int nextID = 1001; 
+            int nextID = 1001;
 
             if (dr.Read() && !dr.IsDBNull(0))
             {
@@ -159,14 +159,12 @@ namespace GYMSYS
 
         }
 
-        public void AddFunds(decimal amount)
+        public void UpdateBalance()
         {
-            Balance += amount;
-            string sqlQuery = "UPDATE MEMBERS SET BALANCE = "
-                + Balance +
+            string sqlQuery = "UPDATE MEMBERS SET BALANCE = " + Balance +
                 " WHERE MEMBERID = " + MemberID;
-            Database.ExecuteNonQuery(sqlQuery);
 
+            Database.ExecuteNonQuery(sqlQuery);
 
         }
 

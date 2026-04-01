@@ -31,37 +31,31 @@ namespace GYMSYS
         private void button1_Click(object sender, EventArgs e)
         {
 
-            decimal amountToAdd = 0;
-
-            if (radioButton10.Checked)
+            if (ValidatePaymentInputs())
             {
-                amountToAdd = 10;
-            }
-            else if (radioButton20.Checked)
-            {
-                amountToAdd = 20;
-            }
-            else if (radioButton40.Checked)
-            {
-                amountToAdd = 40;
-            }
-            else if (radioButton80.Checked)
-            {
-                amountToAdd = 80;
-            }
+                int memberID = Convert.ToInt32(txtMemberID.Text);
 
+                currentMember = Member.GetMembers(memberID);
 
-            if (amountToAdd == 0)
-            {
-                MessageBox.Show("Please select an amount to add.");
-                return;
+                txtCurrentBalance.Text = "£" + currentMember.Balance.ToString("0.00");
+
+                decimal amountToAdd = GetSelectedAmount();
+
+                if (amountToAdd == 0)
+                {
+                    MessageBox.Show("Please select an amount to add.");
+                    return;
+                }
+
+                currentMember.Balance += amountToAdd;
+
+                currentMember.UpdateBalance();
+
+                txtCurrentBalance.Text = "£" + currentMember.Balance.ToString("0.00");
+
+                MessageBox.Show("Funds added successfully! Your new balance is: £" + currentMember.Balance);
+
             }
-
-            currentMember.AddFunds(amountToAdd);
-
-            txtCurrentBalance.Text = "€" + currentMember.Balance.ToString("0.00");
-
-            MessageBox.Show("Successfully added €" + amountToAdd.ToString("0.00") + " to your balance.");
 
         }
 
@@ -70,12 +64,92 @@ namespace GYMSYS
             this.Close();
         }
 
-        private void LoadMember(Member member)
+        private decimal GetSelectedAmount()
         {
-            currentMember = member;
-            txtCurrentBalance.Text = "€" + currentMember.Balance.ToString("0.00");
+            if (radioButton10.Checked)
+            {
+                return 10;
+            }
+
+            if (radioButton20.Checked)
+            {
+                return 20;
+            }
+
+            if (radioButton40.Checked)
+            {
+                return 40;
+            }
+
+            if (radioButton80.Checked)
+            {
+                return 80;
+            }
+
+            return 0;
+
         }
 
+        private bool ValidatePaymentInputs()
+        {
+            if (txtMemberID.Text == "")
+            {
+                MessageBox.Show("Please enter your member ID.");
+                return false;
+            }
+
+            if (txtNameOnCard.Text == "")
+            {
+                MessageBox.Show("Please enter the name on the card.");
+                return false;
+            }
+
+            if (txtCardNumber.Text == "")
+            {
+                MessageBox.Show("Please enter the card number.");
+                return false;
+            }
+
+            if (txtCVV.Text == "")
+            {
+                MessageBox.Show("Please enter the CVV.");
+                return false;
+            }
+
+            foreach (char c in txtMemberID.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    MessageBox.Show("Member ID must contain only digits.");
+                    return false;
+                }
+            }
+
+            foreach (char c in txtCardNumber.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    MessageBox.Show("Card number must contain only digits.");
+                    return false;
+                }
+            }
+
+            foreach (char c in txtCVV.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    MessageBox.Show("CVV must contain only digits.");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private void txtCurrentBalance_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -85,11 +85,6 @@ namespace GYMSYS
                 DateTime Date = Convert.ToDateTime(dt.Rows[i]["CLASSDATE"]);
                 string Time = dt.Rows[i]["CLASSTIME"].ToString();
 
-                if (Date.DayOfWeek != selectedDate.DayOfWeek)
-                {
-                    continue;
-                }
-
                 int col = 1;
 
                 if (Date.DayOfWeek == DayOfWeek.Monday) col = 1;
