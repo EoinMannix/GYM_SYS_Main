@@ -12,14 +12,13 @@ namespace GYMSYS
 {
     public partial class frmCreateBooking : Form
     {
+        private Classes selectedClass;
+
+        private Member currentMember;
+
         public frmCreateBooking()
         {
             InitializeComponent();
-
-
-            txtBalance.Text = "€" + BalanceManager.Balance.ToString("0.00");
-
-            txtSelectClass.AcceptsReturn = true;
 
         }
 
@@ -30,76 +29,97 @@ namespace GYMSYS
 
         private void frmCreateBooking_Load(object sender, EventArgs e)
         {
-            txtBalance.Text = "€" + BalanceManager.Balance.ToString("0.00");
+            LoadClasses();
         }
 
         private void dgvCreateBooking_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvCreateBooking.Rows[e.RowIndex];
 
-                txtClassName.Text = row.Cells[1].Value.ToString();
+                int id = Convert.ToInt32(
+                    dgvCreateBooking.Rows[e.RowIndex].Cells[0].Value);
 
-                txtInstructor.Text = row.Cells[2].Value.ToString();
+                selectedClass = Classes.GetClass(id);
 
-                txtDate.Text = row.Cells[3].Value.ToString();
+                txtClassName.Text = selectedClass.ClassName;
+                txtInstructor.Text = selectedClass.InstructorID.ToString();
+                txtDate.Text = selectedClass.ClassDate.ToShortDateString();
+                txtTime.Text = selectedClass.ClassTime;
+                txtRoom.Text = Classes.GetRoomName(selectedClass.RoomId);
+                txtPrice.Text = selectedClass.ClassPrice.ToString("0.00");
 
-                txtTime.Text = row.Cells[4].Value.ToString();
-
-                txtRoom.Text = row.Cells[0].Value.ToString();
-
-                txtPrice.Text = "15.00";
             }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            decimal classPrice = 15.00m;
-
-            if (BalanceManager.Balance < classPrice)
+            if (selectedClass == null)
             {
-                MessageBox.Show("Insufficient balance. Please add funds to continue.");
+                MessageBox.Show("Please select a class to book.");
                 return;
             }
 
-            BalanceManager.Balance -= classPrice;
+            DialogResult result = MessageBox.Show($"Are you sure you want to book {selectedClass.ClassName}?",
+                "Confirm Booking", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            txtBalance.Text = "€" + BalanceManager.Balance.ToString("0.00");
+            if (result == DialogResult.Yes)
+            {
 
-            MessageBox.Show("Class booked successfully!", "Booking Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (txtMemberID.Text == "")
+                {
+                    MessageBox.Show("Please enter your Member ID.");
+                    return;
+                }
+
+                int memberID = Convert.ToInt32(txtMemberID.Text);
+                currentMember = Member.GetMembers(memberID);
+
+                if (currentMember == null)
+                {
+                    MessageBox.Show("Member not found. Please enter a valid Member ID.");
+                    return;
+                }
+
+                decimal classPrice = selectedClass.ClassPrice;
+
+                if (currentMember.Balance < classPrice)
+                {
+                    MessageBox.Show("Insufficient balance. Please top up your account.");
+                    return;
+                }
+
+                currentMember.Balance -= classPrice;
+                currentMember.UpdateBalance();
+                
+                txtBalance.Text = currentMember.Balance.ToString("0.00");
+
+                int bookingID = Booking.GetNextBookingID();
+
+                Booking newBooking = new Booking(
+                
+                   bookingID,
+                   memberID,
+                   selectedClass.ClassID,
+                   DateTime.Now,
+                   "Active"
+
+                );
+
+                newBooking.AddBooking();
+                MessageBox.Show($"Booking confirmed for {selectedClass.ClassName}. Your new balance is {currentMember.Balance:C}.");
+
+            }
+
+            else
+            {
+                MessageBox.Show("Booking cancelled.");
+            }
 
         }
 
         private void txtSelectClass_KeyDown(object sender, KeyEventArgs e)
         {
-
-            if (e.KeyCode == Keys.Enter)
-            {
-                String searchText = txtSelectClass.Text.ToLower();
-                bool found = false;
-
-                for (int i = 0; i < dgvCreateBooking.Rows.Count; i++)
-                {
-
-                    if (dgvCreateBooking.Rows[i].Cells[1].Value != null)
-                    {
-                        String className = dgvCreateBooking.Rows[i].Cells[1].Value.ToString().ToLower();
-
-                        if (className.Contains(searchText))
-                        {
-                            dgvCreateBooking.Rows[i].Selected = true;
-                            dgvCreateBooking.FirstDisplayedScrollingRowIndex = i;
-                            found = true;
-                            break;
-                        }
-                    }
-                }
-                if (!found)
-                {
-                    MessageBox.Show("Class not found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
 
         }
 
@@ -117,5 +137,12 @@ namespace GYMSYS
         {
             this.Close();
         }
+
+        private void LoadClasses()
+        {
+            DataSet ds = Classes.GetAllClasses();
+            dgvCreateBooking.DataSource = ds.Tables[0];
+        }
+
     }
 }

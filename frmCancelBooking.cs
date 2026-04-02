@@ -12,68 +12,75 @@ namespace GYMSYS
 {
     public partial class frmCancelBooking : Form
     {
+
+        private Booking selectedBooking;
         public frmCancelBooking()
         {
             InitializeComponent();
-
-            dgvCancelBooking.ColumnCount = 5;
-            dgvCancelBooking.Columns[0].HeaderText = "Class ID";
-            dgvCancelBooking.Columns[1].Name = "Class Name";
-            dgvCancelBooking.Columns[2].Name = "Instructor Name";
-            dgvCancelBooking.Columns[3].Name = "Date";
-            dgvCancelBooking.Columns[4].Name = "Time";
-
-            dgvCancelBooking.Rows.Add("C001", "Yoga", "Aoife Murphy", "2025-07-01", "10:00 AM");
-            dgvCancelBooking.Rows.Add("C002", "Pilates", "Ciaran O Donnell", "2025-07-02", "11:00 AM");
-            dgvCancelBooking.Rows.Add("C003", "Spinning", "Niamh Kelly", "2025-07-03", "12:00 PM");
-            dgvCancelBooking.Rows.Add("C004", "Hyrox", "Darragh Byrne", "2025-07-04", "01:00 PM");
-            dgvCancelBooking.Rows.Add("C005", "Pilates", "Siobhan McCarthy", "2025-07-05", "02:00 PM");
-            dgvCancelBooking.Rows.Add("C006", "Yoga", "Eimear Walsh", "2025-07-06", "03:00 PM");
-            dgvCancelBooking.Rows.Add("C007", "Spinning", "Kevin O Sullivan", "2025-07-07", "04:00 PM");
-            dgvCancelBooking.Rows.Add("C008", "Hyrox", "Laura Brennan", "2025-07-08", "05:00 PM");
-
         }
 
         private void frmCancelBooking_Load(object sender, EventArgs e)
         {
-            txtBalance.Text = "€" + BalanceManager.Balance.ToString("0.00");
+            LoadBookings();
         }
 
         private void dgvCancelBooking_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvCancelBooking.Rows[e.RowIndex];
+              int id = Convert.ToInt32(
+                     dgvCancelBooking.Rows[e.RowIndex].Cells[0].Value);
 
-                txtClassName.Text = row.Cells[1].Value.ToString();
+                selectedBooking = Booking.GetBooking(id);
 
-                txtInstructor.Text = row.Cells[2].Value.ToString();
-
-                txtDate.Text = row.Cells[3].Value.ToString();
-
-                txtTime.Text = row.Cells[4].Value.ToString();
-
-                txtRoom.Text = row.Cells[0].Value.ToString();
-
+                txtClassName.Text = selectedBooking.ClassID.ToString();
+                txtDate.Text = selectedBooking.BookingDate.ToShortDateString();
                 txtPrice.Text = "15.00";
+
             }
+
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            decimal classPrice = 15.00m;
 
-            DialogResult result = MessageBox.Show("Are you sure you want to cancel this booking?", "Confirm Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (selectedBooking == null)
+            {
+                MessageBox.Show("Please select a booking to cancel.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to cancel this booking?",
+                "Confirm Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                BalanceManager.Balance += classPrice;
-                MessageBox.Show("Class canceled & Refunded", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int memberID = selectedBooking.MemberID;
+
+                Member member = Member.GetMembers(memberID);
+
+                if (member == null)
+                {
+                    MessageBox.Show("Member not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                decimal classPrice = 15.00m;
+
+                member.Balance += classPrice;
+                member.UpdateBalance();
+
+                selectedBooking.CancelBooking();
+
+                txtBalance.Text = member.Balance.ToString("0.00");
+                MessageBox.Show("Booking cancelled and balance updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
 
             else
             {
-                // User clicked no, do nothing 
+                MessageBox.Show("Cancellation aborted.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
 
         }
@@ -120,6 +127,27 @@ namespace GYMSYS
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        private void LoadBookings()
+        {
+            DataSet ds = Booking.GetAllBookings();
+
+            if (ds == null || ds.Tables.Count == 0)
+            {
+                MessageBox.Show("No bookings found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            dgvCancelBooking.DataSource = null;
+            dgvCancelBooking.Columns.Clear();
+            dgvCancelBooking.AutoGenerateColumns = true;
+
+            dgvCancelBooking.DataSource = ds.Tables[0];
+
+            dgvCancelBooking.Refresh(); 
+            dgvCancelBooking.Refresh();
         }
     }
 }
