@@ -66,7 +66,6 @@ namespace GYMSYS
 
             if (!dr.Read())
             {
-                MessageBox.Show("Class with ID " + id + " not found.");
                 dr.Close();
                 return null;
             }
@@ -136,7 +135,6 @@ namespace GYMSYS
 
             if (!dr.Read())
             {
-                MessageBox.Show("Room with ID " + roomID + " not found.");
                 dr.Close();
                 return null;
             }

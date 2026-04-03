@@ -23,7 +23,7 @@ namespace GYMSYS
             MemberID = memberId;
             ClassID = classId;
             BookingDate = bookingDate;
-            Status=status;
+            Status = status;
         }
 
         public override string ToString()
@@ -75,13 +75,12 @@ namespace GYMSYS
 
         public static Booking GetBooking(int id)
         {
-            String sqlQuery = "SELECT * FROM BOOKINGS WHERE BOOKINGID = " + id;
+            string sqlQuery = "SELECT * FROM BOOKINGS WHERE BOOKINGID = " + id;
 
             OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
 
             if (!dr.Read())
             {
-                MessageBox.Show("Booking not found!");
                 dr.Close();
                 return null;
             }
@@ -103,6 +102,7 @@ namespace GYMSYS
         {
             string sqlQuery = "SELECT BOOKINGID, MEMBERID, CLASSID, BOOKINGDATE, STATUS " +
                 "FROM BOOKINGS " +
+                "WHERE STATUS = 'Active' " +
                 "ORDER BY BOOKINGID";
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
             return ds;

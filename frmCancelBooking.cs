@@ -33,9 +33,15 @@ namespace GYMSYS
 
                 selectedBooking = Booking.GetBooking(id);
 
-                txtClassName.Text = selectedBooking.ClassID.ToString();
-                txtDate.Text = selectedBooking.BookingDate.ToShortDateString();
-                txtPrice.Text = "15.00";
+                Classes selectedClass = Classes.GetClass(selectedBooking.ClassID);
+
+                txtClassName.Text = selectedClass.ClassName;
+                txtDate.Text = selectedClass.ClassDate.ToShortDateString();
+                txtTime.Text = selectedClass.ClassTime;
+                txtRoom.Text = Classes.GetRoomName(selectedClass.RoomId);
+                txtInstructor.Text = selectedClass.InstructorID.ToString();
+                txtPrice.Text = selectedClass.ClassPrice.ToString("0.00");
+                
 
             }
 
@@ -72,7 +78,7 @@ namespace GYMSYS
 
                 selectedBooking.CancelBooking();
 
-                txtBalance.Text = member.Balance.ToString("0.00");
+                txtBalance.Text = "€" + member.Balance.ToString("0.00");
                 MessageBox.Show("Booking cancelled and balance updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }

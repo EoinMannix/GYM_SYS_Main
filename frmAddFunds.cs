@@ -37,7 +37,11 @@ namespace GYMSYS
 
                 currentMember = Member.GetMembers(memberID);
 
-                txtCurrentBalance.Text = "£" + currentMember.Balance.ToString("0.00");
+                if (currentMember == null)
+                {
+                    MessageBox.Show("Member not found. Please check the member ID and try again.");
+                    return;
+                }
 
                 decimal amountToAdd = GetSelectedAmount();
 
@@ -51,9 +55,9 @@ namespace GYMSYS
 
                 currentMember.UpdateBalance();
 
-                txtCurrentBalance.Text = "£" + currentMember.Balance.ToString("0.00");
+                txtCurrentBalance.Text = "€" + currentMember.Balance.ToString("0.00");
 
-                MessageBox.Show("Funds added successfully! Your new balance is: £" + currentMember.Balance);
+                MessageBox.Show("Funds added successfully! Your new balance is: €" + currentMember.Balance);
 
             }
 

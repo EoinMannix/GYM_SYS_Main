@@ -92,7 +92,7 @@ namespace GYMSYS
                 currentMember.Balance -= classPrice;
                 currentMember.UpdateBalance();
                 
-                txtBalance.Text = currentMember.Balance.ToString("0.00");
+                txtBalance.Text = "€" + currentMember.Balance.ToString("0.00");
 
                 int bookingID = Booking.GetNextBookingID();
 
