@@ -19,7 +19,7 @@ namespace GYMSYS
 
         private void Main_Menu_GYM_Image_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void instructorsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,7 +32,8 @@ namespace GYMSYS
             using (frmRegisterInstructor frmRegisterInstructor = new frmRegisterInstructor(this))
             {
                 frmRegisterInstructor.ShowDialog();
-            } ;
+            }
+            ;
             this.Visible = true;
         }
 
@@ -44,27 +45,8 @@ namespace GYMSYS
 
         private void yeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("The yearly revenue analysis report will be generated",
-                "Please confirm ",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                DialogResult infoResult = MessageBox.Show("Yearly revenue analysis report:\n\n" +
-                    "Total Revenue: $500,000\n" +
-                    "Average Monthly Revenue: $41,667\n" +
-                    "Highest Revenue Month: December ($60,000)\n" +
-                    "Lowest Revenue Month: February ($30,000)",
-                    "Yearly Revenue Analysis",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }
-
-            else
-            {
-                // User chose No, do nothing
-            }
+            frmYearlyRevenueAnalysis yearlyRevenueAnalysis = new frmYearlyRevenueAnalysis();
+            yearlyRevenueAnalysis.ShowDialog();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -83,7 +65,7 @@ namespace GYMSYS
                 // User chose No, do nothing
             }
         }
-          
+
 
         private void GYMSYS_Main_Menu_Load(object sender, EventArgs e)
         {
@@ -145,30 +127,8 @@ namespace GYMSYS
 
         private void alertYearlyClass_Click(object sender, EventArgs e)
         {
-
-            DialogResult dialogResult = MessageBox.Show("The yearly class type analysis will be generated",
-            "Please confirm ",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                DialogResult infoResult = MessageBox.Show("Yearly class analysis report:\n\n" +
-                    "Most Popular Class Type: Yoga (1500 bookings)\n" +
-                    "Least Popular Class Type: Pilates (300 bookings)\n" +
-                    "Average Class Attendance: 25 members per class\n" +
-                    "Total Classes Held: 400",
-                    "Yearly Class Type Analysis",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }
-
-
-            else
-            {
-                // User chose No, do nothing
-            }
-
+            frmYearlyClassTypeAnalysis frmYearlyClassTypeAnalysis = new frmYearlyClassTypeAnalysis();
+            frmYearlyClassTypeAnalysis.ShowDialog();
         }
 
         private void pictureBoxMainMenu_Click(object sender, EventArgs e)
@@ -181,6 +141,11 @@ namespace GYMSYS
         {
             frmCancelBooking frmCancelBooking = new frmCancelBooking();
             frmCancelBooking.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

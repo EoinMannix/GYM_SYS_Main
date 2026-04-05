@@ -29,219 +29,202 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.instructorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerInstructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deRegisterInstructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.membersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addFundsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.withdrawMembershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.classesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alertYearlyRevenue = new System.Windows.Forms.ToolStripMenuItem();
-            this.alertYearlyClass = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBoxMainMenu = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainMenu)).BeginInit();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            instructorsToolStripMenuItem = new ToolStripMenuItem();
+            registerInstructorToolStripMenuItem = new ToolStripMenuItem();
+            editInToolStripMenuItem = new ToolStripMenuItem();
+            deRegisterInstructorToolStripMenuItem = new ToolStripMenuItem();
+            membersToolStripMenuItem = new ToolStripMenuItem();
+            addFundsToolStripMenuItem = new ToolStripMenuItem();
+            withdrawMembershipToolStripMenuItem = new ToolStripMenuItem();
+            createMemberToolStripMenuItem = new ToolStripMenuItem();
+            classesToolStripMenuItem = new ToolStripMenuItem();
+            scheduleClassToolStripMenuItem = new ToolStripMenuItem();
+            cancelToolStripMenuItem = new ToolStripMenuItem();
+            bookingsToolStripMenuItem = new ToolStripMenuItem();
+            createBookingToolStripMenuItem = new ToolStripMenuItem();
+            cancelBookingToolStripMenuItem = new ToolStripMenuItem();
+            adminToolStripMenuItem = new ToolStripMenuItem();
+            alertYearlyRevenue = new ToolStripMenuItem();
+            alertYearlyClass = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            pictureBoxMainMenu = new PictureBox();
+            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMainMenu).BeginInit();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.instructorsToolStripMenuItem,
-            this.membersToolStripMenuItem,
-            this.classesToolStripMenuItem,
-            this.bookingsToolStripMenuItem,
-            this.adminToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(922, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { instructorsToolStripMenuItem, membersToolStripMenuItem, classesToolStripMenuItem, bookingsToolStripMenuItem, adminToolStripMenuItem, exitToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(4, 2, 0, 2);
+            menuStrip1.Size = new Size(807, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // instructorsToolStripMenuItem
             // 
-            this.instructorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registerInstructorToolStripMenuItem,
-            this.editInToolStripMenuItem,
-            this.deRegisterInstructorToolStripMenuItem});
-            this.instructorsToolStripMenuItem.Name = "instructorsToolStripMenuItem";
-            this.instructorsToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
-            this.instructorsToolStripMenuItem.Text = "Instructors";
-            this.instructorsToolStripMenuItem.Click += new System.EventHandler(this.instructorsToolStripMenuItem_Click);
+            instructorsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registerInstructorToolStripMenuItem, editInToolStripMenuItem, deRegisterInstructorToolStripMenuItem });
+            instructorsToolStripMenuItem.Name = "instructorsToolStripMenuItem";
+            instructorsToolStripMenuItem.Size = new Size(75, 20);
+            instructorsToolStripMenuItem.Text = "Instructors";
+            instructorsToolStripMenuItem.Click += instructorsToolStripMenuItem_Click;
             // 
             // registerInstructorToolStripMenuItem
             // 
-            this.registerInstructorToolStripMenuItem.Name = "registerInstructorToolStripMenuItem";
-            this.registerInstructorToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.registerInstructorToolStripMenuItem.Text = "Register Instructor";
-            this.registerInstructorToolStripMenuItem.Click += new System.EventHandler(this.registerInstructorToolStripMenuItem_Click);
+            registerInstructorToolStripMenuItem.Name = "registerInstructorToolStripMenuItem";
+            registerInstructorToolStripMenuItem.Size = new Size(189, 22);
+            registerInstructorToolStripMenuItem.Text = "Register Instructor";
+            registerInstructorToolStripMenuItem.Click += registerInstructorToolStripMenuItem_Click;
             // 
             // editInToolStripMenuItem
             // 
-            this.editInToolStripMenuItem.Name = "editInToolStripMenuItem";
-            this.editInToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.editInToolStripMenuItem.Text = "Edit Instructor";
-            this.editInToolStripMenuItem.Click += new System.EventHandler(this.editInToolStripMenuItem_Click);
+            editInToolStripMenuItem.Name = "editInToolStripMenuItem";
+            editInToolStripMenuItem.Size = new Size(189, 22);
+            editInToolStripMenuItem.Text = "Edit Instructor";
+            editInToolStripMenuItem.Click += editInToolStripMenuItem_Click;
             // 
             // deRegisterInstructorToolStripMenuItem
             // 
-            this.deRegisterInstructorToolStripMenuItem.Name = "deRegisterInstructorToolStripMenuItem";
-            this.deRegisterInstructorToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.deRegisterInstructorToolStripMenuItem.Text = "De-Register Instructor";
-            this.deRegisterInstructorToolStripMenuItem.Click += new System.EventHandler(this.deRegisterInstructorToolStripMenuItem_Click);
+            deRegisterInstructorToolStripMenuItem.Name = "deRegisterInstructorToolStripMenuItem";
+            deRegisterInstructorToolStripMenuItem.Size = new Size(189, 22);
+            deRegisterInstructorToolStripMenuItem.Text = "De-Register Instructor";
+            deRegisterInstructorToolStripMenuItem.Click += deRegisterInstructorToolStripMenuItem_Click;
             // 
             // membersToolStripMenuItem
             // 
-            this.membersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addFundsToolStripMenuItem,
-            this.withdrawMembershipToolStripMenuItem,
-            this.createMemberToolStripMenuItem});
-            this.membersToolStripMenuItem.Name = "membersToolStripMenuItem";
-            this.membersToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.membersToolStripMenuItem.Text = "Members";
+            membersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addFundsToolStripMenuItem, withdrawMembershipToolStripMenuItem, createMemberToolStripMenuItem });
+            membersToolStripMenuItem.Name = "membersToolStripMenuItem";
+            membersToolStripMenuItem.Size = new Size(69, 20);
+            membersToolStripMenuItem.Text = "Members";
             // 
             // addFundsToolStripMenuItem
             // 
-            this.addFundsToolStripMenuItem.Name = "addFundsToolStripMenuItem";
-            this.addFundsToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
-            this.addFundsToolStripMenuItem.Text = "Add Funds";
-            this.addFundsToolStripMenuItem.Click += new System.EventHandler(this.addFundsToolStripMenuItem_Click);
+            addFundsToolStripMenuItem.Name = "addFundsToolStripMenuItem";
+            addFundsToolStripMenuItem.Size = new Size(195, 22);
+            addFundsToolStripMenuItem.Text = "Add Funds";
+            addFundsToolStripMenuItem.Click += addFundsToolStripMenuItem_Click;
             // 
             // withdrawMembershipToolStripMenuItem
             // 
-            this.withdrawMembershipToolStripMenuItem.Name = "withdrawMembershipToolStripMenuItem";
-            this.withdrawMembershipToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
-            this.withdrawMembershipToolStripMenuItem.Text = "Withdraw Membership";
-            this.withdrawMembershipToolStripMenuItem.Click += new System.EventHandler(this.withdrawMembershipToolStripMenuItem_Click);
+            withdrawMembershipToolStripMenuItem.Name = "withdrawMembershipToolStripMenuItem";
+            withdrawMembershipToolStripMenuItem.Size = new Size(195, 22);
+            withdrawMembershipToolStripMenuItem.Text = "Withdraw Membership";
+            withdrawMembershipToolStripMenuItem.Click += withdrawMembershipToolStripMenuItem_Click;
             // 
             // createMemberToolStripMenuItem
             // 
-            this.createMemberToolStripMenuItem.Name = "createMemberToolStripMenuItem";
-            this.createMemberToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
-            this.createMemberToolStripMenuItem.Text = "Create Member";
-            this.createMemberToolStripMenuItem.Click += new System.EventHandler(this.createMemberToolStripMenuItem_Click);
+            createMemberToolStripMenuItem.Name = "createMemberToolStripMenuItem";
+            createMemberToolStripMenuItem.Size = new Size(195, 22);
+            createMemberToolStripMenuItem.Text = "Create Member";
+            createMemberToolStripMenuItem.Click += createMemberToolStripMenuItem_Click;
             // 
             // classesToolStripMenuItem
             // 
-            this.classesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.scheduleClassToolStripMenuItem,
-            this.cancelToolStripMenuItem});
-            this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
-            this.classesToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.classesToolStripMenuItem.Text = "Classes";
+            classesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { scheduleClassToolStripMenuItem, cancelToolStripMenuItem });
+            classesToolStripMenuItem.Name = "classesToolStripMenuItem";
+            classesToolStripMenuItem.Size = new Size(57, 20);
+            classesToolStripMenuItem.Text = "Classes";
             // 
             // scheduleClassToolStripMenuItem
             // 
-            this.scheduleClassToolStripMenuItem.Name = "scheduleClassToolStripMenuItem";
-            this.scheduleClassToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
-            this.scheduleClassToolStripMenuItem.Text = "Schedule Class";
-            this.scheduleClassToolStripMenuItem.Click += new System.EventHandler(this.scheduleClassToolStripMenuItem_Click);
+            scheduleClassToolStripMenuItem.Name = "scheduleClassToolStripMenuItem";
+            scheduleClassToolStripMenuItem.Size = new Size(152, 22);
+            scheduleClassToolStripMenuItem.Text = "Schedule Class";
+            scheduleClassToolStripMenuItem.Click += scheduleClassToolStripMenuItem_Click;
             // 
             // cancelToolStripMenuItem
             // 
-            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
-            this.cancelToolStripMenuItem.Text = "Cancel class";
-            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
+            cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            cancelToolStripMenuItem.Size = new Size(152, 22);
+            cancelToolStripMenuItem.Text = "Cancel class";
+            cancelToolStripMenuItem.Click += cancelToolStripMenuItem_Click;
             // 
             // bookingsToolStripMenuItem
             // 
-            this.bookingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createBookingToolStripMenuItem,
-            this.cancelBookingToolStripMenuItem});
-            this.bookingsToolStripMenuItem.Name = "bookingsToolStripMenuItem";
-            this.bookingsToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
-            this.bookingsToolStripMenuItem.Text = "Bookings";
-            this.bookingsToolStripMenuItem.Click += new System.EventHandler(this.bookingsToolStripMenuItem_Click);
+            bookingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createBookingToolStripMenuItem, cancelBookingToolStripMenuItem });
+            bookingsToolStripMenuItem.Name = "bookingsToolStripMenuItem";
+            bookingsToolStripMenuItem.Size = new Size(68, 20);
+            bookingsToolStripMenuItem.Text = "Bookings";
+            bookingsToolStripMenuItem.Click += bookingsToolStripMenuItem_Click;
             // 
             // createBookingToolStripMenuItem
             // 
-            this.createBookingToolStripMenuItem.Name = "createBookingToolStripMenuItem";
-            this.createBookingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.createBookingToolStripMenuItem.Text = "Create Booking";
-            this.createBookingToolStripMenuItem.Click += new System.EventHandler(this.createBookingToolStripMenuItem_Click);
+            createBookingToolStripMenuItem.Name = "createBookingToolStripMenuItem";
+            createBookingToolStripMenuItem.Size = new Size(157, 22);
+            createBookingToolStripMenuItem.Text = "Create Booking";
+            createBookingToolStripMenuItem.Click += createBookingToolStripMenuItem_Click;
             // 
             // cancelBookingToolStripMenuItem
             // 
-            this.cancelBookingToolStripMenuItem.Name = "cancelBookingToolStripMenuItem";
-            this.cancelBookingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.cancelBookingToolStripMenuItem.Text = "Cancel Booking";
-            this.cancelBookingToolStripMenuItem.Click += new System.EventHandler(this.cancelBookingToolStripMenuItem_Click);
+            cancelBookingToolStripMenuItem.Name = "cancelBookingToolStripMenuItem";
+            cancelBookingToolStripMenuItem.Size = new Size(157, 22);
+            cancelBookingToolStripMenuItem.Text = "Cancel Booking";
+            cancelBookingToolStripMenuItem.Click += cancelBookingToolStripMenuItem_Click;
             // 
             // adminToolStripMenuItem
             // 
-            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alertYearlyRevenue,
-            this.alertYearlyClass});
-            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
-            this.adminToolStripMenuItem.Text = "Admin";
-            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
+            adminToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { alertYearlyRevenue, alertYearlyClass });
+            adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            adminToolStripMenuItem.Size = new Size(55, 20);
+            adminToolStripMenuItem.Text = "Admin";
+            adminToolStripMenuItem.Click += adminToolStripMenuItem_Click;
             // 
             // alertYearlyRevenue
             // 
-            this.alertYearlyRevenue.Name = "alertYearlyRevenue";
-            this.alertYearlyRevenue.Size = new System.Drawing.Size(254, 26);
-            this.alertYearlyRevenue.Text = "Yearly revenue analysis";
-            this.alertYearlyRevenue.Click += new System.EventHandler(this.yeToolStripMenuItem_Click);
+            alertYearlyRevenue.Name = "alertYearlyRevenue";
+            alertYearlyRevenue.Size = new Size(203, 22);
+            alertYearlyRevenue.Text = "Yearly revenue analysis";
+            alertYearlyRevenue.Click += yeToolStripMenuItem_Click;
             // 
             // alertYearlyClass
             // 
-            this.alertYearlyClass.Name = "alertYearlyClass";
-            this.alertYearlyClass.Size = new System.Drawing.Size(254, 26);
-            this.alertYearlyClass.Text = "Yearly class type analysis";
-            this.alertYearlyClass.Click += new System.EventHandler(this.alertYearlyClass_Click);
+            alertYearlyClass.Name = "alertYearlyClass";
+            alertYearlyClass.Size = new Size(203, 22);
+            alertYearlyClass.Text = "Yearly class type analysis";
+            alertYearlyClass.Click += alertYearlyClass_Click;
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
-            this.exitToolStripMenuItem.Text = "exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            exitToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.RightToLeft = RightToLeft.No;
+            exitToolStripMenuItem.Size = new Size(37, 20);
+            exitToolStripMenuItem.Text = "exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // pictureBoxMainMenu
             // 
-            this.pictureBoxMainMenu.ErrorImage = null;
-            this.pictureBoxMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMainMenu.Image")));
-            this.pictureBoxMainMenu.Location = new System.Drawing.Point(12, 46);
-            this.pictureBoxMainMenu.Name = "pictureBoxMainMenu";
-            this.pictureBoxMainMenu.Size = new System.Drawing.Size(898, 466);
-            this.pictureBoxMainMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxMainMenu.TabIndex = 1;
-            this.pictureBoxMainMenu.TabStop = false;
-            this.pictureBoxMainMenu.Click += new System.EventHandler(this.pictureBoxMainMenu_Click);
+            pictureBoxMainMenu.ErrorImage = null;
+            pictureBoxMainMenu.Image = (Image)resources.GetObject("pictureBoxMainMenu.Image");
+            pictureBoxMainMenu.Location = new Point(10, 43);
+            pictureBoxMainMenu.Name = "pictureBoxMainMenu";
+            pictureBoxMainMenu.Size = new Size(786, 437);
+            pictureBoxMainMenu.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBoxMainMenu.TabIndex = 1;
+            pictureBoxMainMenu.TabStop = false;
+            pictureBoxMainMenu.Click += pictureBoxMainMenu_Click;
             // 
             // frmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 524);
-            this.Controls.Add(this.pictureBoxMainMenu);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmMainMenu";
-            this.Text = "Main Menu";
-            this.Load += new System.EventHandler(this.GYMSYS_Main_Menu_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainMenu)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(807, 491);
+            Controls.Add(pictureBoxMainMenu);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "frmMainMenu";
+            Text = "Main Menu";
+            Load += GYMSYS_Main_Menu_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMainMenu).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

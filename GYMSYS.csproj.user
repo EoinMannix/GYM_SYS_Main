@@ -37,5 +37,11 @@
     <Compile Update="frmWithdrawMembership.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmYearlyClassTypeAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmYearlyRevenueAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

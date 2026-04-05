@@ -81,6 +81,7 @@
             menuStrip1.Size = new Size(1144, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // backToolStripMenuItem
             // 

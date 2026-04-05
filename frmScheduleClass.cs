@@ -17,7 +17,7 @@ namespace GYMSYS
         public frmScheduleClass()
         {
             InitializeComponent();
-            
+
 
 
         }
@@ -57,9 +57,9 @@ namespace GYMSYS
             int weeks = int.Parse(cboDuration.Text.Substring(0, 1));
             DateTime date = dtpClassDate.Value;
 
-            for (int i = 0; i < weeks; i++) 
-            { 
-            
+            for (int i = 0; i < weeks; i++)
+            {
+
                 if (Classes.ClassExists(Convert.ToInt32(cboRoom.SelectedValue), date, txtClassTime.Text))
                 {
                     MessageBox.Show("Time already booked! Please select another Time.");
@@ -103,8 +103,8 @@ namespace GYMSYS
 
         private void LoadClassesToGrid()
         {
-           DataSet ds = Database.ExecuteMultiRowQuery("SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME," +
-               " ROOMID FROM CLASSES WHERE STATUS = 'Active' ORDER BY CLASSID");
+            DataSet ds = Database.ExecuteMultiRowQuery("SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME," +
+                " ROOMID FROM CLASSES WHERE STATUS = 'Active' ORDER BY CLASSID");
             dgvScheduleClass.DataSource = ds.Tables[0];
         }
 
@@ -125,7 +125,7 @@ namespace GYMSYS
             cboDuration.Items.Add("3 Weeks");
             cboDuration.Items.Add("4 Weeks");
 
-        } 
+        }
 
         private void LoadRooms()
         {
@@ -221,6 +221,11 @@ namespace GYMSYS
 
             frmTimetableView timetable = new frmTimetableView(roomID, dtpClassDate.Value);
             timetable.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
