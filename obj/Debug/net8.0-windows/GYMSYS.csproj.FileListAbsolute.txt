@@ -76,3 +76,4 @@ C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\win-x
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\bin\Debug\net8.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.frmYearlyRevenueAnalysis.resources
 C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.frmYearlyClassTypeAnalysis.resources
+C:\Software_Project_Main\GYM_SYS\GYM_SYS\obj\Debug\net8.0-windows\GYMSYS.Properties.Resources.resources

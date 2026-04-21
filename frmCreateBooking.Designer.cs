@@ -50,19 +50,23 @@
             backToolStripMenuItem = new ToolStripMenuItem();
             txtMemberID = new TextBox();
             lblMemberID = new Label();
+            dgvMembers = new DataGridView();
+            txtSearchMember = new TextBox();
+            lblSearch = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvCreateBooking).BeginInit();
             grpCreateBooking.SuspendLayout();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMembers).BeginInit();
             SuspendLayout();
             // 
             // dgvCreateBooking
             // 
             dgvCreateBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCreateBooking.Location = new Point(195, 96);
+            dgvCreateBooking.Location = new Point(564, 89);
             dgvCreateBooking.Name = "dgvCreateBooking";
             dgvCreateBooking.RowHeadersWidth = 51;
             dgvCreateBooking.RowTemplate.Height = 24;
-            dgvCreateBooking.Size = new Size(592, 157);
+            dgvCreateBooking.Size = new Size(882, 162);
             dgvCreateBooking.TabIndex = 2;
             dgvCreateBooking.CellClick += dgvCreateBooking_CellClick;
             dgvCreateBooking.CellContentClick += dgvCreateBooking_CellClick;
@@ -71,7 +75,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(522, 39);
+            label2.Location = new Point(532, 140);
             label2.Name = "label2";
             label2.Size = new Size(0, 24);
             label2.TabIndex = 4;
@@ -81,7 +85,7 @@
             // 
             lblBalance.AutoSize = true;
             lblBalance.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBalance.Location = new Point(438, 41);
+            lblBalance.Location = new Point(845, 44);
             lblBalance.Name = "lblBalance";
             lblBalance.Size = new Size(78, 24);
             lblBalance.TabIndex = 5;
@@ -89,7 +93,7 @@
             // 
             // txtBalance
             // 
-            txtBalance.Location = new Point(563, 42);
+            txtBalance.Location = new Point(948, 45);
             txtBalance.Name = "txtBalance";
             txtBalance.ReadOnly = true;
             txtBalance.Size = new Size(224, 23);
@@ -109,7 +113,7 @@
             grpCreateBooking.Controls.Add(lblInstructor);
             grpCreateBooking.Controls.Add(lblTime);
             grpCreateBooking.Controls.Add(lblClassName);
-            grpCreateBooking.Location = new Point(64, 258);
+            grpCreateBooking.Location = new Point(371, 313);
             grpCreateBooking.Name = "grpCreateBooking";
             grpCreateBooking.Size = new Size(847, 272);
             grpCreateBooking.TabIndex = 7;
@@ -119,8 +123,9 @@
             // 
             // txtDate
             // 
-            txtDate.Location = new Point(200, 128);
+            txtDate.Location = new Point(200, 121);
             txtDate.Name = "txtDate";
+            txtDate.ReadOnly = true;
             txtDate.Size = new Size(176, 23);
             txtDate.TabIndex = 23;
             // 
@@ -138,20 +143,23 @@
             // 
             txtRoom.Location = new Point(577, 208);
             txtRoom.Name = "txtRoom";
+            txtRoom.ReadOnly = true;
             txtRoom.Size = new Size(176, 23);
             txtRoom.TabIndex = 21;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(577, 52);
+            txtPrice.Location = new Point(577, 45);
             txtPrice.Name = "txtPrice";
+            txtPrice.ReadOnly = true;
             txtPrice.Size = new Size(176, 23);
             txtPrice.TabIndex = 20;
             // 
             // txtInstructor
             // 
-            txtInstructor.Location = new Point(200, 211);
+            txtInstructor.Location = new Point(200, 205);
             txtInstructor.Name = "txtInstructor";
+            txtInstructor.ReadOnly = true;
             txtInstructor.Size = new Size(176, 23);
             txtInstructor.TabIndex = 19;
             // 
@@ -159,13 +167,15 @@
             // 
             txtTime.Location = new Point(577, 128);
             txtTime.Name = "txtTime";
+            txtTime.ReadOnly = true;
             txtTime.Size = new Size(176, 23);
             txtTime.TabIndex = 18;
             // 
             // txtClassName
             // 
-            txtClassName.Location = new Point(200, 68);
+            txtClassName.Location = new Point(200, 48);
             txtClassName.Name = "txtClassName";
+            txtClassName.ReadOnly = true;
             txtClassName.Size = new Size(176, 23);
             txtClassName.TabIndex = 17;
             // 
@@ -221,7 +231,7 @@
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(362, 560);
+            btnConfirm.Location = new Point(695, 647);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(178, 44);
             btnConfirm.TabIndex = 8;
@@ -231,12 +241,13 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.ActiveBorder;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(978, 24);
+            menuStrip1.Size = new Size(1470, 24);
             menuStrip1.TabIndex = 9;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -249,26 +260,61 @@
             // 
             // txtMemberID
             // 
-            txtMemberID.Location = new Point(234, 44);
+            txtMemberID.Location = new Point(627, 45);
             txtMemberID.Name = "txtMemberID";
+            txtMemberID.ReadOnly = true;
             txtMemberID.Size = new Size(176, 23);
             txtMemberID.TabIndex = 24;
+            txtMemberID.Leave += txtMemberID_Leave;
             // 
             // lblMemberID
             // 
             lblMemberID.AutoSize = true;
             lblMemberID.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMemberID.Location = new Point(91, 44);
+            lblMemberID.Location = new Point(496, 44);
             lblMemberID.Name = "lblMemberID";
             lblMemberID.Size = new Size(103, 24);
             lblMemberID.TabIndex = 24;
             lblMemberID.Text = "Memebr ID";
             // 
+            // dgvMembers
+            // 
+            dgvMembers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMembers.Location = new Point(40, 89);
+            dgvMembers.Name = "dgvMembers";
+            dgvMembers.Size = new Size(404, 162);
+            dgvMembers.TabIndex = 32;
+            dgvMembers.CellClick += dgvMembers_CellClick;
+            dgvMembers.CellContentClick += dgvMembers_CellContentClick;
+            // 
+            // txtSearchMember
+            // 
+            txtSearchMember.Location = new Point(238, 45);
+            txtSearchMember.Name = "txtSearchMember";
+            txtSearchMember.Size = new Size(176, 23);
+            txtSearchMember.TabIndex = 33;
+            txtSearchMember.KeyUp += txtSearchMember_KeyUp;
+            // 
+            // lblSearch
+            // 
+            lblSearch.AutoSize = true;
+            lblSearch.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSearch.Location = new Point(40, 45);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(146, 24);
+            lblSearch.TabIndex = 34;
+            lblSearch.Text = "Search Member";
+            lblSearch.Click += label1_Click;
+            // 
             // frmCreateBooking
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(978, 636);
+            AutoScroll = true;
+            ClientSize = new Size(1470, 1057);
+            Controls.Add(lblSearch);
+            Controls.Add(txtSearchMember);
+            Controls.Add(dgvMembers);
             Controls.Add(lblMemberID);
             Controls.Add(txtMemberID);
             Controls.Add(btnConfirm);
@@ -287,6 +333,7 @@
             grpCreateBooking.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMembers).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -315,5 +362,8 @@
         private ToolStripMenuItem backToolStripMenuItem;
         private TextBox txtMemberID;
         private Label lblMemberID;
+        private DataGridView dgvMembers;
+        private TextBox txtSearchMember;
+        private Label lblSearch;
     }
 }

@@ -63,18 +63,21 @@ namespace GYMSYS
 
         }
 
-        public void FillTestData() {             
-            dgvTimetable.Rows[0].Cells[1].Value = "Yoga";
-            dgvTimetable.Rows[1].Cells[2].Value = "Spinning";
-            dgvTimetable.Rows[2].Cells[3].Value = "Pilates";
-            dgvTimetable.Rows[3].Cells[4].Value = "Zumba";
-            dgvTimetable.Rows[4].Cells[5].Value = "Boxing";
-        }
+ 
 
         public void LoadTimetable(int roomId, DateTime selectedDate)
         {
+
+            DateTime startOfWeek = selectedDate.AddDays(-(int)selectedDate.DayOfWeek + 1);
+            DateTime endOfWeek = startOfWeek.AddDays(6);
+
+            string start = startOfWeek.ToString("dd/MM/yyyy");
+            string end = endOfWeek.ToString("dd/MM/yyyy");
+
             DataSet ds = Database.ExecuteMultiRowQuery(
-                "SELECT CLASSNAME, CLASSDATE, CLASSTIME FROM CLASSES WHERE ROOMID = " + roomId);
+                "SELECT CLASSNAME, CLASSDATE, CLASSTIME FROM CLASSES WHERE ROOMID = " + roomId+
+                " AND CLASSDATE BETWEEN TO_DATE('" + start + "', 'DD/MM/YYYY')" + 
+                " AND TO_DATE('" + end + "', 'DD/MM/YYYY')");
 
             DataTable dt = ds.Tables[0];
 
@@ -85,15 +88,12 @@ namespace GYMSYS
                 DateTime Date = Convert.ToDateTime(dt.Rows[i]["CLASSDATE"]);
                 string Time = dt.Rows[i]["CLASSTIME"].ToString();
 
-                int col = 1;
+                int col = (int)Date.DayOfWeek;
 
-                if (Date.DayOfWeek == DayOfWeek.Monday) col = 1;
-                else if (Date.DayOfWeek == DayOfWeek.Tuesday) col = 2;
-                else if (Date.DayOfWeek == DayOfWeek.Wednesday) col = 3;
-                else if (Date.DayOfWeek == DayOfWeek.Thursday) col = 4;
-                else if (Date.DayOfWeek == DayOfWeek.Friday) col = 5;
-                else if (Date.DayOfWeek == DayOfWeek.Saturday) col = 6;
-                else if (Date.DayOfWeek == DayOfWeek.Sunday) col = 7;
+                if (col == 0)
+                {
+                    col = 7;
+                }
 
                 for (int r = 0; r < dgvTimetable.Rows.Count; r++)
                 {
@@ -121,6 +121,9 @@ namespace GYMSYS
             }
         }
 
+        private void frmTimetableView_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

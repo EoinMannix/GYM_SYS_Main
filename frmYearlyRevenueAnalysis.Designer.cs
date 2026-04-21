@@ -35,6 +35,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.ActiveBorder;
             menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -49,14 +50,14 @@
             backToolStripMenuItem.Text = "Back";
             backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
-            // YearlyRevenueAnalysis
+            // frmYearlyRevenueAnalysis
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 951);
+            ClientSize = new Size(800, 845);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "YearlyRevenueAnalysis";
+            Name = "frmYearlyRevenueAnalysis";
             Text = "YearlyRevenueAnalysis";
             Load += YearlyRevenueAnalysis_Load;
             menuStrip1.ResumeLayout(false);

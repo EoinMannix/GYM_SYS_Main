@@ -29,7 +29,7 @@ namespace GYMSYS
         {
             if (e.RowIndex >= 0) // makes sure the user clicked a real row not the header
             {
-                int id = Convert.ToInt32( 
+                int id = Convert.ToInt32(
                     dgvCancelClass.Rows[e.RowIndex].Cells[0].Value);
 
                 selectedClass = Classes.GetClass(id);
@@ -68,7 +68,7 @@ namespace GYMSYS
                 selectedClass.CancelClass();
                 LoadClasses();
                 MessageBox.Show("Class cancelled successfully.");
-                
+
             }
 
             else
@@ -94,7 +94,7 @@ namespace GYMSYS
                 return;
             }
 
-            dgvCancelClass.DataSource = null; 
+            dgvCancelClass.DataSource = null;
             dgvCancelClass.Columns.Clear();
             dgvCancelClass.AutoGenerateColumns = true;
 
@@ -103,6 +103,10 @@ namespace GYMSYS
 
             dgvCancelClass.Refresh();
         }
-        
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

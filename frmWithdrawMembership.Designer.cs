@@ -58,11 +58,13 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.ActiveBorder;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1083, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(948, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -70,7 +72,7 @@
             // backToolStripMenuItem
             // 
             backToolStripMenuItem.Name = "backToolStripMenuItem";
-            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Size = new Size(44, 20);
             backToolStripMenuItem.Text = "Back";
             backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
@@ -78,9 +80,9 @@
             // 
             lblEnterMembersName.AutoSize = true;
             lblEnterMembersName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEnterMembersName.Location = new Point(196, 96);
+            lblEnterMembersName.Location = new Point(172, 72);
             lblEnterMembersName.Name = "lblEnterMembersName";
-            lblEnterMembersName.Size = new Size(249, 29);
+            lblEnterMembersName.Size = new Size(196, 24);
             lblEnterMembersName.TabIndex = 1;
             lblEnterMembersName.Text = "Enter Members Name";
             // 
@@ -88,14 +90,13 @@
             // 
             dgvWithdrawMembership.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvWithdrawMembership.Columns.AddRange(new DataGridViewColumn[] { clmMemberID, clmName, clmEmail, Column4 });
-            dgvWithdrawMembership.Location = new Point(201, 180);
-            dgvWithdrawMembership.Margin = new Padding(3, 4, 3, 4);
+            dgvWithdrawMembership.Location = new Point(176, 135);
             dgvWithdrawMembership.MultiSelect = false;
             dgvWithdrawMembership.Name = "dgvWithdrawMembership";
             dgvWithdrawMembership.RowHeadersWidth = 51;
             dgvWithdrawMembership.RowTemplate.Height = 24;
             dgvWithdrawMembership.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvWithdrawMembership.Size = new Size(554, 219);
+            dgvWithdrawMembership.Size = new Size(485, 164);
             dgvWithdrawMembership.TabIndex = 2;
             dgvWithdrawMembership.CellContentClick += dgvWithdrawMembership_CellClick;
             // 
@@ -129,10 +130,9 @@
             // 
             // txtMemberName
             // 
-            txtMemberName.Location = new Point(481, 105);
-            txtMemberName.Margin = new Padding(3, 4, 3, 4);
+            txtMemberName.Location = new Point(421, 79);
             txtMemberName.Name = "txtMemberName";
-            txtMemberName.Size = new Size(257, 27);
+            txtMemberName.Size = new Size(225, 23);
             txtMemberName.TabIndex = 3;
             txtMemberName.TextChanged += txtMemberName_TextChanged;
             txtMemberName.KeyDown += txtEnterName_KeyDown;
@@ -151,11 +151,9 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(lblForename);
-            groupBox1.Location = new Point(88, 406);
-            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Location = new Point(77, 304);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(840, 270);
+            groupBox1.Size = new Size(735, 202);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Member Details";
@@ -163,60 +161,55 @@
             // lstGender
             // 
             lstGender.FormattingEnabled = true;
+            lstGender.ItemHeight = 15;
             lstGender.Items.AddRange(new object[] { "Male", "Female" });
-            lstGender.Location = new Point(643, 211);
-            lstGender.Margin = new Padding(3, 4, 3, 4);
+            lstGender.Location = new Point(563, 158);
             lstGender.Name = "lstGender";
-            lstGender.Size = new Size(158, 24);
+            lstGender.Size = new Size(139, 19);
             lstGender.TabIndex = 11;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(643, 125);
-            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Location = new Point(563, 94);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(158, 27);
+            txtPhone.Size = new Size(139, 23);
             txtPhone.TabIndex = 10;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(643, 58);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(563, 44);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(158, 27);
+            txtEmail.Size = new Size(139, 23);
             txtEmail.TabIndex = 9;
             // 
             // dtpDOB
             // 
-            dtpDOB.Location = new Point(230, 209);
-            dtpDOB.Margin = new Padding(3, 4, 3, 4);
+            dtpDOB.Location = new Point(201, 157);
             dtpDOB.Name = "dtpDOB";
-            dtpDOB.Size = new Size(158, 27);
+            dtpDOB.Size = new Size(139, 23);
             dtpDOB.TabIndex = 8;
             // 
             // txtSurname
             // 
-            txtSurname.Location = new Point(230, 134);
-            txtSurname.Margin = new Padding(3, 4, 3, 4);
+            txtSurname.Location = new Point(201, 100);
             txtSurname.Name = "txtSurname";
-            txtSurname.Size = new Size(158, 27);
+            txtSurname.Size = new Size(139, 23);
             txtSurname.TabIndex = 7;
             // 
             // txtForename
             // 
-            txtForename.Location = new Point(230, 58);
-            txtForename.Margin = new Padding(3, 4, 3, 4);
+            txtForename.Location = new Point(201, 44);
             txtForename.Name = "txtForename";
-            txtForename.Size = new Size(158, 27);
+            txtForename.Size = new Size(139, 23);
             txtForename.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(427, 200);
+            label5.Location = new Point(374, 150);
             label5.Name = "label5";
-            label5.Size = new Size(94, 29);
+            label5.Size = new Size(74, 24);
             label5.TabIndex = 5;
             label5.Text = "Gender";
             // 
@@ -224,9 +217,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(427, 125);
+            label4.Location = new Point(374, 94);
             label4.Name = "label4";
-            label4.Size = new Size(176, 29);
+            label4.Size = new Size(140, 24);
             label4.TabIndex = 4;
             label4.Text = "Phone Number";
             // 
@@ -234,9 +227,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(427, 49);
+            label3.Location = new Point(374, 37);
             label3.Name = "label3";
-            label3.Size = new Size(74, 29);
+            label3.Size = new Size(57, 24);
             label3.TabIndex = 3;
             label3.Text = "Email";
             // 
@@ -244,9 +237,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(56, 200);
+            label2.Location = new Point(49, 150);
             label2.Name = "label2";
-            label2.Size = new Size(144, 29);
+            label2.Size = new Size(110, 24);
             label2.TabIndex = 2;
             label2.Text = "Date of Birth";
             // 
@@ -254,9 +247,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(56, 125);
+            label1.Location = new Point(49, 94);
             label1.Name = "label1";
-            label1.Size = new Size(124, 29);
+            label1.Size = new Size(98, 24);
             label1.TabIndex = 1;
             label1.Text = "Surename";
             // 
@@ -264,18 +257,17 @@
             // 
             lblForename.AutoSize = true;
             lblForename.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblForename.Location = new Point(56, 49);
+            lblForename.Location = new Point(49, 37);
             lblForename.Name = "lblForename";
-            lblForename.Size = new Size(124, 29);
+            lblForename.Size = new Size(98, 24);
             lblForename.TabIndex = 0;
             lblForename.Text = "Forename";
             // 
             // btnUpdateWithdraw
             // 
-            btnUpdateWithdraw.Location = new Point(435, 696);
-            btnUpdateWithdraw.Margin = new Padding(3, 4, 3, 4);
+            btnUpdateWithdraw.Location = new Point(381, 522);
             btnUpdateWithdraw.Name = "btnUpdateWithdraw";
-            btnUpdateWithdraw.Size = new Size(174, 56);
+            btnUpdateWithdraw.Size = new Size(152, 42);
             btnUpdateWithdraw.TabIndex = 5;
             btnUpdateWithdraw.Text = "Update";
             btnUpdateWithdraw.UseVisualStyleBackColor = true;
@@ -283,9 +275,9 @@
             // 
             // frmWithdrawMembership
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1083, 785);
+            ClientSize = new Size(948, 589);
             Controls.Add(btnUpdateWithdraw);
             Controls.Add(groupBox1);
             Controls.Add(txtMemberName);
@@ -293,7 +285,6 @@
             Controls.Add(lblEnterMembersName);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmWithdrawMembership";
             Text = "frmWithdrawMembership";
             Load += frmWithdrawMembership_Load;

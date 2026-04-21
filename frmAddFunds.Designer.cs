@@ -55,6 +55,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.ActiveBorder;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
@@ -75,11 +76,12 @@
             // 
             lblCurrentBalance.AutoSize = true;
             lblCurrentBalance.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCurrentBalance.Location = new Point(202, 78);
+            lblCurrentBalance.Location = new Point(210, 61);
             lblCurrentBalance.Name = "lblCurrentBalance";
             lblCurrentBalance.Size = new Size(186, 24);
             lblCurrentBalance.TabIndex = 1;
             lblCurrentBalance.Text = "Your current balance";
+            lblCurrentBalance.Click += lblCurrentBalance_Click;
             // 
             // groupBox1
             // 
@@ -246,7 +248,7 @@
             // 
             // txtCurrentBalance
             // 
-            txtCurrentBalance.Location = new Point(470, 84);
+            txtCurrentBalance.Location = new Point(478, 67);
             txtCurrentBalance.Name = "txtCurrentBalance";
             txtCurrentBalance.ReadOnly = true;
             txtCurrentBalance.Size = new Size(88, 23);

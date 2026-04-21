@@ -35,7 +35,9 @@ namespace GYMSYS
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            
+
+            ValidateEditInputs();
+
             if (selectedInstructor == null)
             {
                 MessageBox.Show("Please select an instructor to edit.");
@@ -47,7 +49,7 @@ namespace GYMSYS
 
             if (result == DialogResult.Yes)
             {
-
+                
                 selectedInstructor.InstructorForename = txtForename.Text;
                 selectedInstructor.InstructorSurname = txtSurname.Text;
                 selectedInstructor.InstructorDOB = dtpDOB.Value;
@@ -159,6 +161,62 @@ namespace GYMSYS
             UtilityInstructor.FormatGrid(dgvEditInstructors);
             dgvEditInstructors.Refresh();
 
+        }
+
+        private bool ValidateEditInputs()
+        {
+            if (txtForename.Text == "")
+            {
+                MessageBox.Show("please enter a name. ");
+                return false;
+            }
+
+            if (txtSurname.Text == "")
+            {
+                MessageBox.Show("please enter a surname. ");
+                return false;
+            }
+
+            if (dtpDOB.Value > DateTime.Now && dtpDOB.Value.Year > 18)
+            {
+                MessageBox.Show("Please enter a valid date of birth.");
+                return false;
+            }
+
+            if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Please enter an email.");
+                return false;
+            }
+
+            if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
+            {
+                MessageBox.Show("Please enter a valid email address.");
+                return false;
+            }
+
+            // used a for each to validate all digits in the phone number https://www.w3schools.com/cs/cs_foreach_loop.php
+
+            foreach (char c in txtPhone.Text)
+            {
+
+                if (!char.IsDigit(c))
+                {
+                    MessageBox.Show("Phone number must conain number only. ");
+                    return false;
+                }
+
+            }
+
+            if (txtWorkdays.Text == "")
+            {
+                MessageBox.Show("Please enter at least one workday.");
+                return false;
+            }
+
+
+
+            return true;
         }
     }
 }

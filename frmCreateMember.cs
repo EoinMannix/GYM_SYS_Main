@@ -72,9 +72,15 @@ namespace GYMSYS
                 return false;
             }
 
-            if (dtpDOB.Value > DateTime.Now)
+            if (dtpDOB.Value > DateTime.Now) // Added validation to ensure age is older than 16 years old
             {
                 MessageBox.Show("Date of birth cannot be in the future.");
+                return false;
+            }
+
+            if (DateTime.Now.Year - dtpDOB.Value.Year < 16)
+            {
+                MessageBox.Show("You must be at least 16 years old to register.");
                 return false;
             }
 

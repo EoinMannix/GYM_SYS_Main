@@ -59,18 +59,20 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.ActiveBorder;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1065, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(932, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // backToolStripMenuItem
             // 
             backToolStripMenuItem.Name = "backToolStripMenuItem";
-            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Size = new Size(44, 20);
             backToolStripMenuItem.Text = "Back";
             backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
@@ -78,9 +80,9 @@
             // 
             lblInstructorName.AutoSize = true;
             lblInstructorName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblInstructorName.Location = new Point(228, 34);
+            lblInstructorName.Location = new Point(257, 52);
             lblInstructorName.Name = "lblInstructorName";
-            lblInstructorName.Size = new Size(239, 32);
+            lblInstructorName.Size = new Size(192, 27);
             lblInstructorName.TabIndex = 1;
             lblInstructorName.Text = "Enter Instructor Name";
             lblInstructorName.UseCompatibleTextRendering = true;
@@ -99,72 +101,65 @@
             grpDeRegisterInstructor.Controls.Add(lblDOB);
             grpDeRegisterInstructor.Controls.Add(lblSurname);
             grpDeRegisterInstructor.Controls.Add(lblForename);
-            grpDeRegisterInstructor.Location = new Point(116, 286);
-            grpDeRegisterInstructor.Margin = new Padding(3, 4, 3, 4);
+            grpDeRegisterInstructor.Location = new Point(102, 267);
             grpDeRegisterInstructor.Name = "grpDeRegisterInstructor";
-            grpDeRegisterInstructor.Padding = new Padding(3, 4, 3, 4);
-            grpDeRegisterInstructor.Size = new Size(867, 352);
+            grpDeRegisterInstructor.Size = new Size(759, 264);
             grpDeRegisterInstructor.TabIndex = 2;
             grpDeRegisterInstructor.TabStop = false;
             grpDeRegisterInstructor.Text = "De-Register an Instructor";
             // 
             // dtpDOB
             // 
-            dtpDOB.Location = new Point(235, 264);
-            dtpDOB.Margin = new Padding(3, 4, 3, 4);
+            dtpDOB.Location = new Point(206, 198);
             dtpDOB.Name = "dtpDOB";
-            dtpDOB.Size = new Size(168, 27);
+            dtpDOB.Size = new Size(148, 23);
             dtpDOB.TabIndex = 11;
             // 
             // lsbGender
             // 
             lsbGender.FormattingEnabled = true;
+            lsbGender.ItemHeight = 15;
             lsbGender.Items.AddRange(new object[] { "Male", "Female" });
-            lsbGender.Location = new Point(648, 269);
-            lsbGender.Margin = new Padding(3, 4, 3, 4);
+            lsbGender.Location = new Point(567, 202);
             lsbGender.Name = "lsbGender";
-            lsbGender.Size = new Size(167, 24);
+            lsbGender.Size = new Size(147, 19);
             lsbGender.TabIndex = 10;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(648, 170);
-            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Location = new Point(567, 128);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(167, 27);
+            txtPhone.Size = new Size(147, 23);
             txtPhone.TabIndex = 9;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(648, 70);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(567, 52);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(167, 27);
+            txtEmail.Size = new Size(147, 23);
             txtEmail.TabIndex = 8;
             // 
             // txtSurname
             // 
-            txtSurname.Location = new Point(236, 170);
-            txtSurname.Margin = new Padding(3, 4, 3, 4);
+            txtSurname.Location = new Point(206, 128);
             txtSurname.Name = "txtSurname";
-            txtSurname.Size = new Size(167, 27);
+            txtSurname.Size = new Size(147, 23);
             txtSurname.TabIndex = 7;
             // 
             // txtForename
             // 
-            txtForename.Location = new Point(236, 70);
-            txtForename.Margin = new Padding(3, 4, 3, 4);
+            txtForename.Location = new Point(206, 52);
             txtForename.Name = "txtForename";
-            txtForename.Size = new Size(167, 27);
+            txtForename.Size = new Size(147, 23);
             txtForename.TabIndex = 6;
             // 
             // lblGender
             // 
             lblGender.AutoSize = true;
             lblGender.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGender.Location = new Point(441, 258);
+            lblGender.Location = new Point(386, 194);
             lblGender.Name = "lblGender";
-            lblGender.Size = new Size(94, 29);
+            lblGender.Size = new Size(74, 24);
             lblGender.TabIndex = 5;
             lblGender.Text = "Gender";
             // 
@@ -172,9 +167,9 @@
             // 
             lblPhone.AutoSize = true;
             lblPhone.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPhone.Location = new Point(441, 161);
+            lblPhone.Location = new Point(386, 121);
             lblPhone.Name = "lblPhone";
-            lblPhone.Size = new Size(176, 29);
+            lblPhone.Size = new Size(140, 24);
             lblPhone.TabIndex = 4;
             lblPhone.Text = "Phone Number";
             // 
@@ -182,9 +177,9 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(441, 61);
+            lblEmail.Location = new Point(386, 46);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(74, 29);
+            lblEmail.Size = new Size(57, 24);
             lblEmail.TabIndex = 3;
             lblEmail.Text = "Email";
             // 
@@ -192,9 +187,9 @@
             // 
             lblDOB.AutoSize = true;
             lblDOB.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDOB.Location = new Point(39, 258);
+            lblDOB.Location = new Point(34, 194);
             lblDOB.Name = "lblDOB";
-            lblDOB.Size = new Size(144, 29);
+            lblDOB.Size = new Size(110, 24);
             lblDOB.TabIndex = 2;
             lblDOB.Text = "Date of Birth";
             // 
@@ -202,9 +197,9 @@
             // 
             lblSurname.AutoSize = true;
             lblSurname.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSurname.Location = new Point(39, 161);
+            lblSurname.Location = new Point(34, 121);
             lblSurname.Name = "lblSurname";
-            lblSurname.Size = new Size(124, 29);
+            lblSurname.Size = new Size(98, 24);
             lblSurname.TabIndex = 1;
             lblSurname.Text = "Surename";
             // 
@@ -212,19 +207,18 @@
             // 
             lblForename.AutoSize = true;
             lblForename.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblForename.Location = new Point(39, 61);
+            lblForename.Location = new Point(34, 46);
             lblForename.Name = "lblForename";
-            lblForename.Size = new Size(124, 29);
+            lblForename.Size = new Size(98, 24);
             lblForename.TabIndex = 0;
             lblForename.Text = "Forename";
             // 
             // btnConfirmDeRegInst
             // 
             btnConfirmDeRegInst.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnConfirmDeRegInst.Location = new Point(475, 672);
-            btnConfirmDeRegInst.Margin = new Padding(3, 4, 3, 4);
+            btnConfirmDeRegInst.Location = new Point(415, 537);
             btnConfirmDeRegInst.Name = "btnConfirmDeRegInst";
-            btnConfirmDeRegInst.Size = new Size(176, 51);
+            btnConfirmDeRegInst.Size = new Size(154, 38);
             btnConfirmDeRegInst.TabIndex = 3;
             btnConfirmDeRegInst.Text = "Confirm";
             btnConfirmDeRegInst.UseVisualStyleBackColor = true;
@@ -233,17 +227,16 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(505, 54);
+            label8.Location = new Point(441, 73);
             label8.Name = "label8";
-            label8.Size = new Size(0, 20);
+            label8.Size = new Size(0, 15);
             label8.TabIndex = 5;
             // 
             // txtEnterInstructorName
             // 
-            txtEnterInstructorName.Location = new Point(511, 39);
-            txtEnterInstructorName.Margin = new Padding(3, 4, 3, 4);
+            txtEnterInstructorName.Location = new Point(536, 52);
             txtEnterInstructorName.Name = "txtEnterInstructorName";
-            txtEnterInstructorName.Size = new Size(231, 27);
+            txtEnterInstructorName.Size = new Size(203, 23);
             txtEnterInstructorName.TabIndex = 6;
             txtEnterInstructorName.KeyDown += txtEnterInstructorName_KeyDown;
             // 
@@ -251,12 +244,11 @@
             // 
             dvgDeRegisterInstructor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dvgDeRegisterInstructor.Columns.AddRange(new DataGridViewColumn[] { clmMemberID, clmName, clmPhone, clmEmail });
-            dvgDeRegisterInstructor.Location = new Point(295, 90);
-            dvgDeRegisterInstructor.Margin = new Padding(3, 4, 3, 4);
+            dvgDeRegisterInstructor.Location = new Point(257, 101);
             dvgDeRegisterInstructor.Name = "dvgDeRegisterInstructor";
             dvgDeRegisterInstructor.RowHeadersWidth = 51;
             dvgDeRegisterInstructor.RowTemplate.Height = 24;
-            dvgDeRegisterInstructor.Size = new Size(551, 188);
+            dvgDeRegisterInstructor.Size = new Size(482, 141);
             dvgDeRegisterInstructor.TabIndex = 4;
             dvgDeRegisterInstructor.CellClick += dvgDeRegisterInstructor_CellClick;
             dvgDeRegisterInstructor.CellContentClick += dataGridView1_CellContentClick;
@@ -291,9 +283,9 @@
             // 
             // frmDeRegisterInstructor
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1065, 786);
+            ClientSize = new Size(932, 590);
             Controls.Add(txtEnterInstructorName);
             Controls.Add(label8);
             Controls.Add(dvgDeRegisterInstructor);
@@ -302,7 +294,6 @@
             Controls.Add(lblInstructorName);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmDeRegisterInstructor";
             Text = "De-register Instructor";
             Load += frmDeRegisterInstructor_Load;

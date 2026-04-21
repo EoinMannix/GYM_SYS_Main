@@ -81,6 +81,7 @@
             MainMenuStrip = menuStrip1;
             Name = "frmTimetableView";
             Text = "frmTimetableView";
+            Load += frmTimetableView_Load;
             ((System.ComponentModel.ISupportInitialize)dgvTimetable).EndInit();
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();

@@ -159,6 +159,7 @@
             // 
             txtRoom.Location = new Point(488, 178);
             txtRoom.Name = "txtRoom";
+            txtRoom.ReadOnly = true;
             txtRoom.Size = new Size(141, 23);
             txtRoom.TabIndex = 16;
             // 
@@ -184,6 +185,7 @@
             // 
             txtTime.Location = new Point(488, 112);
             txtTime.Name = "txtTime";
+            txtTime.ReadOnly = true;
             txtTime.Size = new Size(141, 23);
             txtTime.TabIndex = 13;
             // 
@@ -220,6 +222,7 @@
             // 
             txtDate.Location = new Point(176, 112);
             txtDate.Name = "txtDate";
+            txtDate.ReadOnly = true;
             txtDate.Size = new Size(141, 23);
             txtDate.TabIndex = 9;
             // 
@@ -227,6 +230,7 @@
             // 
             txtInstructor.Location = new Point(174, 178);
             txtInstructor.Name = "txtInstructor";
+            txtInstructor.ReadOnly = true;
             txtInstructor.Size = new Size(141, 23);
             txtInstructor.TabIndex = 8;
             // 
@@ -234,6 +238,7 @@
             // 
             txtClassName.Location = new Point(174, 45);
             txtClassName.Name = "txtClassName";
+            txtClassName.ReadOnly = true;
             txtClassName.Size = new Size(141, 23);
             txtClassName.TabIndex = 7;
             // 
@@ -277,6 +282,7 @@
             menuStrip1.Size = new Size(1042, 24);
             menuStrip1.TabIndex = 8;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // backToolStripMenuItem
             // 

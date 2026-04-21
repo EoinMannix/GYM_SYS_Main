@@ -114,7 +114,7 @@ namespace GYMSYS
                 return false;
             }
 
-            if (txtCVV.Text == "")
+            if (txtCVV.Text == "" && txtCVV.Text.Length == 3)
             {
                 MessageBox.Show("Please enter the CVV.");
                 return false;
@@ -151,6 +151,11 @@ namespace GYMSYS
         }
 
         private void txtCurrentBalance_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCurrentBalance_Click(object sender, EventArgs e)
         {
 
         }

@@ -104,12 +104,23 @@ namespace GYMSYS
                 "FROM BOOKINGS " +
                 "WHERE STATUS = 'Active' " +
                 "ORDER BY BOOKINGID";
+
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
             return ds;
         }
 
+        public static DataSet GetBookingsByMember(int memberId)
+        {
+            string sqlQuery = "SELECT BOOKINGID, MEMBERID, CLASSID, BOOKINGDATE, STATUS " +
+                "FROM BOOKINGS " +
+                "WHERE MEMBERID = " + memberId + " AND STATUS = 'Active' " +
+                "ORDER BY BOOKINGID";
+
+            DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
+            return ds;
+
+        }
 
     }
-
 
 }

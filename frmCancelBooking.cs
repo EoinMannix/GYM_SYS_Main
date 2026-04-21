@@ -21,15 +21,25 @@ namespace GYMSYS
 
         private void frmCancelBooking_Load(object sender, EventArgs e)
         {
-            LoadBookings();
+            dgvCancelBooking.Visible = false;
+            grpCancelBooking.Visible = false;
         }
 
         private void dgvCancelBooking_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            object value = dgvCancelBooking.Rows[e.RowIndex].Cells[0].Value;
+
+            if (value != null || value == DBNull.Value)
+            {
+                MessageBox.Show("Invalid selection. Please select a valid booking.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (e.RowIndex >= 0)
             {
-              int id = Convert.ToInt32(
-                     dgvCancelBooking.Rows[e.RowIndex].Cells[0].Value);
+                int id = Convert.ToInt32(
+                       dgvCancelBooking.Rows[e.RowIndex].Cells[0].Value);
 
                 selectedBooking = Booking.GetBooking(id);
 
@@ -41,7 +51,7 @@ namespace GYMSYS
                 txtRoom.Text = Classes.GetRoomName(selectedClass.RoomId);
                 txtInstructor.Text = selectedClass.InstructorID.ToString();
                 txtPrice.Text = selectedClass.ClassPrice.ToString("0.00");
-                
+
 
             }
 
@@ -97,7 +107,6 @@ namespace GYMSYS
             if (e.KeyCode == Keys.Enter)
             {
 
-                String searchText = txtSelectClass.Text.ToLower();
                 bool found = false;
 
                 for (int i = 0; i < dgvCancelBooking.Rows.Count; i++)
@@ -105,19 +114,12 @@ namespace GYMSYS
 
                     String className = dgvCancelBooking.Rows[i].Cells[1].Value.ToString().ToLower();
 
-                    if (className.Contains(searchText))
-                    {
-
-                        dgvCancelBooking.Rows[i].Selected = true;
-                        dgvCancelBooking.FirstDisplayedScrollingRowIndex = i;
-                        found = true;
-                        break;
-
-
-                    }
+                    dgvCancelBooking.Rows[i].Selected = true;
+                    dgvCancelBooking.FirstDisplayedScrollingRowIndex = i;
+                    found = true;
+                    break;
 
                 }
-
 
                 if (!found)
                 {
@@ -126,7 +128,10 @@ namespace GYMSYS
 
             }
 
+        }
 
+        private void dgvCancelBooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
@@ -135,25 +140,77 @@ namespace GYMSYS
             this.Close();
         }
 
-
-        private void LoadBookings()
+        private void txtSelectClass_TextChanged(object sender, EventArgs e)
         {
-            DataSet ds = Booking.GetAllBookings();
 
-            if (ds == null || ds.Tables.Count == 0)
+        }
+
+        private void txtMemberID_Leave(object sender, EventArgs e)
+        {
+            LoadMemberBalance();
+        }
+
+        private void LoadMemberBalance()
+        {
+            int MemberID;
+
+            if (txtMemberID.Text == "")
             {
-                MessageBox.Show("No bookings found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a Member ID.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            try
+            {
+                MemberID = Convert.ToInt32(txtMemberID.Text);
+            }
+
+            catch
+            {
+                MessageBox.Show("Invalid Member ID. Please enter a vlaid numeric Member ID.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            Member member = Member.GetMembers(MemberID);
+
+            if (member == null)
+            {
+                MessageBox.Show("Member not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                dgvCancelBooking.Visible = false;
+                grpCancelBooking.Visible = false;
+                return;
+            }
+
+            txtBalance.Text = "€" + member.Balance.ToString("0.00");
+
+            dgvCancelBooking.Visible = true;
+            grpCancelBooking.Visible = true;
+
+            LoadBookingsByMember(MemberID);
+
+        }
+
+        private void LoadBookingsByMember(int memberID)
+        {
+            DataSet ds = Booking.GetBookingsByMember(memberID);
+
+            if (ds == null || ds.Tables.Count == 0)
+            {
+                MessageBox.Show("No bookings found for this member.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             dgvCancelBooking.DataSource = null;
             dgvCancelBooking.Columns.Clear();
             dgvCancelBooking.AutoGenerateColumns = true;
-
             dgvCancelBooking.DataSource = ds.Tables[0];
-
-            dgvCancelBooking.Refresh(); 
             dgvCancelBooking.Refresh();
+        }
+
+        private void grpCancelBooking_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -51,20 +51,22 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(217, 59);
+            label1.Location = new Point(190, 44);
             label1.Name = "label1";
-            label1.Size = new Size(302, 36);
+            label1.Size = new Size(254, 29);
             label1.TabIndex = 0;
             label1.Text = "Create New Member";
             label1.Click += label1_Click;
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.ActiveBorder;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(700, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -72,7 +74,7 @@
             // backToolStripMenuItem
             // 
             backToolStripMenuItem.Name = "backToolStripMenuItem";
-            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Size = new Size(44, 20);
             backToolStripMenuItem.Text = "back";
             backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
@@ -80,9 +82,9 @@
             // 
             lblFname.AutoSize = true;
             lblFname.Font = new Font("Microsoft Sans Serif", 13.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFname.Location = new Point(66, 170);
+            lblFname.Location = new Point(58, 128);
             lblFname.Name = "lblFname";
-            lblFname.Size = new Size(111, 26);
+            lblFname.Size = new Size(91, 22);
             lblFname.TabIndex = 2;
             lblFname.Text = "Forename";
             // 
@@ -90,9 +92,9 @@
             // 
             lblSname.AutoSize = true;
             lblSname.Font = new Font("Microsoft Sans Serif", 13.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSname.Location = new Point(66, 250);
+            lblSname.Location = new Point(58, 188);
             lblSname.Name = "lblSname";
-            lblSname.Size = new Size(113, 26);
+            lblSname.Size = new Size(92, 22);
             lblSname.TabIndex = 3;
             lblSname.Text = "Surename";
             lblSname.Click += label3_Click;
@@ -101,9 +103,9 @@
             // 
             lblDOB.AutoSize = true;
             lblDOB.Font = new Font("Microsoft Sans Serif", 13.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDOB.Location = new Point(66, 328);
+            lblDOB.Location = new Point(58, 246);
             lblDOB.Name = "lblDOB";
-            lblDOB.Size = new Size(60, 26);
+            lblDOB.Size = new Size(49, 22);
             lblDOB.TabIndex = 4;
             lblDOB.Text = "DOB\r\n";
             // 
@@ -111,9 +113,9 @@
             // 
             lblPhone.AutoSize = true;
             lblPhone.Font = new Font("Microsoft Sans Serif", 13.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPhone.Location = new Point(66, 404);
+            lblPhone.Location = new Point(58, 303);
             lblPhone.Name = "lblPhone";
-            lblPhone.Size = new Size(75, 26);
+            lblPhone.Size = new Size(62, 22);
             lblPhone.TabIndex = 5;
             lblPhone.Text = "Phone";
             // 
@@ -121,9 +123,9 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Microsoft Sans Serif", 13.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(66, 474);
+            lblEmail.Location = new Point(58, 356);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(68, 26);
+            lblEmail.Size = new Size(54, 22);
             lblEmail.TabIndex = 6;
             lblEmail.Text = "Email";
             // 
@@ -131,19 +133,18 @@
             // 
             lblGender.AutoSize = true;
             lblGender.Font = new Font("Microsoft Sans Serif", 13.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGender.Location = new Point(66, 548);
+            lblGender.Location = new Point(58, 411);
             lblGender.Name = "lblGender";
-            lblGender.Size = new Size(84, 26);
+            lblGender.Size = new Size(70, 22);
             lblGender.TabIndex = 7;
             lblGender.Text = "Gender";
             lblGender.Click += label7_Click;
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(276, 632);
-            btnConfirm.Margin = new Padding(3, 4, 3, 4);
+            btnConfirm.Location = new Point(242, 474);
             btnConfirm.Name = "btnConfirm";
-            btnConfirm.Size = new Size(191, 59);
+            btnConfirm.Size = new Size(167, 44);
             btnConfirm.TabIndex = 9;
             btnConfirm.Text = "Confirm";
             btnConfirm.UseVisualStyleBackColor = true;
@@ -151,57 +152,56 @@
             // 
             // txtForename
             // 
-            txtForename.Location = new Point(401, 175);
-            txtForename.Margin = new Padding(3, 4, 3, 4);
+            txtForename.Location = new Point(351, 131);
             txtForename.Name = "txtForename";
-            txtForename.Size = new Size(259, 27);
+            txtForename.Size = new Size(227, 23);
             txtForename.TabIndex = 10;
             // 
             // txtSurname
             // 
-            txtSurname.Location = new Point(401, 250);
-            txtSurname.Margin = new Padding(3, 4, 3, 4);
+            txtSurname.Location = new Point(351, 188);
             txtSurname.Name = "txtSurname";
-            txtSurname.Size = new Size(259, 27);
+            txtSurname.Size = new Size(227, 23);
             txtSurname.TabIndex = 11;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(401, 410);
-            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Location = new Point(351, 308);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(259, 27);
+            txtPhone.Size = new Size(227, 23);
             txtPhone.TabIndex = 13;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(401, 479);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(351, 359);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(259, 27);
+            txtEmail.Size = new Size(227, 23);
             txtEmail.TabIndex = 14;
             // 
             // dtpDOB
             // 
-            dtpDOB.Location = new Point(401, 332);
+            dtpDOB.Location = new Point(351, 249);
+            dtpDOB.Margin = new Padding(3, 2, 3, 2);
             dtpDOB.Name = "dtpDOB";
-            dtpDOB.Size = new Size(259, 27);
+            dtpDOB.Size = new Size(227, 23);
             dtpDOB.TabIndex = 16;
             // 
             // lstGender
             // 
             lstGender.FormattingEnabled = true;
+            lstGender.ItemHeight = 15;
             lstGender.Items.AddRange(new object[] { "Male", "Female" });
-            lstGender.Location = new Point(401, 548);
+            lstGender.Location = new Point(351, 411);
+            lstGender.Margin = new Padding(3, 2, 3, 2);
             lstGender.Name = "lstGender";
-            lstGender.Size = new Size(259, 24);
+            lstGender.Size = new Size(227, 19);
             lstGender.TabIndex = 18;
             // 
             // frmCreateMember
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 1055);
+            ClientSize = new Size(700, 634);
             Controls.Add(lstGender);
             Controls.Add(dtpDOB);
             Controls.Add(txtEmail);
@@ -218,7 +218,6 @@
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmCreateMember";
             Text = "GYMSYS_Create_Member";
             Load += frmCreateMember_Load;

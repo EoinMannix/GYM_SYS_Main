@@ -16,6 +16,8 @@ namespace GYMSYS
 
         private Member currentMember;
 
+        private DataTable dtMembers;
+
         public frmCreateBooking()
         {
             InitializeComponent();
@@ -30,6 +32,12 @@ namespace GYMSYS
         private void frmCreateBooking_Load(object sender, EventArgs e)
         {
             LoadClasses();
+            LoadMembers();
+        }
+
+        private void txtMemberID_Leave(object sender, EventArgs e) // I got information on the leave event through this website -> https://www.homeandlearn.co.uk/csharp/csharp_s9p4.html
+        {
+            LoadMembers();
         }
 
         private void dgvCreateBooking_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -91,13 +99,13 @@ namespace GYMSYS
 
                 currentMember.Balance -= classPrice;
                 currentMember.UpdateBalance();
-                
+
                 txtBalance.Text = "€" + currentMember.Balance.ToString("0.00");
 
                 int bookingID = Booking.GetNextBookingID();
 
                 Booking newBooking = new Booking(
-                
+
                    bookingID,
                    memberID,
                    selectedClass.ClassID,
@@ -118,16 +126,6 @@ namespace GYMSYS
 
         }
 
-        private void txtSelectClass_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void txtSelectClass_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
-
         private void grpCreateBooking_Enter(object sender, EventArgs e)
         {
 
@@ -144,5 +142,73 @@ namespace GYMSYS
             dgvCreateBooking.DataSource = ds.Tables[0];
         }
 
+        private void LoadMember()
+        {
+            if (txtMemberID.Text == "")
+            {
+                txtBalance.Clear();
+                return;
+            }
+
+            int memberID = Convert.ToInt32(txtMemberID.Text);
+
+            currentMember = Member.GetMembers(memberID);
+
+            if (currentMember == null)
+            {
+                MessageBox.Show("Member not found. Please enter a valid Member ID.");
+                txtBalance.Clear();
+                return;
+            }
+
+            txtBalance.Text = "€" + currentMember.Balance.ToString("0.00");
+
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadMembers()
+        {
+            DataSet ds = Member.GetAllMembers();
+            dtMembers = ds.Tables[0];
+            dgvMembers.DataSource = dtMembers;
+        }
+
+        private void txtSearchMember_KeyUp(object sender, KeyEventArgs e)
+        {
+            string search = txtSearchMember.Text;
+
+            if (search == "")
+            {
+                LoadMembers();
+            }
+            else
+            {
+                DataSet ds = Member.FindMembers(search);
+                dgvMembers.DataSource = ds.Tables[0];
+            }
+
+        }
+
+
+        private void dgvMembers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtMemberID.Text = dgvMembers.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                LoadMember();
+            }
+        }
     }
 }

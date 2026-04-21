@@ -60,7 +60,7 @@ namespace GYMSYS
 
                 Instructor instructor = new Instructor(newID, txtForename.Text, txtSurname.Text, dtpDOB.Value,
                     txtPhone.Text, txtEmail.Text, lstGender.Text, workdays);
-              
+
                 instructor.AddInstructor();
 
                 MessageBox.Show("Instructor " + txtForename.Text + " " + txtSurname.Text + " added successfully!");
@@ -148,7 +148,7 @@ namespace GYMSYS
                 return false;
             }
 
-            if (dtpDOB.Value > DateTime.Now)
+            if (dtpDOB.Value > DateTime.Now && dtpDOB.Value.Year > 18)
             {
                 MessageBox.Show("Please enter a valid date of birth.");
                 return false;
@@ -185,7 +185,7 @@ namespace GYMSYS
                 return false;
             }
 
-            if (!chkMonday.Checked && !chkTuesday.Checked &&  
+            if (!chkMonday.Checked && !chkTuesday.Checked &&
                 !chkWednesday.Checked && !chkThursday.Checked &&
                 !chkFriday.Checked && !chkSaturday.Checked &&
                 !chkSunday.Checked)
@@ -201,6 +201,11 @@ namespace GYMSYS
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRegisterInstrructor_Click(object sender, EventArgs e)
         {
 
         }

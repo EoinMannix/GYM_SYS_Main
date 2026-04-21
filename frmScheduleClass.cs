@@ -77,11 +77,6 @@ namespace GYMSYS
 
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmScheduleClass_Load(object sender, EventArgs e)
         {
             LoadClassesToGrid();
@@ -90,10 +85,6 @@ namespace GYMSYS
             LoadInstructors();
         }
 
-        private void txtSelectClass_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
 
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)

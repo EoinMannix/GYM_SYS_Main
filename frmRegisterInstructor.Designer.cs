@@ -62,9 +62,9 @@
             // 
             lblForename.AutoSize = true;
             lblForename.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblForename.Location = new Point(66, 121);
+            lblForename.Location = new Point(66, 111);
             lblForename.Name = "lblForename";
-            lblForename.Size = new Size(124, 29);
+            lblForename.Size = new Size(98, 24);
             lblForename.TabIndex = 0;
             lblForename.Text = "Forename";
             lblForename.Click += lblForename_Click;
@@ -73,9 +73,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(66, 470);
+            label2.Location = new Point(553, 267);
             label2.Name = "label2";
-            label2.Size = new Size(94, 29);
+            label2.Size = new Size(74, 24);
             label2.TabIndex = 1;
             label2.Text = "Gender";
             label2.Click += label2_Click;
@@ -84,9 +84,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(66, 401);
+            label3.Location = new Point(553, 187);
             label3.Name = "label3";
-            label3.Size = new Size(72, 29);
+            label3.Size = new Size(55, 24);
             label3.TabIndex = 2;
             label3.Text = "email";
             label3.Click += label3_Click;
@@ -95,9 +95,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(66, 266);
+            label4.Location = new Point(66, 264);
             label4.Name = "label4";
-            label4.Size = new Size(65, 29);
+            label4.Size = new Size(50, 24);
             label4.TabIndex = 3;
             label4.Text = "DOB";
             label4.Click += label4_Click;
@@ -106,9 +106,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(66, 196);
+            label5.Location = new Point(66, 183);
             label5.Name = "label5";
-            label5.Size = new Size(124, 29);
+            label5.Size = new Size(98, 24);
             label5.TabIndex = 4;
             label5.Text = "Surename";
             label5.Click += label5_Click;
@@ -117,46 +117,42 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(66, 332);
+            label6.Location = new Point(553, 111);
             label6.Name = "label6";
-            label6.Size = new Size(83, 29);
+            label6.Size = new Size(66, 24);
             label6.TabIndex = 5;
             label6.Text = "Phone";
             label6.Click += label6_Click;
             // 
             // txtForename
             // 
-            txtForename.Location = new Point(279, 130);
-            txtForename.Margin = new Padding(3, 4, 3, 4);
+            txtForename.Location = new Point(252, 118);
             txtForename.Name = "txtForename";
-            txtForename.Size = new Size(240, 27);
+            txtForename.Size = new Size(210, 23);
             txtForename.TabIndex = 6;
             txtForename.TextChanged += txtForename_TextChanged;
             // 
             // txtSurname
             // 
-            txtSurname.Location = new Point(279, 205);
-            txtSurname.Margin = new Padding(3, 4, 3, 4);
+            txtSurname.Location = new Point(252, 190);
             txtSurname.Name = "txtSurname";
-            txtSurname.Size = new Size(240, 27);
+            txtSurname.Size = new Size(210, 23);
             txtSurname.TabIndex = 7;
             txtSurname.TextChanged += textBox2_TextChanged;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(279, 341);
-            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Location = new Point(739, 118);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(240, 27);
+            txtPhone.Size = new Size(210, 23);
             txtPhone.TabIndex = 9;
             txtPhone.TextChanged += textBox4_TextChanged;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(279, 410);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(739, 194);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(240, 27);
+            txtEmail.Size = new Size(210, 23);
             txtEmail.TabIndex = 10;
             txtEmail.TextChanged += textBox5_TextChanged;
             // 
@@ -164,18 +160,18 @@
             // 
             lblRegisterInstrructor.AutoSize = true;
             lblRegisterInstrructor.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRegisterInstrructor.Location = new Point(215, 35);
+            lblRegisterInstrructor.Location = new Point(357, 46);
             lblRegisterInstrructor.Name = "lblRegisterInstrructor";
-            lblRegisterInstrructor.Size = new Size(322, 36);
+            lblRegisterInstrructor.Size = new Size(262, 29);
             lblRegisterInstrructor.TabIndex = 12;
             lblRegisterInstrructor.Text = "Register an Instructor";
+            lblRegisterInstrructor.Click += lblRegisterInstrructor_Click;
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(255, 919);
-            btnConfirm.Margin = new Padding(3, 4, 3, 4);
+            btnConfirm.Location = new Point(398, 444);
             btnConfirm.Name = "btnConfirm";
-            btnConfirm.Size = new Size(240, 59);
+            btnConfirm.Size = new Size(210, 44);
             btnConfirm.TabIndex = 13;
             btnConfirm.Text = "Confim";
             btnConfirm.UseVisualStyleBackColor = true;
@@ -183,11 +179,13 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.ScrollBar;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { backToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(982, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(984, 24);
             menuStrip1.TabIndex = 14;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -195,33 +193,36 @@
             // backToolStripMenuItem
             // 
             backToolStripMenuItem.Name = "backToolStripMenuItem";
-            backToolStripMenuItem.Size = new Size(54, 24);
+            backToolStripMenuItem.Size = new Size(44, 20);
             backToolStripMenuItem.Text = "Back";
             backToolStripMenuItem.Click += backToolStripMenuItem_Click;
             // 
             // dtpDOB
             // 
-            dtpDOB.Location = new Point(279, 278);
+            dtpDOB.Location = new Point(252, 272);
+            dtpDOB.Margin = new Padding(3, 2, 3, 2);
             dtpDOB.Name = "dtpDOB";
-            dtpDOB.Size = new Size(240, 27);
+            dtpDOB.Size = new Size(210, 23);
             dtpDOB.TabIndex = 15;
             // 
             // lstGender
             // 
             lstGender.FormattingEnabled = true;
+            lstGender.ItemHeight = 15;
             lstGender.Items.AddRange(new object[] { "Male", "Female" });
-            lstGender.Location = new Point(279, 476);
+            lstGender.Location = new Point(739, 272);
+            lstGender.Margin = new Padding(3, 2, 3, 2);
             lstGender.Name = "lstGender";
-            lstGender.Size = new Size(240, 24);
+            lstGender.Size = new Size(210, 19);
             lstGender.TabIndex = 16;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(66, 542);
+            label1.Location = new Point(71, 341);
             label1.Name = "label1";
-            label1.Size = new Size(119, 29);
+            label1.Size = new Size(93, 24);
             label1.TabIndex = 17;
             label1.Text = "Workdays";
             label1.Click += label1_Click;
@@ -229,9 +230,10 @@
             // chkMonday
             // 
             chkMonday.AutoSize = true;
-            chkMonday.Location = new Point(174, 604);
+            chkMonday.Location = new Point(94, 394);
+            chkMonday.Margin = new Padding(3, 2, 3, 2);
             chkMonday.Name = "chkMonday";
-            chkMonday.Size = new Size(85, 24);
+            chkMonday.Size = new Size(70, 19);
             chkMonday.TabIndex = 18;
             chkMonday.Text = "Monday";
             chkMonday.UseVisualStyleBackColor = true;
@@ -239,9 +241,10 @@
             // chkTuesday
             // 
             chkTuesday.AutoSize = true;
-            chkTuesday.Location = new Point(458, 604);
+            chkTuesday.Location = new Point(205, 394);
+            chkTuesday.Margin = new Padding(3, 2, 3, 2);
             chkTuesday.Name = "chkTuesday";
-            chkTuesday.Size = new Size(85, 24);
+            chkTuesday.Size = new Size(70, 19);
             chkTuesday.TabIndex = 19;
             chkTuesday.Text = "Tuesday";
             chkTuesday.UseVisualStyleBackColor = true;
@@ -249,9 +252,10 @@
             // chkWednesday
             // 
             chkWednesday.AutoSize = true;
-            chkWednesday.Location = new Point(174, 679);
+            chkWednesday.Location = new Point(314, 394);
+            chkWednesday.Margin = new Padding(3, 2, 3, 2);
             chkWednesday.Name = "chkWednesday";
-            chkWednesday.Size = new Size(107, 24);
+            chkWednesday.Size = new Size(87, 19);
             chkWednesday.TabIndex = 20;
             chkWednesday.Text = "Wednesday";
             chkWednesday.UseVisualStyleBackColor = true;
@@ -259,9 +263,10 @@
             // chkThursday
             // 
             chkThursday.AutoSize = true;
-            chkThursday.Location = new Point(458, 679);
+            chkThursday.Location = new Point(440, 394);
+            chkThursday.Margin = new Padding(3, 2, 3, 2);
             chkThursday.Name = "chkThursday";
-            chkThursday.Size = new Size(90, 24);
+            chkThursday.Size = new Size(75, 19);
             chkThursday.TabIndex = 21;
             chkThursday.Text = "Thursday";
             chkThursday.UseVisualStyleBackColor = true;
@@ -269,9 +274,10 @@
             // chkFriday
             // 
             chkFriday.AutoSize = true;
-            chkFriday.Location = new Point(174, 753);
+            chkFriday.Location = new Point(550, 394);
+            chkFriday.Margin = new Padding(3, 2, 3, 2);
             chkFriday.Name = "chkFriday";
-            chkFriday.Size = new Size(71, 24);
+            chkFriday.Size = new Size(58, 19);
             chkFriday.TabIndex = 22;
             chkFriday.Text = "Friday";
             chkFriday.UseVisualStyleBackColor = true;
@@ -279,9 +285,10 @@
             // chkSaturday
             // 
             chkSaturday.AutoSize = true;
-            chkSaturday.Location = new Point(458, 753);
+            chkSaturday.Location = new Point(646, 394);
+            chkSaturday.Margin = new Padding(3, 2, 3, 2);
             chkSaturday.Name = "chkSaturday";
-            chkSaturday.Size = new Size(89, 24);
+            chkSaturday.Size = new Size(72, 19);
             chkSaturday.TabIndex = 23;
             chkSaturday.Text = "Saturday";
             chkSaturday.UseVisualStyleBackColor = true;
@@ -289,18 +296,19 @@
             // chkSunday
             // 
             chkSunday.AutoSize = true;
-            chkSunday.Location = new Point(174, 825);
+            chkSunday.Location = new Point(771, 394);
+            chkSunday.Margin = new Padding(3, 2, 3, 2);
             chkSunday.Name = "chkSunday";
-            chkSunday.Size = new Size(79, 24);
+            chkSunday.Size = new Size(65, 19);
             chkSunday.TabIndex = 24;
             chkSunday.Text = "Sunday";
             chkSunday.UseVisualStyleBackColor = true;
             // 
             // frmRegisterInstructor
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(982, 1055);
+            ClientSize = new Size(984, 581);
             Controls.Add(chkSunday);
             Controls.Add(chkSaturday);
             Controls.Add(chkFriday);
@@ -325,10 +333,9 @@
             Controls.Add(lblForename);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
-            MaximumSize = new Size(1200, 2000);
+            MaximumSize = new Size(1052, 1510);
             MinimizeBox = false;
-            MinimumSize = new Size(1000, 1018);
+            MinimumSize = new Size(877, 620);
             Name = "frmRegisterInstructor";
             StartPosition = FormStartPosition.Manual;
             Text = "Register Instructor";
