@@ -27,15 +27,7 @@ namespace GYMSYS
 
         private void dgvCancelBooking_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            object value = dgvCancelBooking.Rows[e.RowIndex].Cells[0].Value;
-
-            if (value != null || value == DBNull.Value)
-            {
-                MessageBox.Show("Invalid selection. Please select a valid booking.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
+     
             if (e.RowIndex >= 0)
             {
                 int id = Convert.ToInt32(
@@ -81,7 +73,8 @@ namespace GYMSYS
                     return;
                 }
 
-                decimal classPrice = 15.00m;
+                Classes selectedClass = Classes.GetClass(selectedBooking.ClassID);
+                decimal classPrice = selectedClass.ClassPrice;
 
                 member.Balance += classPrice;
                 member.UpdateBalance();
@@ -196,7 +189,7 @@ namespace GYMSYS
         {
             DataSet ds = Booking.GetBookingsByMember(memberID);
 
-            if (ds == null || ds.Tables.Count == 0)
+            if (ds.Tables[0].Rows.Count == 0)
             {
                 MessageBox.Show("No bookings found for this member.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

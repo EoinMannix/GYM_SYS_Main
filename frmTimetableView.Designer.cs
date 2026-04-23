@@ -41,6 +41,7 @@
             dgvTimetable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTimetable.Location = new Point(12, 29);
             dgvTimetable.Name = "dgvTimetable";
+            dgvTimetable.ReadOnly = true;
             dgvTimetable.Size = new Size(776, 409);
             dgvTimetable.TabIndex = 0;
             // 

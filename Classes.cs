@@ -49,7 +49,7 @@ namespace GYMSYS
         {
             string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOMID, TYPECODE " +
                 "FROM CLASSES " +
-                "WHERE Status = 'Active' " +
+                "WHERE Status = 'Booked' " +
                 "ORDER BY CLASSID";
 
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
@@ -164,26 +164,17 @@ namespace GYMSYS
 
         }
 
-        public static bool ClassExists(int roomId, DateTime date, string time)
+
+        public static bool ClassExists(int roomId, DateTime classDate, string classTime)
         {
-            string sqlQuery = "SELECT COUNT(*) FROM CLASSES WHERE ROOMID = " + roomId +
-                " AND CLASSDATE = TO_DATE('" + date.ToString("yyyy-MM-dd") + "', 'yyyy-MM-dd')" +
-                " AND CLASSTIME = '" + time.Trim() + "'";
+            string sql = "SELECT * FROM CLASSES WHERE ROOMID = " + roomId +
+                        " AND CLASSDATE = TO_DATE('" + classDate.ToString("dd/MM/yyyy") + "', 'DD/MM/YYYY')" +
+                        " AND CLASSTIME = '" + classTime + "'" +
+                        " AND STATUS = 'active'";
 
-            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+            DataSet ds = Database.ExecuteMultiRowQuery(sql);
 
-            int count = 0;
-
-            if (dr.Read())
-            {
-
-                count = dr.GetInt32(0);
-
-            }
-
-            dr.Close();
-
-            return count > 0;
+            return ds.Tables[0].Rows.Count > 0;
         }
 
 

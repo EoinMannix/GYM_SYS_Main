@@ -45,8 +45,7 @@ namespace GYMSYS
             * 
             * Author: Microsoft
             * Site: learn.microsoft.com
-            * Date: 2026 
-            * Code Version edited June 2-3 2026
+            * Date: 22/04/2026
             * Availablity: https://learn.microsoft.com/en-us/dotnet/api/system.string.substring?view=net-10.0
             * Accessed: 30 March 2026
             * Modified: The substring method is used to extract the first character from the cboDuration text e.g 3 weeks (the 3 is extracted), 

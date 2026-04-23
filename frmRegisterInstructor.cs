@@ -154,6 +154,27 @@ namespace GYMSYS
                 return false;
             }
 
+            if (txtPhone.Text == "")
+            {
+                MessageBox.Show("Please enter a valid phone number.");
+                return false;
+            }
+
+            if (txtPhone.Text.Length < 10 || txtPhone.Text.Length > 15)
+            {
+                MessageBox.Show("Please enter a valid phone number (10-15 digits).");
+                return false;
+            }
+
+            foreach (char c in txtPhone.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    MessageBox.Show("Phone number must conain number only. ");
+                    return false;
+                }
+            }
+
             if (txtEmail.Text == "")
             {
                 MessageBox.Show("Please enter an email.");

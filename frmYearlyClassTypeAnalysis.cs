@@ -51,7 +51,7 @@ namespace GYMSYS
                     new ColumnSeries<int>
                     {
                         Values = data,
-                        Name = "Class Type Analysis"
+                        Name = "Classes booked"
                     }
                 };
 

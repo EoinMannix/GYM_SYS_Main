@@ -138,18 +138,18 @@ INSERT INTO ClassTypes VALUES('SP','Spinning');
 
 -- Sample data members
 
-INSERT INTO Members VALUES(1001, 'Sean', 'O Brien', DATE '1995-04-12', '0712345678','sean.obrien@gmail.com','Male',0,'Active');
-INSERT INTO Members VALUES(1002, 'Aoife', 'Murphy', DATE '1996-08-18', '0847652390','aoife.murphy@gmail.com','Female',0,'Active');
-INSERT INTO Members VALUES(1003, 'Connor', 'Kelly', DATE '2002-05-02','0723748090','connor.kelly@gmail.com','Male',0,'Active');
-INSERT INTO Members VALUES(1004, 'Niamh', 'Doyle', DATE '2000-04-18','0864567890','niamh.doyle@gmail.com','Female',0,'Active');
-INSERT INTO Members VALUES(1005, 'Ciaran', 'Bryne', DATE '1996-09-12','0855678910','ciaran.bryne@gmail.com','Male',0,'Active');
-INSERT INTO Members VALUES(1006, 'Saoirse', 'Ryan', DATE '2001-01-30','0876789012','saoirse.ryan@gmail.com','Female',0,'Active');
-INSERT INTO Members VALUES(1007, 'Darragh', 'Walsh', DATE '2001-01-30','0837890123','darragh.walsh@gmail.com','Male',0,'Active');
-INSERT INTO Members VALUES(1008, 'Orla', 'O Connor', DATE '1997-03-14','0868901234','orla.oconnor@gmail.com','Female',0,'Active');
-INSERT INTO Members VALUES(1009, 'Padraig', 'fitzgerald', DATE '1989-12-08', '0859012345','padraig.fitzgerald@gmail.com','Male',0,'Active');
-INSERT INTO Members VALUES(1010, 'Clodagh', 'Higgins', DATE '1995-10-19','0870123456','clodagh.higgins@gmail.com','Female',0,'Active');
-INSERT INTO Members VALUES(1011, 'Ronan', 'Mccarthy', DATE '1991-05-27', '0831234567','ronan.mccarthy@gmail.com','Male',0,'Active');
-INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan', DATE '1999-08-03', '0862345678','eimear.flanagan@gmail.com','Female',0,'Active');
+INSERT INTO Members VALUES(1001, 'Sean', 'O Brien', DATE '1995-04-12', '0712345678','sean.obrien@gmail.com','Male',50,'Active');
+INSERT INTO Members VALUES(1002, 'Aoife', 'Murphy', DATE '1996-08-18', '0847652390','aoife.murphy@gmail.com','Female',50,'Active');
+INSERT INTO Members VALUES(1003, 'Connor', 'Kelly', DATE '2002-05-02','0723748090','connor.kelly@gmail.com','Male',50,'Active');
+INSERT INTO Members VALUES(1004, 'Niamh', 'Doyle', DATE '2000-04-18','0864567890','niamh.doyle@gmail.com','Female',50,'Active');
+INSERT INTO Members VALUES(1005, 'Ciaran', 'Bryne', DATE '1996-09-12','0855678910','ciaran.bryne@gmail.com','Male',50,'Active');
+INSERT INTO Members VALUES(1006, 'Saoirse', 'Ryan', DATE '2001-01-30','0876789012','saoirse.ryan@gmail.com','Female',50,'Active');
+INSERT INTO Members VALUES(1007, 'Darragh', 'Walsh', DATE '2001-01-30','0837890123','darragh.walsh@gmail.com','Male',50,'Active');
+INSERT INTO Members VALUES(1008, 'Orla', 'O Connor', DATE '1997-03-14','0868901234','orla.oconnor@gmail.com','Female',50,'Active');
+INSERT INTO Members VALUES(1009, 'Padraig', 'fitzgerald', DATE '1989-12-08', '0859012345','padraig.fitzgerald@gmail.com','Male',50,'Active');
+INSERT INTO Members VALUES(1010, 'Clodagh', 'Higgins', DATE '1995-10-19','0870123456','clodagh.higgins@gmail.com','Female',50,'Active');
+INSERT INTO Members VALUES(1011, 'Ronan', 'Mccarthy', DATE '1991-05-27', '0831234567','ronan.mccarthy@gmail.com','Male',50,'Active');
+INSERT INTO Members VALUES(1012, 'Eimer', 'Flanagan', DATE '1999-08-03', '0862345678','eimear.flanagan@gmail.com','Female',50,'Active');
 
 -- Sample data Instructors
 
@@ -170,11 +170,107 @@ INSERT INTO Rooms VALUES (1, 'Yoga Studio');
 INSERT INTO Rooms VALUES (2, 'Spin Studio');
 INSERT INTO Rooms VALUES (3, 'Hyrox Floor');
 
--- Sample data Classes
+-- Sample data Classes Dates (13-19 April 2026)
 
-INSERT INTO Classes VALUES(3001,'Yoga Class',2002, 'YG',DATE '2025-04-01','15:00',15.00,1,'Active');
-INSERT INTO Classes VALUES(2001,'Hyrox Training',2001,'HX',DATE '2025-04-02','18:00',20.00,3,'Active');
-INSERT INTO Classes VALUES(3003,'Pilates Session',2004,'PL',DATE '2025-04-01','12:00',15.00,2,'Active');
+-- Monday
+INSERT INTO Classes VALUES(3301,'Morning Yoga',2002,'YG',DATE '2026-04-13','09:00',15.00,1,'Active');
+
+-- TUESDAY
+INSERT INTO Classes VALUES(3302,'Spin Class',2004,'SP',DATE '2026-04-14','12:00',18.00,2,'Active');
+
+-- WEDNESDAY
+INSERT INTO Classes VALUES(3303,'Pilates Core',2004,'PL',DATE '2026-04-15','10:00',15.00,2,'Active');
+
+-- THURSDAY
+INSERT INTO Classes VALUES(3304,'Hyrox Intro',2001,'HX',DATE '2026-04-16','18:00',20.00,3,'Active');
+
+-- FRIDAY
+INSERT INTO Classes VALUES(3305,'Yoga Flow',2002,'YG',DATE '2026-04-17','11:00',15.00,1,'Active');
+
+-- SATURDAY
+INSERT INTO Classes VALUES(3306,'Spin Advanced',2004,'SP',DATE '2026-04-18','14:00',20.00,2,'Active');
+
+-- SUNDAY
+INSERT INTO Classes VALUES(3307,'Recovery Yoga',2002,'YG',DATE '2026-04-19','17:00',12.00,1,'Active');
+
+-- Sample data Classes Dates (20-26 April 2026)
+
+-- MONDAY
+INSERT INTO Classes VALUES(3308,'Morning Yoga',2002,'YG',DATE '2026-04-20','09:00',15.00,1,'Active');
+
+-- TUESDAY
+INSERT INTO Classes VALUES(3310,'Spin Class',2004,'SP',DATE '2026-04-21','12:00',18.00,2,'Active');
+
+-- WEDNESDAY
+INSERT INTO Classes VALUES(3311,'Pilates',2004,'PL',DATE '2026-04-22','10:00',15.00,2,'Active');
+
+-- THURSDAY
+INSERT INTO Classes VALUES(3312,'Hyrox Training',2001,'HX',DATE '2026-04-23','18:00',22.00,3,'Active');
+
+-- FRIDAY
+INSERT INTO Classes VALUES(3313,'Yoga Flow',2002,'YG',DATE '2026-04-24','11:00',15.00,1,'Active');
+
+-- SATURDAY
+INSERT INTO Classes VALUES(3314,'Morning Pilates',2004,'PL',DATE '2026-04-25','09:00',15.00,2,'Active');
+
+-- SUNDAY
+INSERT INTO Classes VALUES(3315,'Stretch Yoga',2002,'YG',DATE '2026-04-26','17:00',12.00,1,'Active');
+
+
+-- Sample data Booking Dates (13-19 April 2026)
+
+-- I used the SYSYDATE function to get the current date/time to replicate when the booking was make
+-- Link to referance material: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/SYSDATE.html
+
+-- MONDAY
+INSERT INTO Bookings VALUES(5001,1001,3301,SYSDATE,'Booked');
+INSERT INTO Bookings VALUES(5002,1002,3301,SYSDATE,'Booked');
+
+-- TUESDAY
+INSERT INTO Bookings VALUES(5003,1003,3302,SYSDATE,'Booked');
+
+-- WEDNESDAY
+INSERT INTO Bookings VALUES(5004,1004,3303,SYSDATE,'Booked');
+INSERT INTO Bookings VALUES(5005,1005,3303,SYSDATE,'Booked');
+
+-- THURSDAY
+INSERT INTO Bookings VALUES(5006,1006,3304,SYSDATE,'Booked');
+
+-- FRIDAY
+INSERT INTO Bookings VALUES(5007,1007,3305,SYSDATE,'Booked');
+
+-- SATURDAY
+INSERT INTO Bookings VALUES(5008,1008,3306,SYSDATE,'Booked');
+
+-- SUNDAY
+INSERT INTO Bookings VALUES(5009,1009,3307,SYSDATE,'Booked');
+
+
+-- Sample data Booking Dates (20-26 April 2026)
+
+-- MONDAY
+INSERT INTO Bookings VALUES(5010,1010,3308,SYSDATE,'Booked');
+INSERT INTO Bookings VALUES(5011,1011,3308,SYSDATE,'Booked');
+
+-- TUESDAY
+INSERT INTO Bookings VALUES(5013,1001,3310,SYSDATE,'Booked');
+
+-- WEDNESDAY
+INSERT INTO Bookings VALUES(5014,1002,3311,SYSDATE,'Booked');
+
+-- THURSDAY
+INSERT INTO Bookings VALUES(5015,1003,3312,SYSDATE,'Booked');
+INSERT INTO Bookings VALUES(5016,1004,3312,SYSDATE,'Booked');
+
+-- FRIDAY
+INSERT INTO Bookings VALUES(5017,1005,3313,SYSDATE,'Booked');
+
+-- SATURDAY
+INSERT INTO Bookings VALUES(5018,1006,3314,SYSDATE,'Booked');
+
+-- SUNDAY
+INSERT INTO Bookings VALUES(5019,1007,3315,SYSDATE,'Booked');
+
 
 COMMIT; 
     

@@ -113,7 +113,7 @@ namespace GYMSYS
         {
             string sqlQuery = "SELECT BOOKINGID, MEMBERID, CLASSID, BOOKINGDATE, STATUS " +
                 "FROM BOOKINGS " +
-                "WHERE MEMBERID = " + memberId + " AND STATUS = 'Active' " +
+                "WHERE MEMBERID = " + memberId + " AND STATUS = 'Booked' " +
                 "ORDER BY BOOKINGID";
 
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
