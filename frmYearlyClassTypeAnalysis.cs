@@ -31,6 +31,7 @@ namespace GYMSYS
 
         private void frmYearlyClassTypeAnalysis_Load(object sender, EventArgs e)
         {
+
             Chart = new CartesianChart
             {
                 Dock = DockStyle.Fill

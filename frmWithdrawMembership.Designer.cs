@@ -96,7 +96,7 @@
             dgvWithdrawMembership.RowHeadersWidth = 51;
             dgvWithdrawMembership.RowTemplate.Height = 24;
             dgvWithdrawMembership.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvWithdrawMembership.Size = new Size(485, 164);
+            dgvWithdrawMembership.Size = new Size(553, 164);
             dgvWithdrawMembership.TabIndex = 2;
             dgvWithdrawMembership.CellContentClick += dgvWithdrawMembership_CellClick;
             // 

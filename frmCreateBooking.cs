@@ -31,8 +31,17 @@ namespace GYMSYS
 
         private void frmCreateBooking_Load(object sender, EventArgs e)
         {
+
+            UITheme.StyleForm(this);
+            UITheme.StyleButton(btnConfirm);
+            UITheme.StyleGrid(dgvCreateBooking);
+            UITheme.StyleGrid(dgvMembers);
+            UITheme.StyleLabel(this);
+            UITheme.StyleTextBox(grpCreateBooking);
+
             LoadClasses();
             LoadMembers();
+            
         }
 
         private void txtMemberID_Leave(object sender, EventArgs e) // I got information on the leave event through this website -> https://www.homeandlearn.co.uk/csharp/csharp_s9p4.html
@@ -139,7 +148,14 @@ namespace GYMSYS
         private void LoadClasses()
         {
             DataSet ds = Classes.GetAllClasses();
-            dgvCreateBooking.DataSource = ds.Tables[0];
+
+            if (ds.Tables.Count == 0 || ds.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("No classes available.");
+                return;
+            }
+
+                dgvCreateBooking.DataSource = ds.Tables[0];
         }
 
         private void LoadMember()

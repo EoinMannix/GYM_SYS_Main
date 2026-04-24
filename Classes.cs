@@ -49,7 +49,7 @@ namespace GYMSYS
         {
             string sqlQuery = "SELECT CLASSID, CLASSNAME, INSTRUCTORID, PRICE, CLASSDATE, CLASSTIME, ROOMID, TYPECODE " +
                 "FROM CLASSES " +
-                "WHERE Status = 'Booked' " +
+                "WHERE Status = 'Active' " +
                 "ORDER BY CLASSID";
 
             DataSet ds = Database.ExecuteMultiRowQuery(sqlQuery);
@@ -170,7 +170,7 @@ namespace GYMSYS
             string sql = "SELECT * FROM CLASSES WHERE ROOMID = " + roomId +
                         " AND CLASSDATE = TO_DATE('" + classDate.ToString("dd/MM/yyyy") + "', 'DD/MM/YYYY')" +
                         " AND CLASSTIME = '" + classTime + "'" +
-                        " AND STATUS = 'active'";
+                        " AND STATUS = 'Active'";
 
             DataSet ds = Database.ExecuteMultiRowQuery(sql);
 

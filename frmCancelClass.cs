@@ -22,6 +22,11 @@ namespace GYMSYS
 
         private void frmCancelClass_Load(object sender, EventArgs e)
         {
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleButton(btnConfirm);
+            UITheme.StyleGrid(dgvCancelClass);
+
             LoadClasses();
         }
 

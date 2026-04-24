@@ -69,7 +69,7 @@ namespace GYMSYS
 
         private void GYMSYS_Main_Menu_Load(object sender, EventArgs e)
         {
-
+            UITheme.StyleForm(this);
         }
 
         private void createMemberToolStripMenuItem_Click(object sender, EventArgs e)

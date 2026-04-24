@@ -97,6 +97,11 @@ namespace GYMSYS
 
             InitializeComponent();
             SetupGrid();
+
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleGrid(dgvTimetable);
+
             LoadTimetable(roomId, selectedDate);
             dgvTimetable.Dock = DockStyle.Fill;
         }

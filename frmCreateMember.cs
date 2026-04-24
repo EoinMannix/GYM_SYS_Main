@@ -16,6 +16,10 @@ namespace GYMSYS
         public frmCreateMember()
         {
             InitializeComponent();
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleButton(btnConfirm);
+            UITheme.StyleListBox(lstGender);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,7 +48,7 @@ namespace GYMSYS
 
                 newMember.AddMember();
 
-                MessageBox.Show("Member " + txtForename.Text + " " + txtSurname.Text + "added successfully!");
+                MessageBox.Show("Member " + txtForename.Text + " " + txtSurname.Text + " added successfully!");
 
                 this.Close();
             }
@@ -60,15 +64,15 @@ namespace GYMSYS
         // ValidateRegisterInputs() function provides validation when creating a member.
         private bool ValidateRegisterInputs()
         {
-            if (txtForename.Text == "")
+            if (txtForename.Text == "" && txtSurname.Text == "")
             {
-                MessageBox.Show("please enter a name. ");
+                MessageBox.Show("please enter a Forename and Surname. ");
                 return false;
             }
 
-            if (txtSurname.Text == "")
+            if (txtForename.Text.Length <= 2 || txtSurname.Text.Length <= 2)
             {
-                MessageBox.Show("Please enter a surname.");
+                MessageBox.Show("please enter a valid Forename and Surname. ");
                 return false;
             }
 

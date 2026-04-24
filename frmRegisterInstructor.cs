@@ -78,6 +78,10 @@ namespace GYMSYS
 
         private void frmRegInstructor_Load(object sender, EventArgs e)
         {
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleButton(btnConfirm);
+            UITheme.StyleListBox(lstGender);
 
         }
 
@@ -111,10 +115,6 @@ namespace GYMSYS
 
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -136,15 +136,15 @@ namespace GYMSYS
         // ValidateRegisterInputs() function provides validation when creating a member.
         private bool ValidateRegisterInputs()
         {
-            if (txtForename.Text == "")
+            if (txtForename.Text == "" && txtSurname.Text == "")
             {
-                MessageBox.Show("please enter a name. ");
+                MessageBox.Show("please enter a Forename and Surname. ");
                 return false;
             }
 
-            if (txtSurname.Text == "")
+            if (txtForename.Text.Length <= 2 || txtSurname.Text.Length <= 2)
             {
-                MessageBox.Show("please enter a surname. ");
+                MessageBox.Show("please enter a valid Forename and Surname. ");
                 return false;
             }
 

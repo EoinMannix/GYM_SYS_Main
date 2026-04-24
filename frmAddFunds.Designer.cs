@@ -113,6 +113,8 @@
             txtMemberID.Name = "txtMemberID";
             txtMemberID.Size = new Size(175, 23);
             txtMemberID.TabIndex = 26;
+            txtMemberID.TextChanged += txtMemberID_TextChanged;
+            txtMemberID.Leave += txtMemberID_Leave;
             // 
             // radioButton80
             // 

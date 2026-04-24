@@ -78,6 +78,12 @@ namespace GYMSYS
 
         private void frmScheduleClass_Load(object sender, EventArgs e)
         {
+
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleButton(btnViewTimetable);
+            UITheme.StyleGrid(dgvScheduleClass);
+
             LoadClassesToGrid();
             LoadRooms();
             LoadDuration();

@@ -85,6 +85,7 @@
             // 
             lblBalance.AutoSize = true;
             lblBalance.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBalance.ForeColor = Color.Black;
             lblBalance.Location = new Point(845, 44);
             lblBalance.Name = "lblBalance";
             lblBalance.Size = new Size(78, 24);
@@ -133,6 +134,7 @@
             // 
             lblDate.AutoSize = true;
             lblDate.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate.ForeColor = Color.Black;
             lblDate.Location = new Point(27, 121);
             lblDate.Name = "lblDate";
             lblDate.Size = new Size(48, 24);
@@ -183,6 +185,7 @@
             // 
             lblRoom.AutoSize = true;
             lblRoom.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRoom.ForeColor = Color.Black;
             lblRoom.Location = new Point(449, 204);
             lblRoom.Name = "lblRoom";
             lblRoom.Size = new Size(61, 24);
@@ -193,6 +196,7 @@
             // 
             lblPrice.AutoSize = true;
             lblPrice.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPrice.ForeColor = Color.Black;
             lblPrice.Location = new Point(449, 45);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(53, 24);
@@ -203,6 +207,7 @@
             // 
             lblInstructor.AutoSize = true;
             lblInstructor.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInstructor.ForeColor = Color.Black;
             lblInstructor.Location = new Point(27, 204);
             lblInstructor.Name = "lblInstructor";
             lblInstructor.Size = new Size(86, 24);
@@ -213,6 +218,7 @@
             // 
             lblTime.AutoSize = true;
             lblTime.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTime.ForeColor = Color.Black;
             lblTime.Location = new Point(449, 121);
             lblTime.Name = "lblTime";
             lblTime.Size = new Size(53, 24);
@@ -223,6 +229,7 @@
             // 
             lblClassName.AutoSize = true;
             lblClassName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblClassName.ForeColor = Color.Black;
             lblClassName.Location = new Point(27, 45);
             lblClassName.Name = "lblClassName";
             lblClassName.Size = new Size(111, 24);
@@ -271,6 +278,7 @@
             // 
             lblMemberID.AutoSize = true;
             lblMemberID.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMemberID.ForeColor = Color.Black;
             lblMemberID.Location = new Point(496, 44);
             lblMemberID.Name = "lblMemberID";
             lblMemberID.Size = new Size(103, 24);
@@ -299,6 +307,7 @@
             // 
             lblSearch.AutoSize = true;
             lblSearch.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSearch.ForeColor = Color.Black;
             lblSearch.Location = new Point(40, 45);
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(146, 24);

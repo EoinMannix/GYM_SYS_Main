@@ -19,6 +19,10 @@ namespace GYMSYS
         {
             InitializeComponent();
 
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleButton(btnConfirm_Click);
+
         }
 
         private void frmAddFunds_Load(object sender, EventArgs e)
@@ -108,15 +112,15 @@ namespace GYMSYS
                 return false;
             }
 
-            if (txtCardNumber.Text == "")
+            if (txtCardNumber.Text == "" || txtCardNumber.Text.Length != 10)
             {
-                MessageBox.Show("Please enter the card number.");
+                MessageBox.Show("Please enter a valid 10-digit card number.");
                 return false;
             }
 
-            if (txtCVV.Text == "" && txtCVV.Text.Length == 3)
+            if (txtCVV.Text == "" || txtCVV.Text.Length != 3)
             {
-                MessageBox.Show("Please enter the CVV.");
+                MessageBox.Show("Please enter a valid 3-digit CVV.");
                 return false;
             }
 
@@ -159,6 +163,47 @@ namespace GYMSYS
         {
 
         }
+
+        private void txtMemberID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMemberID_Leave(object sender, EventArgs e)
+        {
+            LoadMemberBalance();
+        }
+
+        private void LoadMemberBalance()
+        {
+            int memberID;
+            if (txtMemberID.Text == "")
+            {
+                MessageBox.Show("Please enter a Member ID.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            try
+            {
+                memberID = Convert.ToInt32(txtMemberID.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Member ID. Please enter a valid numeric Member ID.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Member currentMember = Member.GetMembers(memberID);
+
+            if (currentMember == null)
+            {
+                MessageBox.Show("Member not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCurrentBalance.Text = "";
+                return;
+            }
+
+            txtCurrentBalance.Text = "€" + currentMember.Balance.ToString("0.00");
+        }
+
     }
 
 }

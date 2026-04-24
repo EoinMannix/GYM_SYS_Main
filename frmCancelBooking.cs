@@ -21,6 +21,13 @@ namespace GYMSYS
 
         private void frmCancelBooking_Load(object sender, EventArgs e)
         {
+
+            UITheme.StyleForm(this);
+            UITheme.StyleButton(btnConfirm);
+            UITheme.StyleGrid(dgvCancelBooking);
+            UITheme.StyleLabel(this);
+            UITheme.StyleTextBox(grpCancelBooking);
+
             dgvCancelBooking.Visible = false;
             grpCancelBooking.Visible = false;
         }

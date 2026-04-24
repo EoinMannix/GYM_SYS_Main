@@ -55,6 +55,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.ActiveBorder;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { instructorsToolStripMenuItem, membersToolStripMenuItem, classesToolStripMenuItem, bookingsToolStripMenuItem, adminToolStripMenuItem, exitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);

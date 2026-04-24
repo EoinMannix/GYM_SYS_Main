@@ -110,6 +110,13 @@ namespace GYMSYS
 
         private void frmWithdrawMembership_Load(object sender, EventArgs e)
         {
+            
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleButton(btnUpdateWithdraw);
+            UITheme.StyleGrid(dgvWithdrawMembership);
+            UITheme.StyleListBox(lstGender);
+
             LoadMembers();
         }
 

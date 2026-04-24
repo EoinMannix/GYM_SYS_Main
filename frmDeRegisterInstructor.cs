@@ -29,6 +29,11 @@ namespace GYMSYS
 
         private void frmDeRegisterInstructor_Load(object sender, EventArgs e)
         {
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleButton(btnConfirmDeRegInst);
+            UITheme.StyleListBox(lsbGender);
+
             LoadInstructors();
         }
 

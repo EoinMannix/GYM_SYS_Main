@@ -19,6 +19,7 @@ namespace GYMSYS
         {
             InitializeComponent();
            
+ 
 
         }
 
@@ -81,6 +82,12 @@ namespace GYMSYS
 
         private void frmeditInstructor_Load(object sender, EventArgs e)
         {
+
+            UITheme.StyleForm(this);
+            UITheme.StyleLabel(this);
+            UITheme.StyleButton(btnConfirm);
+            UITheme.StyleGrid(dgvEditInstructors);
+
             LoadInstructors();
         }
 
